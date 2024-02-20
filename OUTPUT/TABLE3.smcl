@@ -1,0 +1,1667 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. 
+. /////////////////TABLE 3: Logistic regression models for change in depression, antidepressant use as well as depression and/or antidepressant use as predictors of estimates of epigenetic age acceleration//////
+> 
+. ************Y=DEPRESSION_BASELINE_BR***********************
+. 
+. ***********MODEL 1***************
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit DEPRESSION_BASELINE_BR `x' if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      1.04
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.3087
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}IEAA {c |}{col 14}{res}{space 2}-.0149926{col 26}{space 2} .0147269{col 37}{space 1}   -1.02{col 46}{space 3}0.309{col 54}{space 4}-.0438568{col 67}{space 3} .0138717
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.103133{col 26}{space 2} .0737468{col 37}{space 1}  -28.52{col 46}{space 3}0.000{col 54}{space 4}-2.247674{col 67}{space 3}-1.958591
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      2.89
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0889
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}EEAA {c |}{col 14}{res}{space 2} .0197594{col 26}{space 2} .0116154{col 37}{space 1}    1.70{col 46}{space 3}0.089{col 54}{space 4}-.0030063{col 67}{space 3} .0425251
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.103162{col 26}{space 2} .0738295{col 37}{space 1}  -28.49{col 46}{space 3}0.000{col 54}{space 4}-2.247865{col 67}{space 3}-1.958459
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.50
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.4791
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSI~E_BR{col 15}{c |} Coefficient{col 27}  Std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0            {col 15}{txt}{c |}  (base outcome)
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1             {txt}{c |}
+AgeAccelPheno {c |}{col 15}{res}{space 2}  .008033{col 27}{space 2} .0113502{col 38}{space 1}    0.71{col 47}{space 3}0.479{col 55}{space 4}-.0142129{col 68}{space 3}  .030279
+{txt}{space 8}_cons {c |}{col 15}{res}{space 2}-2.101359{col 27}{space 2} .0736516{col 38}{space 1}  -28.53{col 47}{space 3}0.000{col 55}{space 4}-2.245713{col 68}{space 3}-1.957004
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  8.77e+61
+{txt}{col 49}        avg{col 67}= {res}  8.77e+61
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 8.8e+61{txt}){col 67}= {res}      7.54
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0060
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BA~R{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0              {col 17}{txt}{c |}  (base outcome)
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1               {txt}{c |}
+AgeAccelGrimAge {c |}{col 17}{res}{space 2} .0504899{col 29}{space 2} .0183878{col 40}{space 1}    2.75{col 49}{space 3}0.006{col 57}{space 4} .0144505{col 70}{space 3} .0865293
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}-2.113637{col 29}{space 2} .0744445{col 40}{space 1}  -28.39{col 49}{space 3}0.000{col 57}{space 4}-2.259545{col 70}{space 3}-1.967728
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. ***********MODEL 2: ADJUSTED FOR DEMOGRAPHICS***************
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit DEPRESSION_BASELINE_BR `x' i.AGE_BR i.RACEBR i.ETHNICITY i.MARITAL_BR i.EDUC_BR i.INCOME_BR if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0119
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0907
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    525.65
+{txt}{col 49}        avg{col 67}= {res}  1.31e+07
+{txt}{col 49}        max{col 67}= {res}  1.64e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}334575.0{txt}){col 67}= {res}      3.74
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}IEAA {c |}{col 14}{res}{space 2} -.009844{col 26}{space 2} .0150477{col 37}{space 1}   -0.65{col 46}{space 3}0.513{col 54}{space 4}-.0393369{col 67}{space 3}  .019649
+{txt}{space 12} {c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.4636233{col 26}{space 2} .1818861{col 37}{space 1}   -2.55{col 46}{space 3}0.011{col 54}{space 4}-.8201136{col 67}{space 3}-.1071331
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} -.712249{col 26}{space 2} .2329132{col 37}{space 1}   -3.06{col 46}{space 3}0.002{col 54}{space 4}-1.168751{col 67}{space 3}-.2557469
+{txt}{space 12} {c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .0409736{col 26}{space 2} .1819999{col 37}{space 1}    0.23{col 46}{space 3}0.822{col 54}{space 4}-.3157398{col 67}{space 3} .3976869
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .5248093{col 26}{space 2} .4432829{col 37}{space 1}    1.18{col 46}{space 3}0.236{col 54}{space 4}-.3440112{col 67}{space 3}  1.39363
+{txt}{space 12} {c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} .1576602{col 26}{space 2} .2178404{col 37}{space 1}    0.72{col 46}{space 3}0.469{col 54}{space 4}-.2692993{col 67}{space 3} .5846196
+{txt}{space 12} {c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .0602534{col 26}{space 2} .3845377{col 37}{space 1}    0.16{col 46}{space 3}0.875{col 54}{space 4}-.6934824{col 67}{space 3} .8139892
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}  -.00866{col 26}{space 2} .2090799{col 37}{space 1}   -0.04{col 46}{space 3}0.967{col 54}{space 4}-.4184491{col 67}{space 3} .4011291
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2371938{col 26}{space 2} .1988903{col 37}{space 1}    1.19{col 46}{space 3}0.233{col 54}{space 4}-.1526282{col 67}{space 3} .6270157
+{txt}{space 12} {c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} -.330732{col 26}{space 2} .2543392{col 37}{space 1}   -1.30{col 46}{space 3}0.193{col 54}{space 4}-.8292327{col 67}{space 3} .1677688
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.2892227{col 26}{space 2}  .230133{col 37}{space 1}   -1.26{col 46}{space 3}0.209{col 54}{space 4}-.7402895{col 67}{space 3}  .161844
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.4388605{col 26}{space 2} .2709825{col 37}{space 1}   -1.62{col 46}{space 3}0.105{col 54}{space 4}-.9699869{col 67}{space 3} .0922659
+{txt}{space 12} {c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.7552231{col 26}{space 2} .1841182{col 37}{space 1}   -4.10{col 46}{space 3}0.000{col 54}{space 4}-1.116127{col 67}{space 3}-.3943195
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.6394964{col 26}{space 2} .2507962{col 37}{space 1}   -2.55{col 46}{space 3}0.011{col 54}{space 4}-1.131072{col 67}{space 3}-.1479205
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.435624{col 26}{space 2} .6160252{col 37}{space 1}   -2.33{col 46}{space 3}0.020{col 54}{space 4}-2.645797{col 67}{space 3}  -.22545
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.063144{col 26}{space 2} .2784527{col 37}{space 1}   -3.82{col 46}{space 3}0.000{col 54}{space 4}-1.608902{col 67}{space 3}-.5173867
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0124
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0932
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    498.37
+{txt}{col 49}        avg{col 67}= {res}3133120.70
+{txt}{col 49}        max{col 67}= {res}  2.48e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}309221.7{txt}){col 67}= {res}      3.79
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}EEAA {c |}{col 14}{res}{space 2} .0137852{col 26}{space 2} .0119344{col 37}{space 1}    1.16{col 46}{space 3}0.248{col 54}{space 4}-.0096058{col 67}{space 3} .0371762
+{txt}{space 12} {c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.4628811{col 26}{space 2} .1817879{col 37}{space 1}   -2.55{col 46}{space 3}0.011{col 54}{space 4}-.8191789{col 67}{space 3}-.1065832
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.7080643{col 26}{space 2} .2324308{col 37}{space 1}   -3.05{col 46}{space 3}0.002{col 54}{space 4}-1.163621{col 67}{space 3}-.2525077
+{txt}{space 12} {c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .0601192{col 26}{space 2} .1823865{col 37}{space 1}    0.33{col 46}{space 3}0.742{col 54}{space 4}-.2973519{col 67}{space 3} .4175902
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}  .543234{col 26}{space 2} .4430764{col 37}{space 1}    1.23{col 46}{space 3}0.220{col 54}{space 4}-.3251818{col 67}{space 3}  1.41165
+{txt}{space 12} {c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} .1517053{col 26}{space 2} .2172749{col 37}{space 1}    0.70{col 46}{space 3}0.485{col 54}{space 4}-.2741457{col 67}{space 3} .5775563
+{txt}{space 12} {c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .0799786{col 26}{space 2} .3843927{col 37}{space 1}    0.21{col 46}{space 3}0.835{col 54}{space 4}-.6734964{col 67}{space 3} .8334536
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0061983{col 26}{space 2} .2093147{col 37}{space 1}   -0.03{col 46}{space 3}0.976{col 54}{space 4}-.4164478{col 67}{space 3} .4040513
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2376033{col 26}{space 2} .1988837{col 37}{space 1}    1.19{col 46}{space 3}0.232{col 54}{space 4}-.1522062{col 67}{space 3} .6274128
+{txt}{space 12} {c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.3275275{col 26}{space 2} .2544398{col 37}{space 1}   -1.29{col 46}{space 3}0.198{col 54}{space 4}-.8262254{col 67}{space 3} .1711704
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.2850328{col 26}{space 2} .2300206{col 37}{space 1}   -1.24{col 46}{space 3}0.215{col 54}{space 4}-.7358822{col 67}{space 3} .1658165
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.4233908{col 26}{space 2} .2713625{col 37}{space 1}   -1.56{col 46}{space 3}0.119{col 54}{space 4}-.9552643{col 67}{space 3} .1084826
+{txt}{space 12} {c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.7546844{col 26}{space 2}  .184187{col 37}{space 1}   -4.10{col 46}{space 3}0.000{col 54}{space 4}-1.115727{col 67}{space 3}-.3936417
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.6306385{col 26}{space 2}   .25074{col 37}{space 1}   -2.52{col 46}{space 3}0.012{col 54}{space 4}-1.122099{col 67}{space 3}-.1391776
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.415236{col 26}{space 2} .6168234{col 37}{space 1}   -2.29{col 46}{space 3}0.022{col 54}{space 4} -2.62713{col 67}{space 3}-.2033409
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.080742{col 26}{space 2} .2788494{col 37}{space 1}   -3.88{col 46}{space 3}0.000{col 54}{space 4}-1.627278{col 67}{space 3}-.5342075
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0121
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0918
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    513.44
+{txt}{col 49}        avg{col 67}= {res}4184794.80
+{txt}{col 49}        max{col 67}= {res}  2.42e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}323840.8{txt}){col 67}= {res}      3.72
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSI~E_BR{col 15}{c |} Coefficient{col 27}  Std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0            {col 15}{txt}{c |}  (base outcome)
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1             {txt}{c |}
+AgeAccelPheno {c |}{col 15}{res}{space 2} .0030539{col 27}{space 2} .0116084{col 38}{space 1}    0.26{col 47}{space 3}0.792{col 55}{space 4}-.0196981{col 68}{space 3} .0258059
+{txt}{space 13} {c |}
+{space 7}AGE_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.4682492{col 27}{space 2} .1819795{col 38}{space 1}   -2.57{col 47}{space 3}0.010{col 55}{space 4}-.8249226{col 68}{space 3}-.1115758
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.7103162{col 27}{space 2} .2326597{col 38}{space 1}   -3.05{col 47}{space 3}0.002{col 55}{space 4}-1.166321{col 68}{space 3}-.2543111
+{txt}{space 13} {c |}
+{space 7}RACEBR {c |}
+{space 11}1  {c |}{col 15}{res}{space 2} .0391161{col 27}{space 2} .1823322{col 38}{space 1}    0.21{col 47}{space 3}0.830{col 55}{space 4}-.3182486{col 68}{space 3} .3964809
+{txt}{space 11}2  {c |}{col 15}{res}{space 2} .5354196{col 27}{space 2} .4431852{col 38}{space 1}    1.21{col 47}{space 3}0.227{col 55}{space 4}-.3332094{col 68}{space 3} 1.404049
+{txt}{space 13} {c |}
+{space 2}1.ETHNICITY {c |}{col 15}{res}{space 2} .1690444{col 27}{space 2}  .216784{col 38}{space 1}    0.78{col 47}{space 3}0.436{col 55}{space 4}-.2558444{col 68}{space 3} .5939333
+{txt}{space 13} {c |}
+{space 3}MARITAL_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2} .0738101{col 27}{space 2} .3847914{col 38}{space 1}    0.19{col 47}{space 3}0.848{col 55}{space 4}-.6804321{col 68}{space 3} .8280523
+{txt}{space 11}3  {c |}{col 15}{res}{space 2} -.009426{col 27}{space 2} .2091644{col 38}{space 1}   -0.05{col 47}{space 3}0.964{col 55}{space 4} -.419381{col 68}{space 3} .4005289
+{txt}{space 11}4  {c |}{col 15}{res}{space 2} .2420483{col 27}{space 2} .1987391{col 38}{space 1}    1.22{col 47}{space 3}0.223{col 55}{space 4}-.1474774{col 68}{space 3} .6315741
+{txt}{space 13} {c |}
+{space 6}EDUC_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.3324984{col 27}{space 2} .2543027{col 38}{space 1}   -1.31{col 47}{space 3}0.191{col 55}{space 4}-.8309276{col 68}{space 3} .1659308
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.2915451{col 27}{space 2} .2300113{col 38}{space 1}   -1.27{col 47}{space 3}0.205{col 55}{space 4}-.7423743{col 68}{space 3} .1592841
+{txt}{space 11}4  {c |}{col 15}{res}{space 2}-.4392441{col 27}{space 2} .2712434{col 38}{space 1}   -1.62{col 47}{space 3}0.105{col 55}{space 4}-.9708827{col 68}{space 3} .0923946
+{txt}{space 13} {c |}
+{space 4}INCOME_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}  -.75428{col 27}{space 2} .1840989{col 38}{space 1}   -4.10{col 47}{space 3}0.000{col 55}{space 4}-1.115146{col 68}{space 3}-.3934141
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.6384381{col 27}{space 2} .2508016{col 38}{space 1}   -2.55{col 47}{space 3}0.011{col 55}{space 4}-1.130023{col 68}{space 3}-.1468533
+{txt}{space 11}4  {c |}{col 15}{res}{space 2}-1.425442{col 27}{space 2} .6162066{col 38}{space 1}   -2.31{col 47}{space 3}0.021{col 55}{space 4}-2.636039{col 68}{space 3} -.214846
+{txt}{space 13} {c |}
+{space 8}_cons {c |}{col 15}{res}{space 2}-1.063342{col 27}{space 2} .2783395{col 38}{space 1}   -3.82{col 47}{space 3}0.000{col 55}{space 4}-1.608877{col 68}{space 3}-.5178059
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0119
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0916
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    515.77
+{txt}{col 49}        avg{col 67}= {res}4731957.42
+{txt}{col 49}        max{col 67}= {res}  4.28e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}335310.7{txt}){col 67}= {res}      4.00
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BA~R{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0              {col 17}{txt}{c |}  (base outcome)
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1               {txt}{c |}
+AgeAccelGrimAge {c |}{col 17}{res}{space 2} .0420754{col 29}{space 2} .0192599{col 40}{space 1}    2.18{col 49}{space 3}0.029{col 57}{space 4} .0043266{col 70}{space 3} .0798241
+{txt}{space 15} {c |}
+{space 9}AGE_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.4716973{col 29}{space 2} .1818378{col 40}{space 1}   -2.59{col 49}{space 3}0.009{col 57}{space 4}-.8280928{col 70}{space 3}-.1153018
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.7156943{col 29}{space 2} .2325711{col 40}{space 1}   -3.08{col 49}{space 3}0.002{col 57}{space 4}-1.171526{col 70}{space 3}-.2598628
+{txt}{space 15} {c |}
+{space 9}RACEBR {c |}
+{space 13}1  {c |}{col 17}{res}{space 2}-.0036368{col 29}{space 2} .1836473{col 40}{space 1}   -0.02{col 49}{space 3}0.984{col 57}{space 4}-.3635791{col 70}{space 3} .3563056
+{txt}{space 13}2  {c |}{col 17}{res}{space 2} .4867179{col 29}{space 2} .4449972{col 40}{space 1}    1.09{col 49}{space 3}0.274{col 57}{space 4}-.3854621{col 70}{space 3} 1.358898
+{txt}{space 15} {c |}
+{space 4}1.ETHNICITY {c |}{col 17}{res}{space 2} .2026264{col 29}{space 2} .2174328{col 40}{space 1}    0.93{col 49}{space 3}0.351{col 57}{space 4} -.223534{col 70}{space 3} .6287868
+{txt}{space 15} {c |}
+{space 5}MARITAL_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2} .0661083{col 29}{space 2} .3841706{col 40}{space 1}    0.17{col 49}{space 3}0.863{col 57}{space 4}-.6869081{col 70}{space 3} .8191246
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.0478536{col 29}{space 2} .2102467{col 40}{space 1}   -0.23{col 49}{space 3}0.820{col 57}{space 4}-.4599297{col 70}{space 3} .3642225
+{txt}{space 13}4  {c |}{col 17}{res}{space 2}  .209224{col 29}{space 2} .1994789{col 40}{space 1}    1.05{col 49}{space 3}0.294{col 57}{space 4}-.1817531{col 70}{space 3} .6002012
+{txt}{space 15} {c |}
+{space 8}EDUC_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.3127784{col 29}{space 2} .2550009{col 40}{space 1}   -1.23{col 49}{space 3}0.220{col 57}{space 4}-.8125764{col 70}{space 3} .1870195
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.2807139{col 29}{space 2} .2304712{col 40}{space 1}   -1.22{col 49}{space 3}0.223{col 57}{space 4} -.732448{col 70}{space 3} .1710203
+{txt}{space 13}4  {c |}{col 17}{res}{space 2}-.3960636{col 29}{space 2} .2719253{col 40}{space 1}   -1.46{col 49}{space 3}0.145{col 57}{space 4}-.9290409{col 70}{space 3} .1369138
+{txt}{space 15} {c |}
+{space 6}INCOME_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.7528818{col 29}{space 2} .1840615{col 40}{space 1}   -4.09{col 49}{space 3}0.000{col 57}{space 4}-1.113679{col 70}{space 3}-.3920848
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.6382989{col 29}{space 2} .2505322{col 40}{space 1}   -2.55{col 49}{space 3}0.011{col 57}{space 4}-1.129353{col 70}{space 3}-.1472448
+{txt}{space 13}4  {c |}{col 17}{res}{space 2}-1.412114{col 29}{space 2} .6165404{col 40}{space 1}   -2.29{col 49}{space 3}0.022{col 57}{space 4}-2.623353{col 70}{space 3}-.2008748
+{txt}{space 15} {c |}
+{space 10}_cons {c |}{col 17}{res}{space 2}-1.064741{col 29}{space 2} .2791872{col 40}{space 1}   -3.81{col 49}{space 3}0.000{col 57}{space 4}-1.611939{col 70}{space 3}-.5175444
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. **********Model 3*********************************
+. 
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit DEPRESSION_BASELINE_BR `x' i.AGE_BR i.RACEBR i.ETHNICITY i.MARITAL_BR i.EDUC_BR i.INCOME_BR i.SMOKING_BR i.ALCOHOL_BR  i.BMIC_BR2 i.CVD_BR12 i.HT_BR12 i.DIAB_BR12 i.HYPERLIPIDEMIA_BR i.SRH_BR PHYSICAL_ACTIVITY_MET if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0165
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0980
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    452.07
+{txt}{col 49}        avg{col 67}= {res}  1.28e+07
+{txt}{col 49}        max{col 67}= {res}  3.29e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}370769.8{txt}){col 67}= {res}      3.67
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BASELINE~R{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 17}IEAA {c |}{col 23}{res}{space 2}-.0164398{col 35}{space 2} .0153256{col 46}{space 1}   -1.07{col 55}{space 3}0.283{col 63}{space 4}-.0464773{col 76}{space 3} .0135978
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}  -.34309{col 35}{space 2} .1894108{col 46}{space 1}   -1.81{col 55}{space 3}0.070{col 63}{space 4}-.7143287{col 76}{space 3} .0281488
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.5086876{col 35}{space 2} .2459362{col 46}{space 1}   -2.07{col 55}{space 3}0.039{col 63}{space 4}-.9907139{col 76}{space 3}-.0266612
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2} -.191361{col 35}{space 2} .1936041{col 46}{space 1}   -0.99{col 55}{space 3}0.323{col 63}{space 4}-.5708186{col 76}{space 3} .1880967
+{txt}{space 19}2  {c |}{col 23}{res}{space 2} .4074653{col 35}{space 2} .4600986{col 46}{space 1}    0.89{col 55}{space 3}0.376{col 63}{space 4}-.4943125{col 76}{space 3} 1.309243
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2} .1511509{col 35}{space 2} .2257613{col 46}{space 1}    0.67{col 55}{space 3}0.503{col 63}{space 4} -.291333{col 76}{space 3} .5936348
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0331133{col 35}{space 2} .4011692{col 46}{space 1}    0.08{col 55}{space 3}0.934{col 63}{space 4}-.7532029{col 76}{space 3} .8194294
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0131248{col 35}{space 2}   .21615{col 46}{space 1}   -0.06{col 55}{space 3}0.952{col 63}{space 4}-.4367717{col 76}{space 3}  .410522
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .1734152{col 35}{space 2} .2033242{col 46}{space 1}    0.85{col 55}{space 3}0.394{col 63}{space 4} -.225107{col 76}{space 3} .5719374
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}  -.13729{col 35}{space 2} .2647776{col 46}{space 1}   -0.52{col 55}{space 3}0.604{col 63}{space 4}-.6562585{col 76}{space 3} .3816785
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1485298{col 35}{space 2}  .241236{col 46}{space 1}   -0.62{col 55}{space 3}0.538{col 63}{space 4}-.6214139{col 76}{space 3} .3243543
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.1772112{col 35}{space 2}  .285148{col 46}{space 1}   -0.62{col 55}{space 3}0.534{col 63}{space 4}-.7361558{col 76}{space 3} .3817334
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.6255233{col 35}{space 2} .1916518{col 46}{space 1}   -3.26{col 55}{space 3}0.001{col 63}{space 4}-1.001189{col 76}{space 3}-.2498579
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.4241285{col 35}{space 2} .2610652{col 46}{space 1}   -1.62{col 55}{space 3}0.104{col 63}{space 4}-.9358212{col 76}{space 3} .0875641
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-1.108652{col 35}{space 2} .6336288{col 46}{space 1}   -1.75{col 55}{space 3}0.081{col 63}{space 4}-2.353876{col 76}{space 3} .1365711
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}  .149568{col 35}{space 2} .1833875{col 46}{space 1}    0.82{col 55}{space 3}0.415{col 63}{space 4} -.210241{col 76}{space 3}  .509377
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .6709521{col 35}{space 2} .2400771{col 46}{space 1}    2.79{col 55}{space 3}0.005{col 63}{space 4} .2003611{col 76}{space 3} 1.141543
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}  .321208{col 35}{space 2} .2562496{col 46}{space 1}    1.25{col 55}{space 3}0.210{col 63}{space 4}-.1811061{col 76}{space 3} .8235221
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1199547{col 35}{space 2} .2494322{col 46}{space 1}    0.48{col 55}{space 3}0.631{col 63}{space 4}-.3689924{col 76}{space 3} .6089017
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0660919{col 35}{space 2} .2816564{col 46}{space 1}   -0.23{col 55}{space 3}0.814{col 63}{space 4}-.6181326{col 76}{space 3} .4859487
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0428316{col 35}{space 2} .2349481{col 46}{space 1}    0.18{col 55}{space 3}0.855{col 63}{space 4}-.4176597{col 76}{space 3} .5033229
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .3339927{col 35}{space 2} .2241395{col 46}{space 1}    1.49{col 55}{space 3}0.136{col 63}{space 4} -.105315{col 76}{space 3} .7733004
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0461225{col 35}{space 2} .1990078{col 46}{space 1}    0.23{col 55}{space 3}0.817{col 63}{space 4}-.3439256{col 76}{space 3} .4361706
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1105224{col 35}{space 2} .1646725{col 46}{space 1}    0.67{col 55}{space 3}0.502{col 63}{space 4}-.2122297{col 76}{space 3} .4332746
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.2264662{col 35}{space 2} .1877778{col 46}{space 1}   -1.21{col 55}{space 3}0.228{col 63}{space 4}-.5945041{col 76}{space 3} .1415718
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0574606{col 35}{space 2}  .212813{col 46}{space 1}    0.27{col 55}{space 3}0.787{col 63}{space 4}-.3599095{col 76}{space 3} .4748307
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .9585719{col 35}{space 2} .1953338{col 46}{space 1}    4.91{col 55}{space 3}0.000{col 63}{space 4} .5757242{col 76}{space 3}  1.34142
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0142581{col 35}{space 2}  .007813{col 46}{space 1}   -1.82{col 55}{space 3}0.069{col 63}{space 4}  -.02961{col 76}{space 3} .0010938
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.837208{col 35}{space 2} .3884942{col 46}{space 1}   -4.73{col 55}{space 3}0.000{col 63}{space 4}-2.598645{col 76}{space 3}-1.075771
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0166
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1007
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    429.52
+{txt}{col 49}        avg{col 67}= {res}  4.47e+07
+{txt}{col 49}        max{col 67}= {res}  1.27e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}364162.4{txt}){col 67}= {res}      3.67
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BASELINE~R{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 17}EEAA {c |}{col 23}{res}{space 2} .0077681{col 35}{space 2} .0121626{col 46}{space 1}    0.64{col 55}{space 3}0.523{col 63}{space 4}-.0160701{col 76}{space 3} .0316063
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.3491663{col 35}{space 2} .1889929{col 46}{space 1}   -1.85{col 55}{space 3}0.065{col 63}{space 4} -.719586{col 76}{space 3} .0212534
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.5028329{col 35}{space 2} .2451792{col 46}{space 1}   -2.05{col 55}{space 3}0.040{col 63}{space 4}-.9833757{col 76}{space 3}-.0222902
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-.1740961{col 35}{space 2} .1943583{col 46}{space 1}   -0.90{col 55}{space 3}0.370{col 63}{space 4} -.555032{col 76}{space 3} .2068398
+{txt}{space 19}2  {c |}{col 23}{res}{space 2} .4467191{col 35}{space 2} .4579316{col 46}{space 1}    0.98{col 55}{space 3}0.329{col 63}{space 4}-.4508113{col 76}{space 3}  1.34425
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2} .1612884{col 35}{space 2} .2251685{col 46}{space 1}    0.72{col 55}{space 3}0.474{col 63}{space 4}-.2800336{col 76}{space 3} .6026105
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0514312{col 35}{space 2} .4000389{col 46}{space 1}    0.13{col 55}{space 3}0.898{col 63}{space 4}-.7326911{col 76}{space 3} .8355534
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0101796{col 35}{space 2} .2162273{col 46}{space 1}   -0.05{col 55}{space 3}0.962{col 63}{space 4}-.4339782{col 76}{space 3} .4136191
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .1775477{col 35}{space 2} .2032685{col 46}{space 1}    0.87{col 55}{space 3}0.382{col 63}{space 4}-.2208656{col 76}{space 3}  .575961
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.1413902{col 35}{space 2} .2642618{col 46}{space 1}   -0.54{col 55}{space 3}0.593{col 63}{space 4}-.6593472{col 76}{space 3} .3765668
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1534428{col 35}{space 2} .2406711{col 46}{space 1}   -0.64{col 55}{space 3}0.524{col 63}{space 4}-.6252237{col 76}{space 3} .3183382
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.1762281{col 35}{space 2} .2850179{col 46}{space 1}   -0.62{col 55}{space 3}0.536{col 63}{space 4}-.7349222{col 76}{space 3}  .382466
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.6314335{col 35}{space 2} .1914218{col 46}{space 1}   -3.30{col 55}{space 3}0.001{col 63}{space 4}-1.006648{col 76}{space 3}-.2562186
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.4221488{col 35}{space 2} .2608947{col 46}{space 1}   -1.62{col 55}{space 3}0.106{col 63}{space 4}-.9335047{col 76}{space 3} .0892072
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-1.099185{col 35}{space 2} .6342544{col 46}{space 1}   -1.73{col 55}{space 3}0.084{col 63}{space 4}-2.345813{col 76}{space 3}  .147444
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1575431{col 35}{space 2}   .18325{col 46}{space 1}    0.86{col 55}{space 3}0.390{col 63}{space 4}-.2019995{col 76}{space 3} .5170857
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .6636092{col 35}{space 2} .2401046{col 46}{space 1}    2.76{col 55}{space 3}0.006{col 63}{space 4} .1929671{col 76}{space 3} 1.134251
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .3033624{col 35}{space 2} .2561634{col 46}{space 1}    1.18{col 55}{space 3}0.236{col 63}{space 4}-.1987856{col 76}{space 3} .8055105
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1050933{col 35}{space 2} .2488376{col 46}{space 1}    0.42{col 55}{space 3}0.673{col 63}{space 4}-.3826874{col 76}{space 3}  .592874
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0712642{col 35}{space 2} .2813425{col 46}{space 1}   -0.25{col 55}{space 3}0.800{col 63}{space 4}  -.62269{col 76}{space 3} .4801617
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0484302{col 35}{space 2} .2348427{col 46}{space 1}    0.21{col 55}{space 3}0.837{col 63}{space 4}-.4118546{col 76}{space 3}  .508715
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .3233274{col 35}{space 2} .2237901{col 46}{space 1}    1.44{col 55}{space 3}0.149{col 63}{space 4}-.1152954{col 76}{space 3} .7619501
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0340475{col 35}{space 2} .1990446{col 46}{space 1}    0.17{col 55}{space 3}0.864{col 63}{space 4}-.3560728{col 76}{space 3} .4241677
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .0963875{col 35}{space 2} .1647349{col 46}{space 1}    0.59{col 55}{space 3}0.558{col 63}{space 4} -.226487{col 76}{space 3} .4192621
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.2332246{col 35}{space 2}   .18757{col 46}{space 1}   -1.24{col 55}{space 3}0.214{col 63}{space 4}-.6008553{col 76}{space 3}  .134406
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0571746{col 35}{space 2} .2125032{col 46}{space 1}    0.27{col 55}{space 3}0.788{col 63}{space 4}-.3595771{col 76}{space 3} .4739263
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .9554208{col 35}{space 2}  .195054{col 46}{space 1}    4.90{col 55}{space 3}0.000{col 63}{space 4} .5731216{col 76}{space 3}  1.33772
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0137624{col 35}{space 2} .0077905{col 46}{space 1}   -1.77{col 55}{space 3}0.078{col 63}{space 4}-.0290697{col 76}{space 3} .0015449
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.821006{col 35}{space 2} .3879988{col 46}{space 1}   -4.69{col 55}{space 3}0.000{col 63}{space 4}-2.581472{col 76}{space 3} -1.06054
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0165
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0999
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    436.07
+{txt}{col 49}        avg{col 67}= {res}  1.47e+07
+{txt}{col 49}        max{col 67}= {res}  4.03e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}367933.2{txt}){col 67}= {res}      3.65
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BASELINE~R{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 8}AgeAccelPheno {c |}{col 23}{res}{space 2}-.0024809{col 35}{space 2} .0120511{col 46}{space 1}   -0.21{col 55}{space 3}0.837{col 63}{space 4}-.0261007{col 76}{space 3} .0211388
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.3461743{col 35}{space 2} .1894794{col 46}{space 1}   -1.83{col 55}{space 3}0.068{col 63}{space 4}-.7175477{col 76}{space 3} .0251991
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} -.500012{col 35}{space 2} .2455227{col 46}{space 1}   -2.04{col 55}{space 3}0.042{col 63}{space 4}-.9812281{col 76}{space 3} -.018796
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-.1857645{col 35}{space 2}  .193543{col 46}{space 1}   -0.96{col 55}{space 3}0.337{col 63}{space 4}-.5651025{col 76}{space 3} .1935734
+{txt}{space 19}2  {c |}{col 23}{res}{space 2} .4370431{col 35}{space 2} .4586942{col 46}{space 1}    0.95{col 55}{space 3}0.341{col 63}{space 4} -.461982{col 76}{space 3} 1.336068
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}  .176155{col 35}{space 2} .2247227{col 46}{space 1}    0.78{col 55}{space 3}0.433{col 63}{space 4}-.2642935{col 76}{space 3} .6166035
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0406604{col 35}{space 2} .4012081{col 46}{space 1}    0.10{col 55}{space 3}0.919{col 63}{space 4}-.7457476{col 76}{space 3} .8270685
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0121572{col 35}{space 2} .2162078{col 46}{space 1}   -0.06{col 55}{space 3}0.955{col 63}{space 4}-.4359176{col 76}{space 3} .4116033
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}  .179564{col 35}{space 2} .2031146{col 46}{space 1}    0.88{col 55}{space 3}0.377{col 63}{space 4}-.2185469{col 76}{space 3}  .577675
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.1450746{col 35}{space 2} .2643661{col 46}{space 1}   -0.55{col 55}{space 3}0.583{col 63}{space 4}-.6632365{col 76}{space 3} .3730873
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1584019{col 35}{space 2} .2407993{col 46}{space 1}   -0.66{col 55}{space 3}0.511{col 63}{space 4} -.630431{col 76}{space 3} .3136272
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.1883762{col 35}{space 2} .2850717{col 46}{space 1}   -0.66{col 55}{space 3}0.509{col 63}{space 4}-.7471752{col 76}{space 3} .3704227
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.6300725{col 35}{space 2} .1913869{col 46}{space 1}   -3.29{col 55}{space 3}0.001{col 63}{space 4}-1.005216{col 76}{space 3}-.2549286
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.4261409{col 35}{space 2} .2609206{col 46}{space 1}   -1.63{col 55}{space 3}0.102{col 63}{space 4}-.9375481{col 76}{space 3} .0852662
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-1.099286{col 35}{space 2} .6339702{col 46}{space 1}   -1.73{col 55}{space 3}0.084{col 63}{space 4}-2.345303{col 76}{space 3} .1467309
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1552948{col 35}{space 2} .1833129{col 46}{space 1}    0.85{col 55}{space 3}0.397{col 63}{space 4}-.2043799{col 76}{space 3} .5149695
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .6733653{col 35}{space 2} .2410374{col 46}{space 1}    2.79{col 55}{space 3}0.005{col 63}{space 4} .2008888{col 76}{space 3} 1.145842
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .3115695{col 35}{space 2} .2558207{col 46}{space 1}    1.22{col 55}{space 3}0.223{col 63}{space 4}-.1899063{col 76}{space 3} .8130452
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}  .107427{col 35}{space 2} .2489548{col 46}{space 1}    0.43{col 55}{space 3}0.666{col 63}{space 4} -.380585{col 76}{space 3} .5954389
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0698788{col 35}{space 2} .2813824{col 46}{space 1}   -0.25{col 55}{space 3}0.804{col 63}{space 4}-.6213826{col 76}{space 3}  .481625
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0441632{col 35}{space 2} .2347615{col 46}{space 1}    0.19{col 55}{space 3}0.851{col 63}{space 4}-.4159622{col 76}{space 3} .5042886
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .3281092{col 35}{space 2} .2238663{col 46}{space 1}    1.47{col 55}{space 3}0.143{col 63}{space 4}-.1106626{col 76}{space 3} .7668811
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0389966{col 35}{space 2} .1989752{col 46}{space 1}    0.20{col 55}{space 3}0.845{col 63}{space 4}-.3509877{col 76}{space 3} .4289809
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1061982{col 35}{space 2} .1651352{col 46}{space 1}    0.64{col 55}{space 3}0.520{col 63}{space 4}-.2174609{col 76}{space 3} .4298574
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.2298529{col 35}{space 2} .1877678{col 46}{space 1}   -1.22{col 55}{space 3}0.221{col 63}{space 4}-.5978712{col 76}{space 3} .1381655
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0562193{col 35}{space 2} .2123025{col 46}{space 1}    0.26{col 55}{space 3}0.791{col 63}{space 4}-.3601195{col 76}{space 3}  .472558
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .9537438{col 35}{space 2} .1952342{col 46}{space 1}    4.89{col 55}{space 3}0.000{col 63}{space 4} .5710913{col 76}{space 3} 1.336396
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}   -.0141{col 35}{space 2} .0078052{col 46}{space 1}   -1.81{col 55}{space 3}0.071{col 63}{space 4}-.0294364{col 76}{space 3} .0012365
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.823095{col 35}{space 2} .3885304{col 46}{space 1}   -4.69{col 55}{space 3}0.000{col 63}{space 4}-2.584603{col 76}{space 3}-1.061587
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0170
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0995
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    439.57
+{txt}{col 49}        avg{col 67}= {res}  1.06e+07
+{txt}{col 49}        max{col 67}= {res}  2.81e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}348776.5{txt}){col 67}= {res}      3.65
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BASELINE~R{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 6}AgeAccelGrimAge {c |}{col 23}{res}{space 2} .0076005{col 35}{space 2}  .024253{col 46}{space 1}    0.31{col 55}{space 3}0.754{col 63}{space 4}-.0399384{col 76}{space 3} .0551395
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.3532903{col 35}{space 2} .1894799{col 46}{space 1}   -1.86{col 55}{space 3}0.062{col 63}{space 4}-.7246644{col 76}{space 3} .0180838
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.5102689{col 35}{space 2} .2465653{col 46}{space 1}   -2.07{col 55}{space 3}0.038{col 63}{space 4}-.9935281{col 76}{space 3}-.0270097
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-.1919997{col 35}{space 2} .1939973{col 46}{space 1}   -0.99{col 55}{space 3}0.322{col 63}{space 4} -.572228{col 76}{space 3} .1882286
+{txt}{space 19}2  {c |}{col 23}{res}{space 2} .4342724{col 35}{space 2} .4584852{col 46}{space 1}    0.95{col 55}{space 3}0.344{col 63}{space 4}-.4643428{col 76}{space 3} 1.332888
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2} .1743048{col 35}{space 2} .2243754{col 46}{space 1}    0.78{col 55}{space 3}0.437{col 63}{space 4}-.2654628{col 76}{space 3} .6140724
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0510605{col 35}{space 2} .4000812{col 46}{space 1}    0.13{col 55}{space 3}0.898{col 63}{space 4}-.7331422{col 76}{space 3} .8352631
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0152572{col 35}{space 2} .2162122{col 46}{space 1}   -0.07{col 55}{space 3}0.944{col 63}{space 4}-.4390262{col 76}{space 3} .4085119
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .1757624{col 35}{space 2} .2036473{col 46}{space 1}    0.86{col 55}{space 3}0.388{col 63}{space 4}-.2233948{col 76}{space 3} .5749196
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} -.140355{col 35}{space 2}  .264627{col 46}{space 1}   -0.53{col 55}{space 3}0.596{col 63}{space 4}-.6590286{col 76}{space 3} .3783186
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1540611{col 35}{space 2} .2410271{col 46}{space 1}   -0.64{col 55}{space 3}0.523{col 63}{space 4}-.6265436{col 76}{space 3} .3184214
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.1780435{col 35}{space 2}  .285859{col 46}{space 1}   -0.62{col 55}{space 3}0.533{col 63}{space 4}-.7383897{col 76}{space 3} .3823027
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.6295847{col 35}{space 2} .1913003{col 46}{space 1}   -3.29{col 55}{space 3}0.001{col 63}{space 4}-1.004559{col 76}{space 3}-.2546105
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} -.426297{col 35}{space 2} .2608104{col 46}{space 1}   -1.63{col 55}{space 3}0.102{col 63}{space 4}-.9374877{col 76}{space 3} .0848937
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} -1.09944{col 35}{space 2} .6337835{col 46}{space 1}   -1.73{col 55}{space 3}0.083{col 63}{space 4}-2.345063{col 76}{space 3} .1461824
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1394869{col 35}{space 2} .1907557{col 46}{space 1}    0.73{col 55}{space 3}0.465{col 63}{space 4}-.2348813{col 76}{space 3} .5138551
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .6172822{col 35}{space 2} .2927351{col 46}{space 1}    2.11{col 55}{space 3}0.035{col 63}{space 4} .0433513{col 76}{space 3} 1.191213
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .3093465{col 35}{space 2} .2558797{col 46}{space 1}    1.21{col 55}{space 3}0.227{col 63}{space 4}-.1922434{col 76}{space 3} .8109364
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1087729{col 35}{space 2} .2489243{col 46}{space 1}    0.44{col 55}{space 3}0.662{col 63}{space 4}-.3791742{col 76}{space 3} .5967201
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0704146{col 35}{space 2}  .281433{col 46}{space 1}   -0.25{col 55}{space 3}0.802{col 63}{space 4}-.6220178{col 76}{space 3} .4811886
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0461791{col 35}{space 2} .2347966{col 46}{space 1}    0.20{col 55}{space 3}0.844{col 63}{space 4}-.4140152{col 76}{space 3} .5063734
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}  .324413{col 35}{space 2} .2237804{col 46}{space 1}    1.45{col 55}{space 3}0.147{col 63}{space 4}-.1141902{col 76}{space 3} .7630163
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0400078{col 35}{space 2} .1989269{col 46}{space 1}    0.20{col 55}{space 3}0.841{col 63}{space 4}-.3498818{col 76}{space 3} .4298974
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1002337{col 35}{space 2} .1646712{col 46}{space 1}    0.61{col 55}{space 3}0.543{col 63}{space 4}-.2225161{col 76}{space 3} .4229835
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.2369112{col 35}{space 2} .1883899{col 46}{space 1}   -1.26{col 55}{space 3}0.209{col 63}{space 4}-.6061491{col 76}{space 3} .1323267
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0582688{col 35}{space 2} .2122396{col 46}{space 1}    0.27{col 55}{space 3}0.784{col 63}{space 4}-.3579399{col 76}{space 3} .4744775
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .9539846{col 35}{space 2} .1950392{col 46}{space 1}    4.89{col 55}{space 3}0.000{col 63}{space 4} .5717144{col 76}{space 3} 1.336255
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0139541{col 35}{space 2} .0077965{col 46}{space 1}   -1.79{col 55}{space 3}0.074{col 63}{space 4}-.0292747{col 76}{space 3} .0013664
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.803633{col 35}{space 2} .3910645{col 46}{space 1}   -4.61{col 55}{space 3}0.000{col 63}{space 4}-2.570107{col 76}{space 3}-1.037158
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. *************Y=ANTIDEPRESSANT_BR******************
+. 
+. ***********MODEL 1***************
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit ANTIDEPRESSANT_BR `x' if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.99
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.3189
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}IEAA {c |}{col 14}{res}{space 2} .0172251{col 26}{space 2} .0172801{col 37}{space 1}    1.00{col 46}{space 3}0.319{col 54}{space 4}-.0166433{col 67}{space 3} .0510935
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.574662{col 26}{space 2} .0896247{col 37}{space 1}  -28.73{col 46}{space 3}0.000{col 54}{space 4}-2.750324{col 67}{space 3}-2.399001
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      1.44
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.2297
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}EEAA {c |}{col 14}{res}{space 2} .0168949{col 26}{space 2} .0140646{col 37}{space 1}    1.20{col 46}{space 3}0.230{col 54}{space 4}-.0106712{col 67}{space 3}  .044461
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.571695{col 26}{space 2} .0894712{col 37}{space 1}  -28.74{col 46}{space 3}0.000{col 54}{space 4}-2.747055{col 67}{space 3}-2.396334
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.10
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.7561
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRES~BR{col 15}{c |} Coefficient{col 27}  Std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0            {col 15}{txt}{c |}  (base outcome)
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1             {txt}{c |}
+AgeAccelPheno {c |}{col 15}{res}{space 2}-.0042886{col 27}{space 2} .0138043{col 38}{space 1}   -0.31{col 47}{space 3}0.756{col 55}{space 4}-.0313445{col 68}{space 3} .0227673
+{txt}{space 8}_cons {c |}{col 15}{res}{space 2}-2.571623{col 27}{space 2} .0894008{col 38}{space 1}  -28.77{col 47}{space 3}0.000{col 55}{space 4}-2.746845{col 68}{space 3}-2.396401
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      4.01
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0453
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRESSA~BR{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0              {col 17}{txt}{c |}  (base outcome)
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1               {txt}{c |}
+AgeAccelGrimAge {c |}{col 17}{res}{space 2} .0445448{col 29}{space 2} .0222526{col 40}{space 1}    2.00{col 49}{space 3}0.045{col 57}{space 4} .0009306{col 70}{space 3}  .088159
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}-2.580958{col 29}{space 2}  .090157{col 40}{space 1}  -28.63{col 49}{space 3}0.000{col 57}{space 4}-2.757663{col 70}{space 3}-2.404254
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. ***********MODEL 2: ADJUSTED FOR DEMOGRAPHICS***************
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit ANTIDEPRESSANT_BR `x' i.AGE_BR i.RACEBR i.ETHNICITY i.MARITAL_BR i.EDUC_BR i.INCOME_BR if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0103
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0583
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,238.71
+{txt}{col 49}        avg{col 67}= {res}  1.79e+08
+{txt}{col 49}        max{col 67}= {res}  1.40e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}444432.8{txt}){col 67}= {res}      1.79
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0302
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}IEAA {c |}{col 14}{res}{space 2} .0168357{col 26}{space 2} .0181889{col 37}{space 1}    0.93{col 46}{space 3}0.355{col 54}{space 4} -.018814{col 67}{space 3} .0524853
+{txt}{space 12} {c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.1003216{col 26}{space 2} .2329364{col 37}{space 1}   -0.43{col 46}{space 3}0.667{col 54}{space 4}-.5568687{col 67}{space 3} .3562255
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.2473859{col 26}{space 2} .2811927{col 37}{space 1}   -0.88{col 46}{space 3}0.379{col 54}{space 4}-.7985135{col 67}{space 3} .3037417
+{txt}{space 12} {c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} -.896003{col 26}{space 2} .2456352{col 37}{space 1}   -3.65{col 46}{space 3}0.000{col 54}{space 4}-1.377439{col 67}{space 3}-.4145668
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}-1.369759{col 26}{space 2} 1.025298{col 37}{space 1}   -1.34{col 46}{space 3}0.182{col 54}{space 4}-3.379305{col 67}{space 3}  .639788
+{txt}{space 12} {c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2}-.1190913{col 26}{space 2}    .2675{col 37}{space 1}   -0.45{col 46}{space 3}0.656{col 54}{space 4}-.6433817{col 67}{space 3} .4051991
+{txt}{space 12} {c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.9029691{col 26}{space 2} .7351314{col 37}{space 1}   -1.23{col 46}{space 3}0.219{col 54}{space 4}  -2.3438{col 67}{space 3} .5378621
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .5155628{col 26}{space 2} .2404599{col 37}{space 1}    2.14{col 46}{space 3}0.032{col 54}{space 4} .0442686{col 67}{space 3} .9868569
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.0384042{col 26}{space 2}  .248534{col 37}{space 1}   -0.15{col 46}{space 3}0.877{col 54}{space 4}-.5255225{col 67}{space 3}  .448714
+{txt}{space 12} {c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .4543966{col 26}{space 2} .3754154{col 37}{space 1}    1.21{col 46}{space 3}0.226{col 54}{space 4}-.2814042{col 67}{space 3} 1.190197
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .4340713{col 26}{space 2} .3555538{col 37}{space 1}    1.22{col 46}{space 3}0.222{col 54}{space 4} -.262804{col 67}{space 3} 1.130947
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2924909{col 26}{space 2} .3897841{col 37}{space 1}    0.75{col 46}{space 3}0.453{col 54}{space 4}-.4714727{col 67}{space 3} 1.056454
+{txt}{space 12} {c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2192313{col 26}{space 2} .2262925{col 37}{space 1}   -0.97{col 46}{space 3}0.333{col 54}{space 4}-.6631902{col 67}{space 3} .2247276
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.3633462{col 26}{space 2} .3122281{col 37}{space 1}   -1.16{col 46}{space 3}0.245{col 54}{space 4}-.9753332{col 67}{space 3} .2486409
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.3639405{col 26}{space 2}  .576055{col 37}{space 1}   -0.63{col 46}{space 3}0.528{col 54}{space 4}-1.493544{col 67}{space 3} .7656634
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.456143{col 26}{space 2} .4086984{col 37}{space 1}   -6.01{col 46}{space 3}0.000{col 54}{space 4}-3.257178{col 67}{space 3}-1.655109
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0103
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0580
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,253.48
+{txt}{col 49}        avg{col 67}= {res}  1.14e+08
+{txt}{col 49}        max{col 67}= {res}  1.51e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}447331.7{txt}){col 67}= {res}      1.77
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0322
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}EEAA {c |}{col 14}{res}{space 2} .0107364{col 26}{space 2} .0147593{col 37}{space 1}    0.73{col 46}{space 3}0.467{col 54}{space 4}-.0181913{col 67}{space 3} .0396641
+{txt}{space 12} {c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.0994392{col 26}{space 2}  .233087{col 37}{space 1}   -0.43{col 46}{space 3}0.670{col 54}{space 4}-.5562814{col 67}{space 3} .3574031
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.2525039{col 26}{space 2} .2812717{col 37}{space 1}   -0.90{col 46}{space 3}0.369{col 54}{space 4}-.8037863{col 67}{space 3} .2987784
+{txt}{space 12} {c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}-.8841283{col 26}{space 2} .2465724{col 37}{space 1}   -3.59{col 46}{space 3}0.000{col 54}{space 4}-1.367401{col 67}{space 3}-.4008553
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} -1.38865{col 26}{space 2} 1.024791{col 37}{space 1}   -1.36{col 46}{space 3}0.175{col 54}{space 4}-3.397204{col 67}{space 3} .6199042
+{txt}{space 12} {c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2}-.1580427{col 26}{space 2} .2668583{col 37}{space 1}   -0.59{col 46}{space 3}0.554{col 54}{space 4}-.6810755{col 67}{space 3}   .36499
+{txt}{space 12} {c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} -.905824{col 26}{space 2} .7349583{col 37}{space 1}   -1.23{col 46}{space 3}0.218{col 54}{space 4}-2.346316{col 67}{space 3}  .534668
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .5158238{col 26}{space 2} .2405188{col 37}{space 1}    2.14{col 46}{space 3}0.032{col 54}{space 4} .0444144{col 67}{space 3} .9872332
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.0490822{col 26}{space 2} .2484569{col 37}{space 1}   -0.20{col 46}{space 3}0.843{col 54}{space 4}-.5360493{col 67}{space 3} .4378849
+{txt}{space 12} {c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .4586676{col 26}{space 2} .3754316{col 37}{space 1}    1.22{col 46}{space 3}0.222{col 54}{space 4}-.2771651{col 67}{space 3}   1.1945
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .4452971{col 26}{space 2}  .355727{col 37}{space 1}    1.25{col 46}{space 3}0.211{col 54}{space 4}-.2519179{col 67}{space 3} 1.142512
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .3116004{col 26}{space 2} .3902615{col 37}{space 1}    0.80{col 46}{space 3}0.425{col 54}{space 4}-.4532988{col 67}{space 3}   1.0765
+{txt}{space 12} {c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} -.215604{col 26}{space 2} .2263911{col 37}{space 1}   -0.95{col 46}{space 3}0.341{col 54}{space 4}-.6597513{col 67}{space 3} .2285432
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.3534132{col 26}{space 2} .3121934{col 37}{space 1}   -1.13{col 46}{space 3}0.258{col 54}{space 4}-.9653338{col 67}{space 3} .2585074
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.3598135{col 26}{space 2} .5760877{col 37}{space 1}   -0.62{col 46}{space 3}0.532{col 54}{space 4}-1.489471{col 67}{space 3}  .769844
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.460352{col 26}{space 2} .4090292{col 37}{space 1}   -6.02{col 46}{space 3}0.000{col 54}{space 4}-3.262035{col 67}{space 3}-1.658669
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0102
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0576
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,268.97
+{txt}{col 49}        avg{col 67}= {res}  1.75e+08
+{txt}{col 49}        max{col 67}= {res}  1.49e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}452210.8{txt}){col 67}= {res}      1.74
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0363
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRES~BR{col 15}{c |} Coefficient{col 27}  Std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0            {col 15}{txt}{c |}  (base outcome)
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1             {txt}{c |}
+AgeAccelPheno {c |}{col 15}{res}{space 2}  -.00365{col 27}{space 2} .0145405{col 38}{space 1}   -0.25{col 47}{space 3}0.802{col 55}{space 4}-.0321489{col 68}{space 3} .0248489
+{txt}{space 13} {c |}
+{space 7}AGE_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.0968207{col 27}{space 2} .2335594{col 38}{space 1}   -0.41{col 47}{space 3}0.678{col 55}{space 4}-.5545889{col 68}{space 3} .3609475
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.2548686{col 27}{space 2} .2815966{col 38}{space 1}   -0.91{col 47}{space 3}0.365{col 55}{space 4}-.8067879{col 68}{space 3} .2970507
+{txt}{space 13} {c |}
+{space 7}RACEBR {c |}
+{space 11}1  {c |}{col 15}{res}{space 2}-.8951113{col 27}{space 2} .2463193{col 38}{space 1}   -3.63{col 47}{space 3}0.000{col 55}{space 4}-1.377888{col 68}{space 3}-.4123344
+{txt}{space 11}2  {c |}{col 15}{res}{space 2}-1.394117{col 27}{space 2}   1.0248{col 38}{space 1}   -1.36{col 47}{space 3}0.174{col 55}{space 4}-3.402687{col 68}{space 3}  .614454
+{txt}{space 13} {c |}
+{space 2}1.ETHNICITY {c |}{col 15}{res}{space 2}-.1437389{col 27}{space 2} .2663914{col 38}{space 1}   -0.54{col 47}{space 3}0.589{col 55}{space 4}-.6658565{col 68}{space 3} .3783786
+{txt}{space 13} {c |}
+{space 3}MARITAL_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.9136663{col 27}{space 2} .7351559{col 38}{space 1}   -1.24{col 47}{space 3}0.214{col 55}{space 4}-2.354546{col 68}{space 3}  .527213
+{txt}{space 11}3  {c |}{col 15}{res}{space 2} .5135919{col 27}{space 2} .2404544{col 38}{space 1}    2.14{col 47}{space 3}0.033{col 55}{space 4} .0423085{col 68}{space 3} .9848753
+{txt}{space 11}4  {c |}{col 15}{res}{space 2}-.0472016{col 27}{space 2} .2483748{col 38}{space 1}   -0.19{col 47}{space 3}0.849{col 55}{space 4}-.5340078{col 68}{space 3} .4396046
+{txt}{space 13} {c |}
+{space 6}EDUC_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2} .4512654{col 27}{space 2} .3752914{col 38}{space 1}    1.20{col 47}{space 3}0.229{col 55}{space 4}-.2842924{col 68}{space 3} 1.186823
+{txt}{space 11}3  {c |}{col 15}{res}{space 2} .4319817{col 27}{space 2} .3558677{col 38}{space 1}    1.21{col 47}{space 3}0.225{col 55}{space 4}-.2655088{col 68}{space 3} 1.129472
+{txt}{space 11}4  {c |}{col 15}{res}{space 2} .2871731{col 27}{space 2} .3904527{col 38}{space 1}    0.74{col 47}{space 3}0.462{col 55}{space 4}-.4781009{col 68}{space 3} 1.052447
+{txt}{space 13} {c |}
+{space 4}INCOME_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.2186735{col 27}{space 2}  .226388{col 38}{space 1}   -0.97{col 47}{space 3}0.334{col 55}{space 4}-.6628095{col 68}{space 3} .2254625
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.3626009{col 27}{space 2} .3120468{col 38}{space 1}   -1.16{col 47}{space 3}0.245{col 55}{space 4}-.9742308{col 68}{space 3}  .249029
+{txt}{space 11}4  {c |}{col 15}{res}{space 2}-.3738697{col 27}{space 2}  .575865{col 38}{space 1}   -0.65{col 47}{space 3}0.516{col 55}{space 4}-1.503078{col 68}{space 3} .7553382
+{txt}{space 13} {c |}
+{space 8}_cons {c |}{col 15}{res}{space 2}-2.442732{col 27}{space 2} .4080954{col 38}{space 1}   -5.99{col 47}{space 3}0.000{col 55}{space 4}-3.242585{col 68}{space 3} -1.64288
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0104
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0577
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,264.58
+{txt}{col 49}        avg{col 67}= {res}  5.66e+08
+{txt}{col 49}        max{col 67}= {res}  6.22e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}438066.0{txt}){col 67}= {res}      2.11
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0071
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRESSA~BR{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0              {col 17}{txt}{c |}  (base outcome)
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1               {txt}{c |}
+AgeAccelGrimAge {c |}{col 17}{res}{space 2}  .056832{col 29}{space 2}  .023227{col 40}{space 1}    2.45{col 49}{space 3}0.014{col 57}{space 4}  .011308{col 70}{space 3}  .102356
+{txt}{space 15} {c |}
+{space 9}AGE_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.1039708{col 29}{space 2} .2332952{col 40}{space 1}   -0.45{col 49}{space 3}0.656{col 57}{space 4}-.5612211{col 70}{space 3} .3532795
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.2612445{col 29}{space 2}  .281516{col 40}{space 1}   -0.93{col 49}{space 3}0.353{col 57}{space 4}-.8130057{col 70}{space 3} .2905168
+{txt}{space 15} {c |}
+{space 9}RACEBR {c |}
+{space 13}1  {c |}{col 17}{res}{space 2}-.9684652{col 29}{space 2} .2485001{col 40}{space 1}   -3.90{col 49}{space 3}0.000{col 57}{space 4}-1.455517{col 70}{space 3}-.4814139
+{txt}{space 13}2  {c |}{col 17}{res}{space 2}-1.482947{col 29}{space 2} 1.027195{col 40}{space 1}   -1.44{col 49}{space 3}0.149{col 57}{space 4}-3.496212{col 70}{space 3}  .530319
+{txt}{space 15} {c |}
+{space 4}1.ETHNICITY {c |}{col 17}{res}{space 2}-.1002072{col 29}{space 2} .2670412{col 40}{space 1}   -0.38{col 49}{space 3}0.707{col 57}{space 4}-.6235984{col 70}{space 3}  .423184
+{txt}{space 15} {c |}
+{space 5}MARITAL_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.9265783{col 29}{space 2} .7352046{col 40}{space 1}   -1.26{col 49}{space 3}0.208{col 57}{space 4}-2.367553{col 70}{space 3} .5143964
+{txt}{space 13}3  {c |}{col 17}{res}{space 2} .4681548{col 29}{space 2} .2416637{col 40}{space 1}    1.94{col 49}{space 3}0.053{col 57}{space 4} -.005499{col 70}{space 3} .9418086
+{txt}{space 13}4  {c |}{col 17}{res}{space 2}-.0888692{col 29}{space 2} .2494248{col 40}{space 1}   -0.36{col 49}{space 3}0.722{col 57}{space 4}-.5777336{col 70}{space 3} .3999953
+{txt}{space 15} {c |}
+{space 8}EDUC_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}  .478974{col 29}{space 2} .3764144{col 40}{space 1}    1.27{col 49}{space 3}0.203{col 57}{space 4}-.2587849{col 70}{space 3} 1.216733
+{txt}{space 13}3  {c |}{col 17}{res}{space 2} .4603789{col 29}{space 2} .3563577{col 40}{space 1}    1.29{col 49}{space 3}0.196{col 57}{space 4}-.2380719{col 70}{space 3}  1.15883
+{txt}{space 13}4  {c |}{col 17}{res}{space 2} .3538623{col 29}{space 2} .3910225{col 40}{space 1}    0.90{col 49}{space 3}0.365{col 57}{space 4}-.4125287{col 70}{space 3} 1.120253
+{txt}{space 15} {c |}
+{space 6}INCOME_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.2094368{col 29}{space 2} .2263403{col 40}{space 1}   -0.93{col 49}{space 3}0.355{col 57}{space 4}-.6534807{col 70}{space 3}  .234607
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.3439735{col 29}{space 2} .3124216{col 40}{space 1}   -1.10{col 49}{space 3}0.271{col 57}{space 4}-.9563555{col 70}{space 3} .2684086
+{txt}{space 13}4  {c |}{col 17}{res}{space 2}-.3398945{col 29}{space 2} .5774531{col 40}{space 1}   -0.59{col 49}{space 3}0.556{col 57}{space 4}-1.472285{col 70}{space 3} .7924963
+{txt}{space 15} {c |}
+{space 10}_cons {c |}{col 17}{res}{space 2}-2.461255{col 29}{space 2} .4103503{col 40}{space 1}   -6.00{col 49}{space 3}0.000{col 57}{space 4}-3.265528{col 70}{space 3}-1.656983
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. **********Model 3*********************************
+. 
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit ANTIDEPRESSANT_BR `x' i.AGE_BR i.RACEBR i.ETHNICITY i.MARITAL_BR i.EDUC_BR i.INCOME_BR i.SMOKING_BR i.ALCOHOL_BR  i.BMIC_BR2 i.CVD_BR12 i.HT_BR12 i.DIAB_BR12 i.HYPERLIPIDEMIA_BR i.SRH_BR PHYSICAL_ACTIVITY_MET if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0115
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0688
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    898.99
+{txt}{col 49}        avg{col 67}= {res}  1.85e+10
+{txt}{col 49}        max{col 67}= {res}  5.32e+11
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}747317.8{txt}){col 67}= {res}      1.79
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0061
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    ANTIDEPRESSANT_BR{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 17}IEAA {c |}{col 23}{res}{space 2} .0145255{col 35}{space 2} .0181831{col 46}{space 1}    0.80{col 55}{space 3}0.424{col 63}{space 4}-.0211128{col 76}{space 3} .0501637
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.0644956{col 35}{space 2} .2385726{col 46}{space 1}   -0.27{col 55}{space 3}0.787{col 63}{space 4}-.5320893{col 76}{space 3} .4030981
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1639204{col 35}{space 2} .2953156{col 46}{space 1}   -0.56{col 55}{space 3}0.579{col 63}{space 4}-.7427285{col 76}{space 3} .4148877
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-1.163468{col 35}{space 2} .2588528{col 46}{space 1}   -4.49{col 55}{space 3}0.000{col 63}{space 4} -1.67081{col 76}{space 3}-.6561255
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-1.438434{col 35}{space 2} 1.028505{col 46}{space 1}   -1.40{col 55}{space 3}0.162{col 63}{space 4}-3.454266{col 76}{space 3} .5773985
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}-.1520637{col 35}{space 2} .2760497{col 46}{space 1}   -0.55{col 55}{space 3}0.582{col 63}{space 4}-.6931129{col 76}{space 3} .3889856
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.9319788{col 35}{space 2} .7398852{col 46}{space 1}   -1.26{col 55}{space 3}0.208{col 63}{space 4}-2.382127{col 76}{space 3} .5181696
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5880965{col 35}{space 2}  .245764{col 46}{space 1}    2.39{col 55}{space 3}0.017{col 63}{space 4} .1064044{col 76}{space 3} 1.069789
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0684939{col 35}{space 2} .2517243{col 46}{space 1}   -0.27{col 55}{space 3}0.786{col 63}{space 4}-.5618659{col 76}{space 3} .4248782
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .6059994{col 35}{space 2} .3832888{col 46}{space 1}    1.58{col 55}{space 3}0.114{col 63}{space 4} -.145233{col 76}{space 3} 1.357232
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5557772{col 35}{space 2} .3650491{col 46}{space 1}    1.52{col 55}{space 3}0.128{col 63}{space 4}-.1597091{col 76}{space 3} 1.271264
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .4699277{col 35}{space 2} .4026572{col 46}{space 1}    1.17{col 55}{space 3}0.243{col 63}{space 4}-.3192684{col 76}{space 3} 1.259124
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.0981711{col 35}{space 2} .2356495{col 46}{space 1}   -0.42{col 55}{space 3}0.677{col 63}{space 4}-.5606582{col 76}{space 3} .3643161
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1357437{col 35}{space 2} .3234964{col 46}{space 1}   -0.42{col 55}{space 3}0.675{col 63}{space 4}-.7698786{col 76}{space 3} .4983912
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .0286422{col 35}{space 2} .5950409{col 46}{space 1}    0.05{col 55}{space 3}0.962{col 63}{space 4}-1.138295{col 76}{space 3} 1.195579
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .5541141{col 35}{space 2} .2114897{col 46}{space 1}    2.62{col 55}{space 3}0.009{col 63}{space 4} .1395646{col 76}{space 3} .9686636
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5943822{col 35}{space 2} .3133961{col 46}{space 1}    1.90{col 55}{space 3}0.058{col 63}{space 4} -.019986{col 76}{space 3}  1.20875
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.4370881{col 35}{space 2} .3031558{col 46}{space 1}   -1.44{col 55}{space 3}0.149{col 63}{space 4}-1.031279{col 76}{space 3} .1571026
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.6098795{col 35}{space 2} .2867584{col 46}{space 1}   -2.13{col 55}{space 3}0.033{col 63}{space 4} -1.17193{col 76}{space 3}-.0478287
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.6614599{col 35}{space 2} .3106155{col 46}{space 1}   -2.13{col 55}{space 3}0.033{col 63}{space 4}-1.270284{col 76}{space 3}-.0526353
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1826122{col 35}{space 2} .2579753{col 46}{space 1}    0.71{col 55}{space 3}0.479{col 63}{space 4}-.3230103{col 76}{space 3} .6882346
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0042034{col 35}{space 2} .2636761{col 46}{space 1}   -0.02{col 55}{space 3}0.987{col 63}{space 4}-.5210006{col 76}{space 3} .5125938
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0694708{col 35}{space 2} .2393556{col 46}{space 1}    0.29{col 55}{space 3}0.772{col 63}{space 4}-.3996576{col 76}{space 3} .5385992
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1798466{col 35}{space 2} .1947167{col 46}{space 1}    0.92{col 55}{space 3}0.356{col 63}{space 4}-.2017911{col 76}{space 3} .5614843
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2} .1692534{col 35}{space 2} .2218937{col 46}{space 1}    0.76{col 55}{space 3}0.446{col 63}{space 4}-.2656503{col 76}{space 3} .6041571
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0616296{col 35}{space 2} .2522241{col 46}{space 1}    0.24{col 55}{space 3}0.807{col 63}{space 4}-.4330703{col 76}{space 3} .5563296
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .6883315{col 35}{space 2} .2576792{col 46}{space 1}    2.67{col 55}{space 3}0.008{col 63}{space 4} .1832895{col 76}{space 3} 1.193373
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0124157{col 35}{space 2} .0088503{col 46}{space 1}   -1.40{col 55}{space 3}0.161{col 63}{space 4}-.0297643{col 76}{space 3} .0049328
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-2.695231{col 35}{space 2} .5057992{col 46}{space 1}   -5.33{col 55}{space 3}0.000{col 63}{space 4}-3.686595{col 76}{space 3}-1.703866
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0117
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0696
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    878.21
+{txt}{col 49}        avg{col 67}= {res}  7.06e+09
+{txt}{col 49}        max{col 67}= {res}  2.02e+11
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}731241.7{txt}){col 67}= {res}      1.79
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0065
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    ANTIDEPRESSANT_BR{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 17}EEAA {c |}{col 23}{res}{space 2} .0073255{col 35}{space 2} .0148642{col 46}{space 1}    0.49{col 55}{space 3}0.622{col 63}{space 4}-.0218079{col 76}{space 3} .0364588
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.0644106{col 35}{space 2} .2387811{col 46}{space 1}   -0.27{col 55}{space 3}0.787{col 63}{space 4}-.5324131{col 76}{space 3} .4035919
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} -.171252{col 35}{space 2} .2954529{col 46}{space 1}   -0.58{col 55}{space 3}0.562{col 63}{space 4}-.7503291{col 76}{space 3} .4078252
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-1.152943{col 35}{space 2} .2603297{col 46}{space 1}   -4.43{col 55}{space 3}0.000{col 63}{space 4} -1.66318{col 76}{space 3}-.6427058
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-1.463308{col 35}{space 2} 1.027918{col 46}{space 1}   -1.42{col 55}{space 3}0.155{col 63}{space 4}-3.477991{col 76}{space 3}  .551375
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}-.1841937{col 35}{space 2} .2754917{col 46}{space 1}   -0.67{col 55}{space 3}0.504{col 63}{space 4}-.7241499{col 76}{space 3} .3557624
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} -.934042{col 35}{space 2} .7395625{col 46}{space 1}   -1.26{col 55}{space 3}0.207{col 63}{space 4}-2.383558{col 76}{space 3}  .515474
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5865396{col 35}{space 2} .2457537{col 46}{space 1}    2.39{col 55}{space 3}0.017{col 63}{space 4} .1048678{col 76}{space 3} 1.068211
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0786967{col 35}{space 2} .2516822{col 46}{space 1}   -0.31{col 55}{space 3}0.755{col 63}{space 4}-.5719862{col 76}{space 3} .4145929
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .6106072{col 35}{space 2} .3834578{col 46}{space 1}    1.59{col 55}{space 3}0.111{col 63}{space 4}-.1409565{col 76}{space 3} 1.362171
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5666354{col 35}{space 2} .3654329{col 46}{space 1}    1.55{col 55}{space 3}0.121{col 63}{space 4}-.1496038{col 76}{space 3} 1.282875
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .4852845{col 35}{space 2} .4031569{col 46}{space 1}    1.20{col 55}{space 3}0.229{col 63}{space 4}-.3048908{col 76}{space 3}  1.27546
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.0954478{col 35}{space 2} .2357685{col 46}{space 1}   -0.40{col 55}{space 3}0.686{col 63}{space 4}-.5581833{col 76}{space 3} .3672876
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1320746{col 35}{space 2} .3231054{col 46}{space 1}   -0.41{col 55}{space 3}0.683{col 63}{space 4} -.765442{col 76}{space 3} .5012929
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}  .026657{col 35}{space 2} .5946028{col 46}{space 1}    0.04{col 55}{space 3}0.964{col 63}{space 4}-1.139398{col 76}{space 3} 1.192712
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .5526187{col 35}{space 2} .2114161{col 46}{space 1}    2.61{col 55}{space 3}0.009{col 63}{space 4} .1382157{col 76}{space 3} .9670217
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5957162{col 35}{space 2} .3133475{col 46}{space 1}    1.90{col 55}{space 3}0.057{col 63}{space 4}-.0185517{col 76}{space 3} 1.209984
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.4330527{col 35}{space 2} .3031355{col 46}{space 1}   -1.43{col 55}{space 3}0.153{col 63}{space 4}-1.027204{col 76}{space 3} .1610981
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.5938662{col 35}{space 2} .2858787{col 46}{space 1}   -2.08{col 55}{space 3}0.038{col 63}{space 4}-1.154193{col 76}{space 3}-.0335396
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.6555046{col 35}{space 2} .3105729{col 46}{space 1}   -2.11{col 55}{space 3}0.035{col 63}{space 4}-1.264246{col 76}{space 3}-.0467634
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1818596{col 35}{space 2} .2580624{col 46}{space 1}    0.70{col 55}{space 3}0.481{col 63}{space 4}-.3239336{col 76}{space 3} .6876528
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0015289{col 35}{space 2} .2637919{col 46}{space 1}   -0.01{col 55}{space 3}0.995{col 63}{space 4}-.5185531{col 76}{space 3} .5154953
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0738065{col 35}{space 2} .2392357{col 46}{space 1}    0.31{col 55}{space 3}0.758{col 63}{space 4}-.3950869{col 76}{space 3}    .5427
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1810155{col 35}{space 2}  .194785{col 46}{space 1}    0.93{col 55}{space 3}0.353{col 63}{space 4}-.2007562{col 76}{space 3} .5627872
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2} .1757171{col 35}{space 2} .2217152{col 46}{space 1}    0.79{col 55}{space 3}0.428{col 63}{space 4}-.2588368{col 76}{space 3} .6102711
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0642706{col 35}{space 2} .2527067{col 46}{space 1}    0.25{col 55}{space 3}0.799{col 63}{space 4}-.4314332{col 76}{space 3} .5599744
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .6885823{col 35}{space 2} .2578077{col 46}{space 1}    2.67{col 55}{space 3}0.008{col 63}{space 4} .1832884{col 76}{space 3} 1.193876
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0121977{col 35}{space 2} .0088511{col 46}{space 1}   -1.38{col 55}{space 3}0.168{col 63}{space 4}-.0295479{col 76}{space 3} .0051524
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-2.709923{col 35}{space 2} .5060484{col 46}{space 1}   -5.36{col 55}{space 3}0.000{col 63}{space 4}-3.701775{col 76}{space 3} -1.71807
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0116
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0671
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    944.46
+{txt}{col 49}        avg{col 67}= {res}  2.25e+10
+{txt}{col 49}        max{col 67}= {res}  6.51e+11
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}742125.9{txt}){col 67}= {res}      1.79
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0063
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    ANTIDEPRESSANT_BR{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 8}AgeAccelPheno {c |}{col 23}{res}{space 2} -.011109{col 35}{space 2} .0149793{col 46}{space 1}   -0.74{col 55}{space 3}0.458{col 63}{space 4} -.040468{col 76}{space 3} .0182499
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.0541394{col 35}{space 2} .2395322{col 46}{space 1}   -0.23{col 55}{space 3}0.821{col 63}{space 4} -.523614{col 76}{space 3} .4153353
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1685564{col 35}{space 2}  .295923{col 46}{space 1}   -0.57{col 55}{space 3}0.569{col 63}{space 4}-.7485552{col 76}{space 3} .4114423
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-1.165157{col 35}{space 2} .2593441{col 46}{space 1}   -4.49{col 55}{space 3}0.000{col 63}{space 4}-1.673462{col 76}{space 3} -.656852
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-1.482515{col 35}{space 2} 1.028466{col 46}{space 1}   -1.44{col 55}{space 3}0.149{col 63}{space 4}-3.498271{col 76}{space 3} .5332418
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}-.1685683{col 35}{space 2} .2751629{col 46}{space 1}   -0.61{col 55}{space 3}0.540{col 63}{space 4}-.7078798{col 76}{space 3} .3707432
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.9527064{col 35}{space 2} .7403177{col 46}{space 1}   -1.29{col 55}{space 3}0.198{col 63}{space 4}-2.403702{col 76}{space 3} .4982897
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5877559{col 35}{space 2} .2458573{col 46}{space 1}    2.39{col 55}{space 3}0.017{col 63}{space 4} .1058808{col 76}{space 3} 1.069631
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0776291{col 35}{space 2} .2513619{col 46}{space 1}   -0.31{col 55}{space 3}0.757{col 63}{space 4}-.5702906{col 76}{space 3} .4150324
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .6026105{col 35}{space 2} .3833203{col 46}{space 1}    1.57{col 55}{space 3}0.116{col 63}{space 4}-.1486837{col 76}{space 3} 1.353905
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5504627{col 35}{space 2} .3655336{col 46}{space 1}    1.51{col 55}{space 3}0.132{col 63}{space 4}-.1659735{col 76}{space 3} 1.266899
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .4569264{col 35}{space 2} .4032776{col 46}{space 1}    1.13{col 55}{space 3}0.257{col 63}{space 4}-.3334855{col 76}{space 3} 1.247338
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} -.096173{col 35}{space 2} .2356854{col 46}{space 1}   -0.41{col 55}{space 3}0.683{col 63}{space 4}-.5587006{col 76}{space 3} .3663547
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1311458{col 35}{space 2} .3233862{col 46}{space 1}   -0.41{col 55}{space 3}0.685{col 63}{space 4}-.7650618{col 76}{space 3} .5027702
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .0279814{col 35}{space 2} .5950814{col 46}{space 1}    0.05{col 55}{space 3}0.963{col 63}{space 4}-1.139029{col 76}{space 3} 1.194992
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .5572963{col 35}{space 2} .2117977{col 46}{space 1}    2.63{col 55}{space 3}0.009{col 63}{space 4} .1421431{col 76}{space 3} .9724495
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .6200965{col 35}{space 2} .3150851{col 46}{space 1}    1.97{col 55}{space 3}0.049{col 63}{space 4} .0024151{col 76}{space 3} 1.237778
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.4321726{col 35}{space 2} .3031023{col 46}{space 1}   -1.43{col 55}{space 3}0.154{col 63}{space 4}-1.026258{col 76}{space 3} .1619128
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.5945983{col 35}{space 2} .2860587{col 46}{space 1}   -2.08{col 55}{space 3}0.038{col 63}{space 4}-1.155277{col 76}{space 3}-.0339194
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.6607368{col 35}{space 2} .3107944{col 46}{space 1}   -2.13{col 55}{space 3}0.034{col 63}{space 4}-1.269912{col 76}{space 3} -.051562
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1848428{col 35}{space 2} .2580993{col 46}{space 1}    0.72{col 55}{space 3}0.474{col 63}{space 4}-.3210228{col 76}{space 3} .6907084
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}  .015083{col 35}{space 2} .2644013{col 46}{space 1}    0.06{col 55}{space 3}0.955{col 63}{space 4}-.5031359{col 76}{space 3} .5333019
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0850799{col 35}{space 2} .2392033{col 46}{space 1}    0.36{col 55}{space 3}0.722{col 63}{space 4}  -.38375{col 76}{space 3} .5539097
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1979709{col 35}{space 2} .1953402{col 46}{space 1}    1.01{col 55}{space 3}0.311{col 63}{space 4}-.1848889{col 76}{space 3} .5808307
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2} .1827466{col 35}{space 2} .2222425{col 46}{space 1}    0.82{col 55}{space 3}0.411{col 63}{space 4}-.2528408{col 76}{space 3} .6183341
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0645514{col 35}{space 2}  .252344{col 46}{space 1}    0.26{col 55}{space 3}0.798{col 63}{space 4}-.4304224{col 76}{space 3} .5595252
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2}  .691856{col 35}{space 2} .2579524{col 46}{space 1}    2.68{col 55}{space 3}0.007{col 63}{space 4} .1862784{col 76}{space 3} 1.197433
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0125468{col 35}{space 2} .0088695{col 46}{space 1}   -1.41{col 55}{space 3}0.157{col 63}{space 4} -.029933{col 76}{space 3} .0048394
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-2.722864{col 35}{space 2} .5072408{col 46}{space 1}   -5.37{col 55}{space 3}0.000{col 63}{space 4}-3.717054{col 76}{space 3}-1.728674
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0120
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0689
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    896.80
+{txt}{col 49}        avg{col 67}= {res}  9.67e+08
+{txt}{col 49}        max{col 67}= {res}  2.59e+10
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}696004.1{txt}){col 67}= {res}      1.83
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0046
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    ANTIDEPRESSANT_BR{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 6}AgeAccelGrimAge {c |}{col 23}{res}{space 2} .0372224{col 35}{space 2} .0289441{col 46}{space 1}    1.29{col 55}{space 3}0.198{col 63}{space 4}-.0195105{col 76}{space 3} .0939553
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.0858845{col 35}{space 2} .2392427{col 46}{space 1}   -0.36{col 55}{space 3}0.720{col 63}{space 4}-.5547917{col 76}{space 3} .3830227
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.2088697{col 35}{space 2} .2965158{col 46}{space 1}   -0.70{col 55}{space 3}0.481{col 63}{space 4}-.7900305{col 76}{space 3} .3722911
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-1.192408{col 35}{space 2} .2597957{col 46}{space 1}   -4.59{col 55}{space 3}0.000{col 63}{space 4}-1.701599{col 76}{space 3}-.6832179
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-1.487758{col 35}{space 2}  1.02827{col 46}{space 1}   -1.45{col 55}{space 3}0.148{col 63}{space 4}-3.503131{col 76}{space 3} .5276146
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}-.1683895{col 35}{space 2} .2745438{col 46}{space 1}   -0.61{col 55}{space 3}0.540{col 63}{space 4}-.7064873{col 76}{space 3} .3697083
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.9426246{col 35}{space 2} .7399275{col 46}{space 1}   -1.27{col 55}{space 3}0.203{col 63}{space 4}-2.392856{col 76}{space 3} .5076067
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5770144{col 35}{space 2} .2457048{col 46}{space 1}    2.35{col 55}{space 3}0.019{col 63}{space 4} .0954385{col 76}{space 3}  1.05859
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0957252{col 35}{space 2} .2524197{col 46}{space 1}   -0.38{col 55}{space 3}0.705{col 63}{space 4}-.5904604{col 76}{space 3} .3990101
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .6182756{col 35}{space 2} .3837546{col 46}{space 1}    1.61{col 55}{space 3}0.107{col 63}{space 4}-.1338699{col 76}{space 3} 1.370421
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .5779014{col 35}{space 2} .3657011{col 46}{space 1}    1.58{col 55}{space 3}0.114{col 63}{space 4}-.1388638{col 76}{space 3} 1.294667
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .5143939{col 35}{space 2} .4038963{col 46}{space 1}    1.27{col 55}{space 3}0.203{col 63}{space 4}-.2772314{col 76}{space 3} 1.306019
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.0919678{col 35}{space 2} .2354967{col 46}{space 1}   -0.39{col 55}{space 3}0.696{col 63}{space 4}-.5541566{col 76}{space 3} .3702211
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.1314295{col 35}{space 2} .3230158{col 46}{space 1}   -0.41{col 55}{space 3}0.684{col 63}{space 4}-.7646214{col 76}{space 3} .5017624
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .0315278{col 35}{space 2}  .594984{col 46}{space 1}    0.05{col 55}{space 3}0.958{col 63}{space 4}-1.135318{col 76}{space 3} 1.198373
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .4668904{col 35}{space 2} .2220995{col 46}{space 1}    2.10{col 55}{space 3}0.036{col 63}{space 4} .0315297{col 76}{space 3} .9022512
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .3371003{col 35}{space 2} .3769039{col 46}{space 1}    0.89{col 55}{space 3}0.371{col 63}{space 4}-.4019188{col 76}{space 3} 1.076119
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} -.438077{col 35}{space 2} .3030235{col 46}{space 1}   -1.45{col 55}{space 3}0.148{col 63}{space 4}-1.032009{col 76}{space 3} .1558554
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.5882751{col 35}{space 2} .2862452{col 46}{space 1}   -2.06{col 55}{space 3}0.040{col 63}{space 4}-1.149323{col 76}{space 3}-.0272274
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.6654812{col 35}{space 2} .3111961{col 46}{space 1}   -2.14{col 55}{space 3}0.032{col 63}{space 4} -1.27545{col 76}{space 3}-.0555127
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1831979{col 35}{space 2} .2582587{col 46}{space 1}    0.71{col 55}{space 3}0.478{col 63}{space 4}  -.32298{col 76}{space 3} .6893758
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0110265{col 35}{space 2} .2637876{col 46}{space 1}   -0.04{col 55}{space 3}0.967{col 63}{space 4}-.5280424{col 76}{space 3} .5059894
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0796682{col 35}{space 2} .2390877{col 46}{space 1}    0.33{col 55}{space 3}0.739{col 63}{space 4}-.3889351{col 76}{space 3} .5482715
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1716309{col 35}{space 2} .1949567{col 46}{space 1}    0.88{col 55}{space 3}0.379{col 63}{space 4}-.2104772{col 76}{space 3}  .553739
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2} .1517063{col 35}{space 2} .2226945{col 46}{space 1}    0.68{col 55}{space 3}0.496{col 63}{space 4}-.2847669{col 76}{space 3} .5881796
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0677654{col 35}{space 2} .2521821{col 46}{space 1}    0.27{col 55}{space 3}0.788{col 63}{space 4}-.4268467{col 76}{space 3} .5623774
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2}  .686721{col 35}{space 2} .2576067{col 46}{space 1}    2.67{col 55}{space 3}0.008{col 63}{space 4} .1818211{col 76}{space 3} 1.191621
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0118259{col 35}{space 2} .0088118{col 46}{space 1}   -1.34{col 55}{space 3}0.180{col 63}{space 4}-.0290987{col 76}{space 3} .0054468
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-2.624859{col 35}{space 2} .5103168{col 46}{space 1}   -5.14{col 55}{space 3}0.000{col 63}{space 4}-3.625087{col 76}{space 3}-1.624631
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. *************Y=DEP_ANTIDEP_DICH******************
+. 
+. ***********MODEL 1***************
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit DEP_ANTIDEP_DICH `x' if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.00
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.9740
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}IEAA {c |}{col 14}{res}{space 2} .0003981{col 26}{space 2} .0121971{col 37}{space 1}    0.03{col 46}{space 3}0.974{col 54}{space 4}-.0235077{col 67}{space 3} .0243039
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.619596{col 26}{space 2} .0617705{col 37}{space 1}  -26.22{col 46}{space 3}0.000{col 54}{space 4}-1.740664{col 67}{space 3}-1.498528
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  1.07e+58
+{txt}{col 49}        avg{col 67}= {res}  1.07e+58
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      2.15
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1422
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}EEAA {c |}{col 14}{res}{space 2} .0142789{col 26}{space 2} .0097287{col 37}{space 1}    1.47{col 46}{space 3}0.142{col 54}{space 4}-.0047891{col 67}{space 3} .0333469
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -1.61905{col 26}{space 2} .0618214{col 37}{space 1}  -26.19{col 46}{space 3}0.000{col 54}{space 4}-1.740218{col 67}{space 3}-1.497882
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  1.07e+58
+{txt}{col 49}        avg{col 67}= {res}  1.07e+58
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.03
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.8680
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDEP~H{col 15}{c |} Coefficient{col 27}  Std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0            {col 15}{txt}{c |}  (base outcome)
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1             {txt}{c |}
+AgeAccelPheno {c |}{col 15}{res}{space 2} .0015846{col 27}{space 2} .0095359{col 38}{space 1}    0.17{col 47}{space 3}0.868{col 55}{space 4}-.0171053{col 68}{space 3} .0202746
+{txt}{space 8}_cons {c |}{col 15}{res}{space 2}-1.619368{col 27}{space 2} .0617769{col 38}{space 1}  -26.21{col 47}{space 3}0.000{col 55}{space 4}-1.740449{col 68}{space 3}-1.498288
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      7.73
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0054
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDEP_D~H{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0              {col 17}{txt}{c |}  (base outcome)
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1               {txt}{c |}
+AgeAccelGrimAge {c |}{col 17}{res}{space 2} .0434601{col 29}{space 2} .0156324{col 40}{space 1}    2.78{col 49}{space 3}0.005{col 57}{space 4} .0128212{col 70}{space 3}  .074099
+{txt}{space 10}_cons {c |}{col 17}{res}{space 2}-1.626476{col 29}{space 2} .0621704{col 40}{space 1}  -26.16{col 49}{space 3}0.000{col 57}{space 4}-1.748328{col 70}{space 3}-1.504625
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. ***********MODEL 2: ADJUSTED FOR DEMOGRAPHICS***************
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit DEP_ANTIDEP_DICH `x' i.AGE_BR i.RACEBR i.ETHNICITY i.MARITAL_BR i.EDUC_BR i.INCOME_BR if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0161
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1127
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    345.55
+{txt}{col 49}        avg{col 67}= {res}  9.68e+07
+{txt}{col 49}        max{col 67}= {res}  1.41e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}184378.5{txt}){col 67}= {res}      2.61
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0006
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}IEAA {c |}{col 14}{res}{space 2} .0027373{col 26}{space 2} .0125297{col 37}{space 1}    0.22{col 46}{space 3}0.827{col 54}{space 4}-.0218205{col 67}{space 3}  .027295
+{txt}{space 12} {c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.3020049{col 26}{space 2} .1565831{col 37}{space 1}   -1.93{col 46}{space 3}0.054{col 54}{space 4}-.6089022{col 67}{space 3} .0048923
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.4785801{col 26}{space 2} .1929275{col 37}{space 1}   -2.48{col 46}{space 3}0.013{col 54}{space 4}-.8567112{col 67}{space 3}-.1004491
+{txt}{space 12} {c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}-.3523103{col 26}{space 2} .1554169{col 37}{space 1}   -2.27{col 46}{space 3}0.023{col 54}{space 4}-.6569219{col 67}{space 3}-.0476986
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}-.0549631{col 26}{space 2} .4350249{col 37}{space 1}   -0.13{col 46}{space 3}0.899{col 54}{space 4}-.9075969{col 67}{space 3} .7976707
+{txt}{space 12} {c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} .0142517{col 26}{space 2} .1847588{col 37}{space 1}    0.08{col 46}{space 3}0.939{col 54}{space 4}-.3478689{col 67}{space 3} .3763723
+{txt}{space 12} {c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2630658{col 26}{space 2}  .358063{col 37}{space 1}   -0.73{col 46}{space 3}0.463{col 54}{space 4}-.9649123{col 67}{space 3} .4387808
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}  .100751{col 26}{space 2} .1741276{col 37}{space 1}    0.58{col 46}{space 3}0.563{col 54}{space 4}-.2405328{col 67}{space 3} .4420348
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0843689{col 26}{space 2} .1673896{col 37}{space 1}    0.50{col 46}{space 3}0.614{col 54}{space 4}-.2437153{col 67}{space 3} .4124532
+{txt}{space 12} {c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.1746144{col 26}{space 2} .2237005{col 37}{space 1}   -0.78{col 46}{space 3}0.435{col 54}{space 4}-.6130619{col 67}{space 3} .2638331
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.1684747{col 26}{space 2} .2067902{col 37}{space 1}   -0.81{col 46}{space 3}0.415{col 54}{space 4}-.5737976{col 67}{space 3} .2368482
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.2671256{col 26}{space 2} .2341701{col 37}{space 1}   -1.14{col 46}{space 3}0.254{col 54}{space 4} -.726096{col 67}{space 3} .1918448
+{txt}{space 12} {c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.5428214{col 26}{space 2} .1549661{col 37}{space 1}   -3.50{col 46}{space 3}0.000{col 54}{space 4}-.8466557{col 67}{space 3}-.2389871
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.5592331{col 26}{space 2} .2113473{col 37}{space 1}   -2.65{col 46}{space 3}0.008{col 54}{space 4}-.9734902{col 67}{space 3}-.1449759
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.109204{col 26}{space 2} .4659985{col 37}{space 1}   -2.38{col 46}{space 3}0.018{col 54}{space 4}-2.025754{col 67}{space 3}-.1926532
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.7271391{col 26}{space 2} .2455705{col 37}{space 1}   -2.96{col 46}{space 3}0.003{col 54}{space 4}-1.208449{col 67}{space 3}-.2458294
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0162
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1132
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    342.85
+{txt}{col 49}        avg{col 67}= {res}  1.29e+07
+{txt}{col 49}        max{col 67}= {res}  1.48e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}181508.9{txt}){col 67}= {res}      2.64
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0005
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 8}EEAA {c |}{col 14}{res}{space 2} .0072432{col 26}{space 2} .0100585{col 37}{space 1}    0.72{col 46}{space 3}0.471{col 54}{space 4} -.012471{col 67}{space 3} .0269574
+{txt}{space 12} {c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.3006315{col 26}{space 2} .1566101{col 37}{space 1}   -1.92{col 46}{space 3}0.055{col 54}{space 4}-.6075816{col 67}{space 3} .0063187
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.4786278{col 26}{space 2} .1928309{col 37}{space 1}   -2.48{col 46}{space 3}0.013{col 54}{space 4}-.8565695{col 67}{space 3} -.100686
+{txt}{space 12} {c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}-.3431779{col 26}{space 2} .1559622{col 37}{space 1}   -2.20{col 46}{space 3}0.028{col 54}{space 4}-.6488582{col 67}{space 3}-.0374975
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}-.0550834{col 26}{space 2} .4345892{col 37}{space 1}   -0.13{col 46}{space 3}0.899{col 54}{space 4}-.9068631{col 67}{space 3} .7966964
+{txt}{space 12} {c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} .0007757{col 26}{space 2} .1843811{col 37}{space 1}    0.00{col 46}{space 3}0.997{col 54}{space 4}-.3606046{col 67}{space 3}  .362156
+{txt}{space 12} {c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2591591{col 26}{space 2} .3580753{col 37}{space 1}   -0.72{col 46}{space 3}0.469{col 54}{space 4}-.9610337{col 67}{space 3} .4427155
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .1018612{col 26}{space 2}  .174173{col 37}{space 1}    0.58{col 46}{space 3}0.559{col 54}{space 4}-.2395116{col 67}{space 3}  .443234
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}  .081289{col 26}{space 2} .1673446{col 37}{space 1}    0.49{col 46}{space 3}0.627{col 54}{space 4}-.2467071{col 67}{space 3} .4092851
+{txt}{space 12} {c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.1706347{col 26}{space 2} .2237919{col 37}{space 1}   -0.76{col 46}{space 3}0.446{col 54}{space 4}-.6092613{col 67}{space 3}  .267992
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.1618729{col 26}{space 2} .2069035{col 37}{space 1}   -0.78{col 46}{space 3}0.434{col 54}{space 4}-.5674192{col 67}{space 3} .2436735
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.2550128{col 26}{space 2} .2346483{col 37}{space 1}   -1.09{col 46}{space 3}0.277{col 54}{space 4} -.714921{col 67}{space 3} .2048954
+{txt}{space 12} {c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.5420681{col 26}{space 2} .1550175{col 37}{space 1}   -3.50{col 46}{space 3}0.000{col 54}{space 4}-.8460048{col 67}{space 3}-.2381313
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.5542822{col 26}{space 2}  .211421{col 37}{space 1}   -2.62{col 46}{space 3}0.009{col 54}{space 4}-.9686837{col 67}{space 3}-.1398808
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.104145{col 26}{space 2}  .466163{col 37}{space 1}   -2.37{col 46}{space 3}0.018{col 54}{space 4}-2.021044{col 67}{space 3}-.1872451
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.7356732{col 26}{space 2} .2459424{col 37}{space 1}   -2.99{col 46}{space 3}0.003{col 54}{space 4}-1.217712{col 67}{space 3}-.2536345
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0160
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1123
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    348.25
+{txt}{col 49}        avg{col 67}= {res}  1.23e+07
+{txt}{col 49}        max{col 67}= {res}  8.43e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}185652.7{txt}){col 67}= {res}      2.61
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0006
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDEP~H{col 15}{c |} Coefficient{col 27}  Std. err.{col 39}      t{col 47}   P>|t|{col 55}     [95% con{col 68}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0            {col 15}{txt}{c |}  (base outcome)
+{hline 14}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1             {txt}{c |}
+AgeAccelPheno {c |}{col 15}{res}{space 2} -.001181{col 27}{space 2} .0098297{col 38}{space 1}   -0.12{col 47}{space 3}0.904{col 55}{space 4}-.0204469{col 68}{space 3} .0180849
+{txt}{space 13} {c |}
+{space 7}AGE_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.3006665{col 27}{space 2} .1568483{col 38}{space 1}   -1.92{col 47}{space 3}0.055{col 55}{space 4}-.6080835{col 68}{space 3} .0067505
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.4790872{col 27}{space 2}  .193015{col 38}{space 1}   -2.48{col 47}{space 3}0.013{col 55}{space 4}-.8573898{col 68}{space 3}-.1007845
+{txt}{space 13} {c |}
+{space 7}RACEBR {c |}
+{space 11}1  {c |}{col 15}{res}{space 2}-.3515412{col 27}{space 2} .1558114{col 38}{space 1}   -2.26{col 47}{space 3}0.024{col 55}{space 4} -.656926{col 68}{space 3}-.0461564
+{txt}{space 11}2  {c |}{col 15}{res}{space 2}-.0582879{col 27}{space 2} .4346112{col 38}{space 1}   -0.13{col 47}{space 3}0.893{col 55}{space 4}-.9101108{col 68}{space 3} .7935351
+{txt}{space 13} {c |}
+{space 2}1.ETHNICITY {c |}{col 15}{res}{space 2}   .01105{col 27}{space 2} .1840319{col 38}{space 1}    0.06{col 47}{space 3}0.952{col 55}{space 4}-.3496458{col 68}{space 3} .3717459
+{txt}{space 13} {c |}
+{space 3}MARITAL_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.2668404{col 27}{space 2} .3584503{col 38}{space 1}   -0.74{col 47}{space 3}0.457{col 55}{space 4}-.9694444{col 68}{space 3} .4357637
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}  .100876{col 27}{space 2} .1741496{col 38}{space 1}    0.58{col 47}{space 3}0.562{col 55}{space 4}-.2404509{col 68}{space 3} .4422029
+{txt}{space 11}4  {c |}{col 15}{res}{space 2} .0828451{col 27}{space 2} .1672913{col 38}{space 1}    0.50{col 47}{space 3}0.620{col 55}{space 4}-.2450464{col 68}{space 3} .4107365
+{txt}{space 13} {c |}
+{space 6}EDUC_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2}-.1745128{col 27}{space 2} .2237015{col 38}{space 1}   -0.78{col 47}{space 3}0.435{col 55}{space 4}-.6129623{col 68}{space 3} .2639367
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.1683525{col 27}{space 2} .2068611{col 38}{space 1}   -0.81{col 47}{space 3}0.416{col 55}{space 4}-.5738143{col 68}{space 3} .2371093
+{txt}{space 11}4  {c |}{col 15}{res}{space 2}-.2678075{col 27}{space 2}  .234501{col 38}{space 1}   -1.14{col 47}{space 3}0.253{col 55}{space 4}-.7274264{col 68}{space 3} .1918114
+{txt}{space 13} {c |}
+{space 4}INCOME_BR {c |}
+{space 11}2  {c |}{col 15}{res}{space 2} -.543264{col 27}{space 2} .1550257{col 38}{space 1}   -3.50{col 47}{space 3}0.000{col 55}{space 4}-.8472132{col 68}{space 3}-.2393148
+{txt}{space 11}3  {c |}{col 15}{res}{space 2}-.5597042{col 27}{space 2} .2114077{col 38}{space 1}   -2.65{col 47}{space 3}0.008{col 55}{space 4}-.9740801{col 68}{space 3}-.1453283
+{txt}{space 11}4  {c |}{col 15}{res}{space 2}-1.111843{col 27}{space 2} .4658891{col 38}{space 1}   -2.39{col 47}{space 3}0.018{col 55}{space 4}-2.028153{col 68}{space 3}-.1955329
+{txt}{space 13} {c |}
+{space 8}_cons {c |}{col 15}{res}{space 2} -.726319{col 27}{space 2} .2455245{col 38}{space 1}   -2.96{col 47}{space 3}0.003{col 55}{space 4}-1.207538{col 68}{space 3}-.2450995
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0161
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1132
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    342.79
+{txt}{col 49}        avg{col 67}= {res}9812402.23
+{txt}{col 49}        max{col 67}= {res}  8.54e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  15{txt},{res}185077.1{txt}){col 67}= {res}      3.06
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDEP_D~H{col 17}{c |} Coefficient{col 29}  Std. err.{col 41}      t{col 49}   P>|t|{col 57}     [95% con{col 70}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0              {col 17}{txt}{c |}  (base outcome)
+{hline 16}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1               {txt}{c |}
+AgeAccelGrimAge {c |}{col 17}{res}{space 2} .0441098{col 29}{space 2} .0162999{col 40}{space 1}    2.71{col 49}{space 3}0.007{col 57}{space 4} .0121625{col 70}{space 3} .0760572
+{txt}{space 15} {c |}
+{space 9}AGE_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.3098229{col 29}{space 2} .1568675{col 40}{space 1}   -1.98{col 49}{space 3}0.048{col 57}{space 4}-.6172777{col 70}{space 3}-.0023682
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.4896257{col 29}{space 2} .1931256{col 40}{space 1}   -2.54{col 49}{space 3}0.011{col 57}{space 4} -.868145{col 70}{space 3}-.1111064
+{txt}{space 15} {c |}
+{space 9}RACEBR {c |}
+{space 13}1  {c |}{col 17}{res}{space 2}-.4051523{col 29}{space 2} .1572613{col 40}{space 1}   -2.58{col 49}{space 3}0.010{col 57}{space 4} -.713379{col 70}{space 3}-.0969257
+{txt}{space 13}2  {c |}{col 17}{res}{space 2}-.1144302{col 29}{space 2}  .436617{col 40}{space 1}   -0.26{col 49}{space 3}0.793{col 57}{space 4}-.9701843{col 70}{space 3} .7413239
+{txt}{space 15} {c |}
+{space 4}1.ETHNICITY {c |}{col 17}{res}{space 2} .0402678{col 29}{space 2} .1845129{col 40}{space 1}    0.22{col 49}{space 3}0.827{col 57}{space 4}-.3213707{col 70}{space 3} .4019064
+{txt}{space 15} {c |}
+{space 5}MARITAL_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.2711191{col 29}{space 2} .3582985{col 40}{space 1}   -0.76{col 49}{space 3}0.449{col 57}{space 4}-.9734218{col 70}{space 3} .4311837
+{txt}{space 13}3  {c |}{col 17}{res}{space 2} .0613654{col 29}{space 2} .1751081{col 40}{space 1}    0.35{col 49}{space 3}0.726{col 57}{space 4}-.2818402{col 70}{space 3} .4045711
+{txt}{space 13}4  {c |}{col 17}{res}{space 2} .0508906{col 29}{space 2} .1680471{col 40}{space 1}    0.30{col 49}{space 3}0.762{col 57}{space 4}-.2784844{col 70}{space 3} .3802656
+{txt}{space 15} {c |}
+{space 8}EDUC_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.1539769{col 29}{space 2} .2244498{col 40}{space 1}   -0.69{col 49}{space 3}0.493{col 57}{space 4}-.5938933{col 70}{space 3} .2859395
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.1525987{col 29}{space 2}  .207356{col 40}{space 1}   -0.74{col 49}{space 3}0.462{col 57}{space 4}-.5590343{col 70}{space 3}  .253837
+{txt}{space 13}4  {c |}{col 17}{res}{space 2}-.2193471{col 29}{space 2} .2352881{col 40}{space 1}   -0.93{col 49}{space 3}0.351{col 57}{space 4}-.6805111{col 70}{space 3} .2418169
+{txt}{space 15} {c |}
+{space 6}INCOME_BR {c |}
+{space 13}2  {c |}{col 17}{res}{space 2}-.5391457{col 29}{space 2} .1552562{col 40}{space 1}   -3.47{col 49}{space 3}0.001{col 57}{space 4}-.8435625{col 70}{space 3}-.2347289
+{txt}{space 13}3  {c |}{col 17}{res}{space 2}-.5531907{col 29}{space 2} .2114293{col 40}{space 1}   -2.62{col 49}{space 3}0.009{col 57}{space 4}-.9676094{col 70}{space 3}-.1387721
+{txt}{space 13}4  {c |}{col 17}{res}{space 2} -1.09279{col 29}{space 2} .4666846{col 40}{space 1}   -2.34{col 49}{space 3}0.020{col 57}{space 4}-2.010716{col 70}{space 3}-.1748643
+{txt}{space 15} {c |}
+{space 10}_cons {c |}{col 17}{res}{space 2}-.7245657{col 29}{space 2} .2464664{col 40}{space 1}   -2.94{col 49}{space 3}0.003{col 57}{space 4}-1.207631{col 70}{space 3}-.2414999
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. **********Model 3*********************************
+. 
+. 
+. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate: mlogit DEP_ANTIDEP_DICH `x' i.AGE_BR i.RACEBR i.ETHNICITY i.MARITAL_BR i.EDUC_BR i.INCOME_BR i.SMOKING_BR i.ALCOHOL_BR  i.BMIC_BR2 i.CVD_BR12 i.HT_BR12 i.DIAB_BR12 i.HYPERLIPIDEMIA_BR i.SRH_BR PHYSICAL_ACTIVITY_MET if sample_final==1
+{txt}  3{com}. 
+. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0167
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1178
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    317.54
+{txt}{col 49}        avg{col 67}= {res}3869077.41
+{txt}{col 49}        max{col 67}= {res}  6.37e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}359746.4{txt}){col 67}= {res}      3.33
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     DEP_ANTIDEP_DICH{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 17}IEAA {c |}{col 23}{res}{space 2}-.0023225{col 35}{space 2} .0126897{col 46}{space 1}   -0.18{col 55}{space 3}0.855{col 63}{space 4}-.0271939{col 76}{space 3} .0225489
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.2325735{col 35}{space 2} .1628517{col 46}{space 1}   -1.43{col 55}{space 3}0.153{col 63}{space 4}-.5517573{col 76}{space 3} .0866103
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} -.345151{col 35}{space 2} .2044181{col 46}{space 1}   -1.69{col 55}{space 3}0.091{col 63}{space 4}-.7458033{col 76}{space 3} .0555014
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-.6294533{col 35}{space 2} .1667191{col 46}{space 1}   -3.78{col 55}{space 3}0.000{col 63}{space 4} -.956217{col 76}{space 3}-.3026895
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-.1995222{col 35}{space 2} .4469079{col 46}{space 1}   -0.45{col 55}{space 3}0.655{col 63}{space 4}-1.075446{col 76}{space 3} .6764013
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}-.0075438{col 35}{space 2} .1916093{col 46}{space 1}   -0.04{col 55}{space 3}0.969{col 63}{space 4}-.3830914{col 76}{space 3} .3680037
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.2985572{col 35}{space 2} .3676407{col 46}{space 1}   -0.81{col 55}{space 3}0.417{col 63}{space 4} -1.01915{col 76}{space 3} .4220355
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1191966{col 35}{space 2} .1797489{col 46}{space 1}    0.66{col 55}{space 3}0.507{col 63}{space 4}-.2331049{col 76}{space 3} .4714981
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .0270998{col 35}{space 2}  .170957{col 46}{space 1}    0.16{col 55}{space 3}0.874{col 63}{space 4}-.3079822{col 76}{space 3} .3621817
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0012881{col 35}{space 2}  .232334{col 46}{space 1}    0.01{col 55}{space 3}0.996{col 63}{space 4}-.4540867{col 76}{space 3} .4566628
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0456184{col 35}{space 2} .2161278{col 46}{space 1}   -0.21{col 55}{space 3}0.833{col 63}{space 4}-.4692918{col 76}{space 3}  .378055
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0495111{col 35}{space 2} .2461531{col 46}{space 1}   -0.20{col 55}{space 3}0.841{col 63}{space 4}-.5320123{col 76}{space 3} .4329901
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.4166005{col 35}{space 2} .1622757{col 46}{space 1}   -2.57{col 55}{space 3}0.010{col 63}{space 4}-.7348455{col 76}{space 3}-.0983554
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.3474472{col 35}{space 2} .2204025{col 46}{space 1}   -1.58{col 55}{space 3}0.115{col 63}{space 4}-.7794764{col 76}{space 3}  .084582
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.7536446{col 35}{space 2} .4805535{col 46}{space 1}   -1.57{col 55}{space 3}0.118{col 63}{space 4}-1.699116{col 76}{space 3} .1918265
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .3339599{col 35}{space 2} .1484108{col 46}{space 1}    2.25{col 55}{space 3}0.024{col 63}{space 4} .0430147{col 76}{space 3} .6249051
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .7135718{col 35}{space 2} .2109266{col 46}{space 1}    3.38{col 55}{space 3}0.001{col 63}{space 4} .3000913{col 76}{space 3} 1.127052
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1440554{col 35}{space 2} .2142111{col 46}{space 1}    0.67{col 55}{space 3}0.501{col 63}{space 4}-.2758086{col 76}{space 3} .5639195
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0903751{col 35}{space 2} .2057197{col 46}{space 1}   -0.44{col 55}{space 3}0.660{col 63}{space 4}-.4935802{col 76}{space 3} .3128301
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.2731093{col 35}{space 2}  .228634{col 46}{space 1}   -1.19{col 55}{space 3}0.232{col 63}{space 4}-.7212247{col 76}{space 3} .1750062
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1131962{col 35}{space 2} .1857611{col 46}{space 1}    0.61{col 55}{space 3}0.542{col 63}{space 4}-.2508899{col 76}{space 3} .4772823
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}  .157929{col 35}{space 2} .1836907{col 46}{space 1}    0.86{col 55}{space 3}0.390{col 63}{space 4}-.2021015{col 76}{space 3} .5179594
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0538334{col 35}{space 2} .1674213{col 46}{space 1}    0.32{col 55}{space 3}0.748{col 63}{space 4}-.2743064{col 76}{space 3} .3819731
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1974956{col 35}{space 2} .1370816{col 46}{space 1}    1.44{col 55}{space 3}0.150{col 63}{space 4}-.0711794{col 76}{space 3} .4661707
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.0450592{col 35}{space 2}  .156229{col 46}{space 1}   -0.29{col 55}{space 3}0.773{col 63}{space 4}-.3512626{col 76}{space 3} .2611442
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0616793{col 35}{space 2} .1772811{col 46}{space 1}    0.35{col 55}{space 3}0.728{col 63}{space 4}-.2860611{col 76}{space 3} .4094198
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .8711606{col 35}{space 2} .1752466{col 46}{space 1}    4.97{col 55}{space 3}0.000{col 63}{space 4} .5276833{col 76}{space 3} 1.214638
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2} -.012066{col 35}{space 2} .0062219{col 46}{space 1}   -1.94{col 55}{space 3}0.053{col 63}{space 4}-.0242818{col 76}{space 3} .0001498
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.348646{col 35}{space 2} .3306792{col 46}{space 1}   -4.08{col 55}{space 3}0.000{col 63}{space 4}-1.996791{col 76}{space 3}-.7005017
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0168
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1182
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    315.15
+{txt}{col 49}        avg{col 67}= {res}1692899.99
+{txt}{col 49}        max{col 67}= {res}  1.90e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}356998.9{txt}){col 67}= {res}      3.33
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     DEP_ANTIDEP_DICH{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 17}EEAA {c |}{col 23}{res}{space 2} .0020233{col 35}{space 2} .0102255{col 46}{space 1}    0.20{col 55}{space 3}0.843{col 63}{space 4}-.0180184{col 76}{space 3} .0220649
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.2330031{col 35}{space 2} .1628003{col 46}{space 1}   -1.43{col 55}{space 3}0.152{col 63}{space 4}-.5520861{col 76}{space 3} .0860799
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.3436869{col 35}{space 2} .2042352{col 46}{space 1}   -1.68{col 55}{space 3}0.092{col 63}{space 4}-.7439808{col 76}{space 3}  .056607
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-.6252472{col 35}{space 2} .1675954{col 46}{space 1}   -3.73{col 55}{space 3}0.000{col 63}{space 4}-.9537284{col 76}{space 3}-.2967659
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-.1927306{col 35}{space 2} .4461073{col 46}{space 1}   -0.43{col 55}{space 3}0.666{col 63}{space 4}-1.067085{col 76}{space 3}  .681624
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}-.0071249{col 35}{space 2} .1912698{col 46}{space 1}   -0.04{col 55}{space 3}0.970{col 63}{space 4}-.3820069{col 76}{space 3} .3677572
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.2959705{col 35}{space 2} .3674826{col 46}{space 1}   -0.81{col 55}{space 3}0.421{col 63}{space 4}-1.016256{col 76}{space 3} .4243145
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1199184{col 35}{space 2} .1797655{col 46}{space 1}    0.67{col 55}{space 3}0.505{col 63}{space 4}-.2324157{col 76}{space 3} .4722524
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .0276641{col 35}{space 2} .1709044{col 46}{space 1}    0.16{col 55}{space 3}0.871{col 63}{space 4}-.3073154{col 76}{space 3} .3626435
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0012589{col 35}{space 2} .2322974{col 46}{space 1}    0.01{col 55}{space 3}0.996{col 63}{space 4}-.4540441{col 76}{space 3}  .456562
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0451717{col 35}{space 2} .2161713{col 46}{space 1}   -0.21{col 55}{space 3}0.834{col 63}{space 4}-.4689328{col 76}{space 3} .3785893
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0477799{col 35}{space 2} .2465135{col 46}{space 1}   -0.19{col 55}{space 3}0.846{col 63}{space 4}-.5309896{col 76}{space 3} .4354298
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.4175305{col 35}{space 2} .1622504{col 46}{space 1}   -2.57{col 55}{space 3}0.010{col 63}{space 4}-.7357276{col 76}{space 3}-.0993334
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.3471126{col 35}{space 2} .2204029{col 46}{space 1}   -1.57{col 55}{space 3}0.115{col 63}{space 4}-.7791419{col 76}{space 3} .0849168
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} -.752342{col 35}{space 2} .4806315{col 46}{space 1}   -1.57{col 55}{space 3}0.119{col 63}{space 4}-1.697994{col 76}{space 3} .1933099
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .3353118{col 35}{space 2} .1483992{col 46}{space 1}    2.26{col 55}{space 3}0.024{col 63}{space 4} .0443891{col 76}{space 3} .6262345
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .7128104{col 35}{space 2} .2109877{col 46}{space 1}    3.38{col 55}{space 3}0.001{col 63}{space 4} .2992107{col 76}{space 3}  1.12641
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1411204{col 35}{space 2} .2142603{col 46}{space 1}    0.66{col 55}{space 3}0.510{col 63}{space 4}-.2788404{col 76}{space 3} .5610812
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} -.092496{col 35}{space 2} .2054511{col 46}{space 1}   -0.45{col 55}{space 3}0.653{col 63}{space 4}-.4951746{col 76}{space 3} .3101827
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.2738871{col 35}{space 2}  .228587{col 46}{space 1}   -1.20{col 55}{space 3}0.231{col 63}{space 4}-.7219105{col 76}{space 3} .1741363
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1142166{col 35}{space 2}  .185776{col 46}{space 1}    0.61{col 55}{space 3}0.539{col 63}{space 4}-.2498988{col 76}{space 3}  .478332
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1560298{col 35}{space 2} .1836547{col 46}{space 1}    0.85{col 55}{space 3}0.396{col 63}{space 4}-.2039299{col 76}{space 3} .5159896
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0520561{col 35}{space 2} .1673976{col 46}{space 1}    0.31{col 55}{space 3}0.756{col 63}{space 4}-.2760372{col 76}{space 3} .3801495
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1950015{col 35}{space 2} .1371539{col 46}{space 1}    1.42{col 55}{space 3}0.155{col 63}{space 4}-.0738153{col 76}{space 3} .4638182
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.0461572{col 35}{space 2}  .156158{col 46}{space 1}   -0.30{col 55}{space 3}0.768{col 63}{space 4}-.3522213{col 76}{space 3}  .259907
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0615227{col 35}{space 2} .1772506{col 46}{space 1}    0.35{col 55}{space 3}0.729{col 63}{space 4}-.2861552{col 76}{space 3} .4092005
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .8701452{col 35}{space 2} .1752088{col 46}{space 1}    4.97{col 55}{space 3}0.000{col 63}{space 4}  .526742{col 76}{space 3} 1.213548
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0119921{col 35}{space 2} .0062277{col 46}{space 1}   -1.93{col 55}{space 3}0.055{col 63}{space 4}-.0242196{col 76}{space 3} .0002353
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.347763{col 35}{space 2} .3305535{col 46}{space 1}   -4.08{col 55}{space 3}0.000{col 63}{space 4}-1.995661{col 76}{space 3}-.6998645
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0168
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1188
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    312.52
+{txt}{col 49}        avg{col 67}= {res}1473203.99
+{txt}{col 49}        max{col 67}= {res}  1.74e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}356526.5{txt}){col 67}= {res}      3.34
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     DEP_ANTIDEP_DICH{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 8}AgeAccelPheno {c |}{col 23}{res}{space 2} -.007973{col 35}{space 2} .0101635{col 46}{space 1}   -0.78{col 55}{space 3}0.433{col 63}{space 4}-.0278931{col 76}{space 3}  .011947
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.2250475{col 35}{space 2} .1632747{col 46}{space 1}   -1.38{col 55}{space 3}0.168{col 63}{space 4}-.5450604{col 76}{space 3} .0949653
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.3384688{col 35}{space 2} .2045722{col 46}{space 1}   -1.65{col 55}{space 3}0.098{col 63}{space 4}-.7394233{col 76}{space 3} .0624856
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-.6250659{col 35}{space 2} .1668646{col 46}{space 1}   -3.75{col 55}{space 3}0.000{col 63}{space 4}-.9521148{col 76}{space 3}-.2980169
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-.1992717{col 35}{space 2} .4467881{col 46}{space 1}   -0.45{col 55}{space 3}0.656{col 63}{space 4} -1.07496{col 76}{space 3}  .676417
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2} .0023691{col 35}{space 2} .1909776{col 46}{space 1}    0.01{col 55}{space 3}0.990{col 63}{space 4}-.3719403{col 76}{space 3} .3766784
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.3126342{col 35}{space 2} .3687806{col 46}{space 1}   -0.85{col 55}{space 3}0.397{col 63}{space 4}-1.035462{col 76}{space 3} .4101937
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1220133{col 35}{space 2} .1798485{col 46}{space 1}    0.68{col 55}{space 3}0.498{col 63}{space 4}-.2304834{col 76}{space 3} .4745101
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .0267236{col 35}{space 2} .1708449{col 46}{space 1}    0.16{col 55}{space 3}0.876{col 63}{space 4}-.3081386{col 76}{space 3} .3615858
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} -.001177{col 35}{space 2} .2323795{col 46}{space 1}   -0.01{col 55}{space 3}0.996{col 63}{space 4}-.4566409{col 76}{space 3} .4542868
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0507313{col 35}{space 2} .2162505{col 46}{space 1}   -0.23{col 55}{space 3}0.815{col 63}{space 4}-.4746447{col 76}{space 3} .3731822
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} -.059663{col 35}{space 2} .2465258{col 46}{space 1}   -0.24{col 55}{space 3}0.809{col 63}{space 4}-.5428972{col 76}{space 3} .4235713
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.4192928{col 35}{space 2}   .16218{col 46}{space 1}   -2.59{col 55}{space 3}0.010{col 63}{space 4}-.7373368{col 76}{space 3}-.1012487
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} -.349232{col 35}{space 2} .2204169{col 46}{space 1}   -1.58{col 55}{space 3}0.113{col 63}{space 4}-.7812869{col 76}{space 3} .0828229
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.7521161{col 35}{space 2} .4808745{col 46}{space 1}   -1.56{col 55}{space 3}0.119{col 63}{space 4}-1.698277{col 76}{space 3} .1940448
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .3373926{col 35}{space 2} .1485278{col 46}{space 1}    2.27{col 55}{space 3}0.023{col 63}{space 4} .0462146{col 76}{space 3} .6285707
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}  .729668{col 35}{space 2} .2121551{col 46}{space 1}    3.44{col 55}{space 3}0.001{col 63}{space 4} .3137708{col 76}{space 3} 1.145565
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1422015{col 35}{space 2} .2141535{col 46}{space 1}    0.66{col 55}{space 3}0.507{col 63}{space 4}-.2775497{col 76}{space 3} .5619528
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0915742{col 35}{space 2} .2055622{col 46}{space 1}   -0.45{col 55}{space 3}0.656{col 63}{space 4}-.4944707{col 76}{space 3} .3113223
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.2753572{col 35}{space 2} .2287254{col 46}{space 1}   -1.20{col 55}{space 3}0.229{col 63}{space 4}-.7236517{col 76}{space 3} .1729373
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1120561{col 35}{space 2} .1857638{col 46}{space 1}    0.60{col 55}{space 3}0.546{col 63}{space 4}-.2520353{col 76}{space 3} .4761475
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1624126{col 35}{space 2} .1838356{col 46}{space 1}    0.88{col 55}{space 3}0.377{col 63}{space 4}-.1979018{col 76}{space 3} .5227269
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0569549{col 35}{space 2} .1674212{col 46}{space 1}    0.34{col 55}{space 3}0.734{col 63}{space 4}-.2711846{col 76}{space 3} .3850944
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .2064124{col 35}{space 2} .1375927{col 46}{space 1}    1.50{col 55}{space 3}0.134{col 63}{space 4}-.0632644{col 76}{space 3} .4760893
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.0399211{col 35}{space 2} .1564593{col 46}{space 1}   -0.26{col 55}{space 3}0.799{col 63}{space 4}-.3465759{col 76}{space 3} .2667337
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0594518{col 35}{space 2} .1772342{col 46}{space 1}    0.34{col 55}{space 3}0.737{col 63}{space 4}-.2881927{col 76}{space 3} .4070963
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .8680054{col 35}{space 2} .1753736{col 46}{space 1}    4.95{col 55}{space 3}0.000{col 63}{space 4} .5242792{col 76}{space 3} 1.211732
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0121887{col 35}{space 2}   .00624{col 46}{space 1}   -1.95{col 55}{space 3}0.051{col 63}{space 4}-.0244407{col 76}{space 3} .0000632
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.359504{col 35}{space 2} .3311829{col 46}{space 1}   -4.10{col 55}{space 3}0.000{col 63}{space 4}-2.008635{col 76}{space 3} -.710373
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0173
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1182
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    315.57
+{txt}{col 49}        avg{col 67}= {res}1875836.72
+{txt}{col 49}        max{col 67}= {res}  2.78e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}  28{txt},{res}338349.7{txt}){col 67}= {res}      3.33
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     DEP_ANTIDEP_DICH{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+{space 6}AgeAccelGrimAge {c |}{col 23}{res}{space 2} .0076134{col 35}{space 2} .0202855{col 46}{space 1}    0.38{col 55}{space 3}0.707{col 63}{space 4}-.0321488{col 76}{space 3} .0473756
+{txt}{space 21} {c |}
+{space 15}AGE_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.2375819{col 35}{space 2} .1632579{col 46}{space 1}   -1.46{col 55}{space 3}0.146{col 63}{space 4}-.5575619{col 76}{space 3} .0823982
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.3519606{col 35}{space 2} .2053841{col 46}{space 1}   -1.71{col 55}{space 3}0.087{col 63}{space 4}-.7545066{col 76}{space 3} .0505854
+{txt}{space 21} {c |}
+{space 15}RACEBR {c |}
+{space 19}1  {c |}{col 23}{res}{space 2}-.6339427{col 35}{space 2} .1672274{col 46}{space 1}   -3.79{col 55}{space 3}0.000{col 63}{space 4}-.9617025{col 76}{space 3}-.3061828
+{txt}{space 19}2  {c |}{col 23}{res}{space 2}-.1982718{col 35}{space 2} .4461198{col 46}{space 1}   -0.44{col 55}{space 3}0.657{col 63}{space 4}-1.072651{col 76}{space 3}  .676107
+{txt}{space 21} {c |}
+{space 10}1.ETHNICITY {c |}{col 23}{res}{space 2}-.0039863{col 35}{space 2} .1906601{col 46}{space 1}   -0.02{col 55}{space 3}0.983{col 63}{space 4}-.3776733{col 76}{space 3} .3697007
+{txt}{space 21} {c |}
+{space 11}MARITAL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2}-.2941402{col 35}{space 2} .3674915{col 46}{space 1}   -0.80{col 55}{space 3}0.423{col 63}{space 4}-1.014444{col 76}{space 3} .4261631
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1172317{col 35}{space 2} .1798166{col 46}{space 1}    0.65{col 55}{space 3}0.514{col 63}{space 4}-.2352027{col 76}{space 3} .4696661
+{txt}{space 19}4  {c |}{col 23}{res}{space 2} .0245693{col 35}{space 2} .1712917{col 46}{space 1}    0.14{col 55}{space 3}0.886{col 63}{space 4}-.3111722{col 76}{space 3} .3603107
+{txt}{space 21} {c |}
+{space 14}EDUC_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .0036152{col 35}{space 2} .2324895{col 46}{space 1}    0.02{col 55}{space 3}0.988{col 63}{space 4}-.4520656{col 76}{space 3}  .459296
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0429425{col 35}{space 2} .2164158{col 46}{space 1}   -0.20{col 55}{space 3}0.843{col 63}{space 4}-.4671914{col 76}{space 3} .3813063
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.0427045{col 35}{space 2} .2472635{col 46}{space 1}   -0.17{col 55}{space 3}0.863{col 63}{space 4}-.5273972{col 76}{space 3} .4419881
+{txt}{space 21} {c |}
+{space 12}INCOME_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} -.416827{col 35}{space 2} .1621951{col 46}{space 1}   -2.57{col 55}{space 3}0.010{col 63}{space 4} -.734914{col 76}{space 3}-.0987401
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.3477589{col 35}{space 2} .2203433{col 46}{space 1}   -1.58{col 55}{space 3}0.115{col 63}{space 4}-.7796709{col 76}{space 3}  .084153
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.7515846{col 35}{space 2} .4806043{col 46}{space 1}   -1.56{col 55}{space 3}0.119{col 63}{space 4}-1.697178{col 76}{space 3}  .194009
+{txt}{space 21} {c |}
+{space 11}SMOKING_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .3185524{col 35}{space 2} .1550054{col 46}{space 1}    2.06{col 55}{space 3}0.040{col 63}{space 4} .0146458{col 76}{space 3}  .622459
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .6617489{col 35}{space 2} .2543776{col 46}{space 1}    2.60{col 55}{space 3}0.009{col 63}{space 4} .1629581{col 76}{space 3}  1.16054
+{txt}{space 21} {c |}
+{space 11}ALCOHOL_BR {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1403782{col 35}{space 2} .2141709{col 46}{space 1}    0.66{col 55}{space 3}0.512{col 63}{space 4}-.2794068{col 76}{space 3} .5601632
+{txt}{space 19}3  {c |}{col 23}{res}{space 2}-.0912004{col 35}{space 2} .2054914{col 46}{space 1}   -0.44{col 55}{space 3}0.657{col 63}{space 4}-.4939579{col 76}{space 3}  .311557
+{txt}{space 19}4  {c |}{col 23}{res}{space 2}-.2752099{col 35}{space 2} .2286909{col 46}{space 1}   -1.20{col 55}{space 3}0.229{col 63}{space 4}-.7234369{col 76}{space 3}  .173017
+{txt}{space 21} {c |}
+{space 13}BMIC_BR2 {c |}
+{space 19}2  {c |}{col 23}{res}{space 2} .1141816{col 35}{space 2} .1857734{col 46}{space 1}    0.61{col 55}{space 3}0.539{col 63}{space 4}-.2499287{col 76}{space 3}  .478292
+{txt}{space 19}3  {c |}{col 23}{res}{space 2} .1544921{col 35}{space 2}  .183722{col 46}{space 1}    0.84{col 55}{space 3}0.400{col 63}{space 4}-.2055996{col 76}{space 3} .5145839
+{txt}{space 21} {c |}
+{space 11}1.CVD_BR12 {c |}{col 23}{res}{space 2} .0542409{col 35}{space 2} .1673587{col 46}{space 1}    0.32{col 55}{space 3}0.746{col 63}{space 4}-.2737761{col 76}{space 3} .3822578
+{txt}{space 12}1.HT_BR12 {c |}{col 23}{res}{space 2} .1935746{col 35}{space 2}  .137171{col 46}{space 1}    1.41{col 55}{space 3}0.158{col 63}{space 4}-.0752756{col 76}{space 3} .4624249
+{txt}{space 10}1.DIAB_BR12 {c |}{col 23}{res}{space 2}-.0511141{col 35}{space 2}  .156815{col 46}{space 1}   -0.33{col 55}{space 3}0.744{col 63}{space 4}-.3584662{col 76}{space 3}  .256238
+{txt}{space 2}1.HYPERLIPIDEMIA_BR {c |}{col 23}{res}{space 2} .0627428{col 35}{space 2}  .177123{col 46}{space 1}    0.35{col 55}{space 3}0.723{col 63}{space 4}-.2846684{col 76}{space 3}  .410154
+{txt}{space 13}2.SRH_BR {c |}{col 23}{res}{space 2} .8692367{col 35}{space 2} .1751958{col 46}{space 1}    4.96{col 55}{space 3}0.000{col 63}{space 4}  .525859{col 76}{space 3} 1.212614
+{txt}PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2} -.011959{col 35}{space 2} .0062247{col 46}{space 1}   -1.92{col 55}{space 3}0.055{col 63}{space 4}-.0241813{col 76}{space 3} .0002633
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.329902{col 35}{space 2} .3336694{col 46}{space 1}   -3.99{col 55}{space 3}0.000{col 63}{space 4} -1.98391{col 76}{space 3}-.6758943
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. capture log close
+{smcl}
+{com}{sf}{ul off}

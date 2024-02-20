@@ -1,0 +1,1277 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. 
+. ////////////////////////TABLE 6: Causal mediation analysis for change in depression, antidepressant use as well as depression and/or antidepressant use as mediators and/or moderators of the relationship between estimates of epigenetic age acceleration and all-cause mortality risks ///////
+> 
+. 
+. 
+. 
+.  
+.  
+. capture drop AGE_BRg* 
+{txt}
+{com}. tab AGE_BR,generate(AGE_BRg)
+
+     {txt}AGE_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      2,958       25.95       25.95
+{txt}          2 {c |}{res}      5,358       47.00       72.95
+{txt}          3 {c |}{res}      3,084       27.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,400      100.00
+{txt}
+{com}. 
+. 
+. capture drop RACEBRg*
+{txt}
+{com}. tab RACEBR, generate(RACEBRg)
+
+     {txt}RACEBR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      7,494       65.74       65.74
+{txt}          1 {c |}{res}      3,690       32.37       98.11
+{txt}          2 {c |}{res}        216        1.89      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,400      100.00
+{txt}
+{com}. 
+. capture drop ETHNICITYg*
+{txt}
+{com}. tab ETHNICITY, generate(ETHNICITYg)
+
+  {txt}ETHNICITY {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      9,708       85.16       85.16
+{txt}          1 {c |}{res}      1,692       14.84      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,400      100.00
+{txt}
+{com}. 
+. capture drop MARITAL_BRg*
+{txt}
+{com}. tab MARITAL_BR, generate(MARITAL_BRg)
+
+ {txt}MARITAL_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      6,034       52.97       52.97
+{txt}          2 {c |}{res}        478        4.20       57.17
+{txt}          3 {c |}{res}      2,220       19.49       76.66
+{txt}          4 {c |}{res}      2,659       23.34      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,391      100.00
+{txt}
+{com}. 
+. capture drop EDUC_BRg*
+{txt}
+{com}. tab EDUC_BR, generate(EDUC_BRg)
+
+    {txt}EDUC_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      1,259       11.06       11.06
+{txt}          2 {c |}{res}      2,280       20.02       31.08
+{txt}          3 {c |}{res}      4,492       39.45       70.53
+{txt}          4 {c |}{res}      3,355       29.47      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,386      100.00
+{txt}
+{com}. 
+. capture drop INCOME_BRg*
+{txt}
+{com}. tab INCOME_BR, generate(INCOME_BRg)
+
+  {txt}INCOME_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      3,370       29.85       29.85
+{txt}          2 {c |}{res}      5,338       47.28       77.14
+{txt}          3 {c |}{res}      2,085       18.47       95.61
+{txt}          4 {c |}{res}        496        4.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,289      100.00
+{txt}
+{com}. 
+. capture drop SMOKING_BRg*
+{txt}
+{com}. tab SMOKING_BR, generate(SMOKING_BRg)
+
+ {txt}SMOKING_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      6,058       53.27       53.27
+{txt}          2 {c |}{res}      4,177       36.73       89.99
+{txt}          3 {c |}{res}      1,138       10.01      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,373      100.00
+{txt}
+{com}.  
+. capture drop ALCOHOL_BRg*
+{txt}
+{com}. tab ALCOHOL_BR, generate(ALCOHOL_BRg)
+
+ {txt}ALCOHOL_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      1,751       15.38       15.38
+{txt}          2 {c |}{res}      2,673       23.48       38.86
+{txt}          3 {c |}{res}      3,852       33.84       72.70
+{txt}          4 {c |}{res}      3,108       27.30      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,384      100.00
+{txt}
+{com}. 
+. capture drop BMIC_BR2g*
+{txt}
+{com}. tab BMIC_BR2, generate(BMIC_BR2g)
+
+   {txt}BMIC_BR2 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      2,573       22.60       22.60
+{txt}          2 {c |}{res}      3,811       33.47       56.07
+{txt}          3 {c |}{res}      5,002       43.93      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,386      100.00
+{txt}
+{com}. 
+. capture drop  CVD_BR12g*
+{txt}
+{com}. tab CVD_BR12, generate(CVD_BR12g)
+
+   {txt}CVD_BR12 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      9,432       82.74       82.74
+{txt}          1 {c |}{res}      1,968       17.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,400      100.00
+{txt}
+{com}. 
+. capture drop HT_BR12g*
+{txt}
+{com}. tab HT_BR12, generate(HT_BR12g)
+
+    {txt}HT_BR12 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      5,328       46.74       46.74
+{txt}          1 {c |}{res}      6,072       53.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,400      100.00
+{txt}
+{com}. 
+. capture drop DIAB_BR12g*
+{txt}
+{com}. tab DIAB_BR12, generate(DIAB_BR12g)
+
+  {txt}DIAB_BR12 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      8,718       76.47       76.47
+{txt}          1 {c |}{res}      2,682       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,400      100.00
+{txt}
+{com}. 
+. capture drop HYPERLIPIDEMIA_BRg*
+{txt}
+{com}. tab HYPERLIPIDEMIA_BR, generate(HYPERLIPIDEMIA_BRg)
+
+{txt}HYPERLIPIDE {c |}
+     MIA_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      9,439       83.69       83.69
+{txt}          1 {c |}{res}      1,840       16.31      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,279      100.00
+{txt}
+{com}. 
+. capture drop SRH_BRg*
+{txt}
+{com}. tab SRH_BR, generate(SRH_BRg)
+
+     {txt}SRH_BR {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}      9,973       87.51       87.51
+{txt}          2 {c |}{res}      1,423       12.49      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     11,396      100.00
+{txt}
+{com}. 
+. 
+. capture drop zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge
+{txt}
+{com}. foreach x of varlist IEAA EEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}.         egen z`x'=std(`x') if sample_final==1
+{txt}  3{com}. {c )-}
+{txt}
+{com}. 
+. *************************************MED4WAY******************************************
+. 
+. 
+. **MODEL 1**
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' DEPRESSION_BASELINE_BR     if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0274065{col 26}{space 2} .0303819{col 37}{space 1}    0.90{col 46}{space 3}0.367{col 54}{space 4}-.0321409{col 67}{space 3} .0869539
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0350343{col 26}{space 2} .0317699{col 37}{space 1}    1.10{col 46}{space 3}0.270{col 54}{space 4}-.0272336{col 67}{space 3} .0973022
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0081715{col 26}{space 2} .0116809{col 37}{space 1}   -0.70{col 46}{space 3}0.484{col 54}{space 4}-.0310657{col 67}{space 3} .0147226
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0005366{col 26}{space 2} .0009208{col 37}{space 1}    0.58{col 46}{space 3}0.560{col 54}{space 4} -.001268{col 67}{space 3} .0023413
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} 7.09e-06{col 26}{space 2} .0006821{col 37}{space 1}    0.01{col 46}{space 3}0.992{col 54}{space 4}-.0013299{col 67}{space 3} .0013441
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1174202{col 26}{space 2} .0333309{col 37}{space 1}    3.52{col 46}{space 3}0.000{col 54}{space 4} .0520928{col 67}{space 3} .1827477
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1186288{col 26}{space 2} .0348907{col 37}{space 1}    3.40{col 46}{space 3}0.001{col 54}{space 4} .0502443{col 67}{space 3} .1870133
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0009295{col 26}{space 2} .0122247{col 37}{space 1}   -0.08{col 46}{space 3}0.939{col 54}{space 4}-.0248893{col 67}{space 3} .0230304
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0001097{col 26}{space 2} .0014448{col 37}{space 1}   -0.08{col 46}{space 3}0.939{col 54}{space 4}-.0029416{col 67}{space 3} .0027221
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0001694{col 26}{space 2}  .001231{col 37}{space 1}   -0.14{col 46}{space 3}0.891{col 54}{space 4}-.0025821{col 67}{space 3} .0022433
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1820114{col 26}{space 2} .0358426{col 37}{space 1}    5.08{col 46}{space 3}0.000{col 54}{space 4} .1117612{col 67}{space 3} .2522615
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2}  .180454{col 26}{space 2} .0368053{col 37}{space 1}    4.90{col 46}{space 3}0.000{col 54}{space 4}  .108317{col 67}{space 3}  .252591
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0015437{col 26}{space 2} .0146001{col 37}{space 1}    0.11{col 46}{space 3}0.916{col 54}{space 4} -.027072{col 67}{space 3} .0301593
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}  .000073{col 26}{space 2} .0006987{col 37}{space 1}    0.10{col 46}{space 3}0.917{col 54}{space 4}-.0012963{col 67}{space 3} .0014424
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0000593{col 26}{space 2} .0004999{col 37}{space 1}   -0.12{col 46}{space 3}0.906{col 54}{space 4} -.001039{col 67}{space 3} .0009204
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2956495{col 26}{space 2} .0363579{col 37}{space 1}    8.13{col 46}{space 3}0.000{col 54}{space 4} .2243894{col 67}{space 3} .3669096
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .3160779{col 26}{space 2}  .039023{col 37}{space 1}    8.10{col 46}{space 3}0.000{col 54}{space 4} .2395941{col 67}{space 3} .3925616
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0166225{col 26}{space 2} .0112464{col 37}{space 1}   -1.48{col 46}{space 3}0.139{col 54}{space 4} -.038665{col 67}{space 3} .0054199
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} -.003104{col 26}{space 2}  .002411{col 37}{space 1}   -1.29{col 46}{space 3}0.198{col 54}{space 4}-.0078295{col 67}{space 3} .0016216
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0007019{col 26}{space 2} .0019525{col 37}{space 1}   -0.36{col 46}{space 3}0.719{col 54}{space 4}-.0045287{col 67}{space 3}  .003125
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' ANTIDEPRESSANT_BR     if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0263031{col 26}{space 2} .0309497{col 37}{space 1}    0.85{col 46}{space 3}0.395{col 54}{space 4}-.0343572{col 67}{space 3} .0869634
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0275707{col 26}{space 2} .0305241{col 37}{space 1}    0.90{col 46}{space 3}0.366{col 54}{space 4}-.0322554{col 67}{space 3} .0873967
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0035886{col 26}{space 2} .0118508{col 37}{space 1}   -0.30{col 46}{space 3}0.762{col 54}{space 4}-.0268158{col 67}{space 3} .0196386
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0003019{col 26}{space 2} .0010447{col 37}{space 1}   -0.29{col 46}{space 3}0.773{col 54}{space 4}-.0023495{col 67}{space 3} .0017458
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0026229{col 26}{space 2} .0028578{col 37}{space 1}    0.92{col 46}{space 3}0.359{col 54}{space 4}-.0029782{col 67}{space 3} .0082241
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1285823{col 26}{space 2}  .034868{col 37}{space 1}    3.69{col 46}{space 3}0.000{col 54}{space 4} .0602422{col 67}{space 3} .1969223
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1062158{col 26}{space 2} .0331276{col 37}{space 1}    3.21{col 46}{space 3}0.001{col 54}{space 4} .0412869{col 67}{space 3} .1711447
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0174295{col 26}{space 2} .0148485{col 37}{space 1}    1.17{col 46}{space 3}0.240{col 54}{space 4}-.0116731{col 67}{space 3} .0465321
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0018284{col 26}{space 2} .0022181{col 37}{space 1}    0.82{col 46}{space 3}0.410{col 54}{space 4} -.002519{col 67}{space 3} .0061757
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0031086{col 26}{space 2} .0029016{col 37}{space 1}    1.07{col 46}{space 3}0.284{col 54}{space 4}-.0025784{col 67}{space 3} .0087957
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1788918{col 26}{space 2} .0354311{col 37}{space 1}    5.05{col 46}{space 3}0.000{col 54}{space 4} .1094482{col 67}{space 3} .2483355
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1842406{col 26}{space 2} .0360726{col 37}{space 1}    5.11{col 46}{space 3}0.000{col 54}{space 4} .1135396{col 67}{space 3} .2549415
+{txt}ereri_intref {c |}{col 14}{res}{space 2} -.004667{col 26}{space 2} .0116512{col 37}{space 1}   -0.40{col 46}{space 3}0.689{col 54}{space 4} -.027503{col 67}{space 3}  .018169
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}  .000119{col 26}{space 2} .0004809{col 37}{space 1}    0.25{col 46}{space 3}0.805{col 54}{space 4}-.0008236{col 67}{space 3} .0010615
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0008007{col 26}{space 2} .0025595{col 37}{space 1}   -0.31{col 46}{space 3}0.754{col 54}{space 4}-.0058172{col 67}{space 3} .0042157
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2962872{col 26}{space 2} .0363986{col 37}{space 1}    8.14{col 46}{space 3}0.000{col 54}{space 4} .2249473{col 67}{space 3} .3676271
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .2866148{col 26}{space 2} .0372119{col 37}{space 1}    7.70{col 46}{space 3}0.000{col 54}{space 4} .2136808{col 67}{space 3} .3595488
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0043173{col 26}{space 2} .0105512{col 37}{space 1}    0.41{col 46}{space 3}0.682{col 54}{space 4}-.0163626{col 67}{space 3} .0249973
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0007395{col 26}{space 2} .0018484{col 37}{space 1}    0.40{col 46}{space 3}0.689{col 54}{space 4}-.0028833{col 67}{space 3} .0043622
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0046156{col 26}{space 2} .0030045{col 37}{space 1}    1.54{col 46}{space 3}0.124{col 54}{space 4} -.001273{col 67}{space 3} .0105043
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way  `x' DEP_ANTIDEP_DICH     if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}.   
+. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0249513{col 26}{space 2} .0308665{col 37}{space 1}    0.81{col 46}{space 3}0.419{col 54}{space 4}-.0355459{col 67}{space 3} .0854486
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0343317{col 26}{space 2} .0317183{col 37}{space 1}    1.08{col 46}{space 3}0.279{col 54}{space 4} -.027835{col 67}{space 3} .0964984
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0094221{col 26}{space 2} .0166346{col 37}{space 1}   -0.57{col 46}{space 3}0.571{col 54}{space 4}-.0420253{col 67}{space 3} .0231811
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0000159{col 26}{space 2} .0004872{col 37}{space 1}   -0.03{col 46}{space 3}0.974{col 54}{space 4}-.0009707{col 67}{space 3}  .000939
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0000576{col 26}{space 2} .0017666{col 37}{space 1}    0.03{col 46}{space 3}0.974{col 54}{space 4}-.0034049{col 67}{space 3} .0035201
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1180917{col 26}{space 2} .0337393{col 37}{space 1}    3.50{col 46}{space 3}0.000{col 54}{space 4} .0519638{col 67}{space 3} .1842196
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1132131{col 26}{space 2} .0348847{col 37}{space 1}    3.25{col 46}{space 3}0.001{col 54}{space 4} .0448403{col 67}{space 3} .1815859
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0021572{col 26}{space 2} .0172917{col 37}{space 1}    0.12{col 46}{space 3}0.901{col 54}{space 4} -.031734{col 67}{space 3} .0360484
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0001691{col 26}{space 2} .0013609{col 37}{space 1}    0.12{col 46}{space 3}0.901{col 54}{space 4}-.0024982{col 67}{space 3} .0028365
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0025523{col 26}{space 2} .0021129{col 37}{space 1}    1.21{col 46}{space 3}0.227{col 54}{space 4}-.0015888{col 67}{space 3} .0066935
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1784509{col 26}{space 2} .0357624{col 37}{space 1}    4.99{col 46}{space 3}0.000{col 54}{space 4}  .108358{col 67}{space 3} .2485439
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1833055{col 26}{space 2} .0373394{col 37}{space 1}    4.91{col 46}{space 3}0.000{col 54}{space 4} .1101216{col 67}{space 3} .2564894
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0051017{col 26}{space 2} .0183621{col 37}{space 1}   -0.28{col 46}{space 3}0.781{col 54}{space 4}-.0410907{col 67}{space 3} .0308872
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0000439{col 26}{space 2} .0003082{col 37}{space 1}   -0.14{col 46}{space 3}0.887{col 54}{space 4} -.000648{col 67}{space 3} .0005603
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}  .000291{col 26}{space 2} .0017616{col 37}{space 1}    0.17{col 46}{space 3}0.869{col 54}{space 4}-.0031616{col 67}{space 3} .0037436
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: no covariates specified.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2939541{col 26}{space 2} .0363258{col 37}{space 1}    8.09{col 46}{space 3}0.000{col 54}{space 4} .2227569{col 67}{space 3} .3651513
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .3035759{col 26}{space 2}  .039729{col 37}{space 1}    7.64{col 46}{space 3}0.000{col 54}{space 4} .2257086{col 67}{space 3} .3814433
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0118625{col 26}{space 2}   .01562{col 37}{space 1}   -0.76{col 46}{space 3}0.448{col 54}{space 4}-.0424771{col 67}{space 3} .0187521
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0017498{col 26}{space 2}  .002395{col 37}{space 1}   -0.73{col 46}{space 3}0.465{col 54}{space 4}-.0064439{col 67}{space 3} .0029443
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0039905{col 26}{space 2} .0025946{col 37}{space 1}    1.54{col 46}{space 3}0.124{col 54}{space 4}-.0010948{col 67}{space 3} .0090758
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. **MODEL 2**
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' DEPRESSION_BASELINE_BR  AGE_BRg* RACEBRg* ETHNICITYg* MARITAL_BRg* EDUC_BRg* INCOME_BRg*   if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0005
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0011
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}3388607.83
+{txt}{col 49}        avg{col 67}= {res}  2.47e+07
+{txt}{col 49}        max{col 67}= {res}  6.00e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0601164{col 26}{space 2}  .030746{col 37}{space 1}    1.96{col 46}{space 3}0.051{col 54}{space 4}-.0001447{col 67}{space 3} .1203776
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0719966{col 26}{space 2} .0320018{col 37}{space 1}    2.25{col 46}{space 3}0.024{col 54}{space 4} .0092742{col 67}{space 3} .1347189
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0121722{col 26}{space 2} .0110202{col 37}{space 1}   -1.10{col 46}{space 3}0.269{col 54}{space 4}-.0337713{col 67}{space 3} .0094269
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0005363{col 26}{space 2} .0009377{col 37}{space 1}    0.57{col 46}{space 3}0.567{col 54}{space 4}-.0013016{col 67}{space 3} .0023742
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0002443{col 26}{space 2} .0005713{col 37}{space 1}   -0.43{col 46}{space 3}0.669{col 54}{space 4} -.001364{col 67}{space 3} .0008755
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0009
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0015
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}1902142.44
+{txt}{col 49}        avg{col 67}= {res}  3.79e+07
+{txt}{col 49}        max{col 67}= {res}  1.49e+08
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1291316{col 26}{space 2} .0340206{col 37}{space 1}    3.80{col 46}{space 3}0.000{col 54}{space 4} .0624525{col 67}{space 3} .1958107
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1352266{col 26}{space 2} .0353145{col 37}{space 1}    3.83{col 46}{space 3}0.000{col 54}{space 4} .0660114{col 67}{space 3} .2044417
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0059932{col 26}{space 2}  .011984{col 37}{space 1}   -0.50{col 46}{space 3}0.617{col 54}{space 4}-.0294815{col 67}{space 3} .0174951
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0004923{col 26}{space 2} .0010786{col 37}{space 1}   -0.46{col 46}{space 3}0.648{col 54}{space 4}-.0026062{col 67}{space 3} .0016217
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0003906{col 26}{space 2} .0008948{col 37}{space 1}    0.44{col 46}{space 3}0.662{col 54}{space 4}-.0013632{col 67}{space 3} .0021443
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0006
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0010
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}4057084.94
+{txt}{col 49}        avg{col 67}= {res}  7.92e+07
+{txt}{col 49}        max{col 67}= {res}  2.85e+08
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2045411{col 26}{space 2} .0370933{col 37}{space 1}    5.51{col 46}{space 3}0.000{col 54}{space 4} .1318396{col 67}{space 3} .2772425
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2}  .208895{col 26}{space 2}  .037995{col 37}{space 1}    5.50{col 46}{space 3}0.000{col 54}{space 4} .1344261{col 67}{space 3}  .283364
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0043699{col 26}{space 2} .0141804{col 37}{space 1}   -0.31{col 46}{space 3}0.758{col 54}{space 4}-.0321631{col 67}{space 3} .0234233
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0000782{col 26}{space 2} .0003953{col 37}{space 1}   -0.20{col 46}{space 3}0.843{col 54}{space 4}-.0008531{col 67}{space 3} .0006967
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0000941{col 26}{space 2} .0004042{col 37}{space 1}    0.23{col 46}{space 3}0.816{col 54}{space 4} -.000698{col 67}{space 3} .0008863
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0005
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0009
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}5006061.04
+{txt}{col 49}        avg{col 67}= {res}  2.55e+07
+{txt}{col 49}        max{col 67}= {res}  6.82e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .3275293{col 26}{space 2} .0400858{col 37}{space 1}    8.17{col 46}{space 3}0.000{col 54}{space 4} .2489626{col 67}{space 3} .4060959
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .3392357{col 26}{space 2} .0421651{col 37}{space 1}    8.05{col 46}{space 3}0.000{col 54}{space 4} .2565935{col 67}{space 3} .4218779
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0105514{col 26}{space 2} .0118767{col 37}{space 1}   -0.89{col 46}{space 3}0.374{col 54}{space 4}-.0338293{col 67}{space 3} .0127266
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0016428{col 26}{space 2} .0020097{col 37}{space 1}   -0.82{col 46}{space 3}0.414{col 54}{space 4}-.0055818{col 67}{space 3} .0022962
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0004877{col 26}{space 2} .0015849{col 37}{space 1}    0.31{col 46}{space 3}0.758{col 54}{space 4}-.0026186{col 67}{space 3} .0035941
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' ANTIDEPRESSANT_BR  AGE_BRg* RACEBRg* ETHNICITYg* MARITAL_BRg* EDUC_BRg* INCOME_BRg*   if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0002
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0004
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  2.08e+07
+{txt}{col 49}        avg{col 67}= {res}  5.23e+08
+{txt}{col 49}        max{col 67}= {res}  1.22e+09
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0622455{col 26}{space 2} .0311432{col 37}{space 1}    2.00{col 46}{space 3}0.046{col 54}{space 4}  .001206{col 67}{space 3} .1232851
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0611141{col 26}{space 2}  .030954{col 37}{space 1}    1.97{col 46}{space 3}0.048{col 54}{space 4} .0004453{col 67}{space 3} .1217829
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0014898{col 26}{space 2} .0106929{col 37}{space 1}   -0.14{col 46}{space 3}0.889{col 54}{space 4}-.0224475{col 67}{space 3}  .019468
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0001234{col 26}{space 2} .0008964{col 37}{space 1}   -0.14{col 46}{space 3}0.891{col 54}{space 4}-.0018803{col 67}{space 3} .0016335
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0027445{col 26}{space 2} .0031753{col 37}{space 1}    0.86{col 46}{space 3}0.387{col 54}{space 4}-.0034788{col 67}{space 3} .0089679
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0003
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0006
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1.20e+07
+{txt}{col 49}        avg{col 67}= {res}  3.42e+07
+{txt}{col 49}        max{col 67}= {res}  6.59e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1399159{col 26}{space 2} .0352735{col 37}{space 1}    3.97{col 46}{space 3}0.000{col 54}{space 4}  .070781{col 67}{space 3} .2090508
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1221098{col 26}{space 2} .0337493{col 37}{space 1}    3.62{col 46}{space 3}0.000{col 54}{space 4} .0559625{col 67}{space 3} .1882572
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0146806{col 26}{space 2} .0142463{col 37}{space 1}    1.03{col 46}{space 3}0.303{col 54}{space 4}-.0132415{col 67}{space 3} .0426028
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}   .00097{col 26}{space 2} .0016613{col 37}{space 1}    0.58{col 46}{space 3}0.559{col 54}{space 4} -.002286{col 67}{space 3}  .004226
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0021554{col 26}{space 2} .0031167{col 37}{space 1}    0.69{col 46}{space 3}0.489{col 54}{space 4}-.0039532{col 67}{space 3} .0082641
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0002
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0007
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}7327841.11
+{txt}{col 49}        avg{col 67}= {res}  3.74e+08
+{txt}{col 49}        max{col 67}= {res}  1.60e+09
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2}  .205059{col 26}{space 2} .0367455{col 37}{space 1}    5.58{col 46}{space 3}0.000{col 54}{space 4} .1330391{col 67}{space 3} .2770788
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .2078405{col 26}{space 2} .0373522{col 37}{space 1}    5.56{col 46}{space 3}0.000{col 54}{space 4} .1346315{col 67}{space 3} .2810495
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0020849{col 26}{space 2} .0111788{col 37}{space 1}   -0.19{col 46}{space 3}0.852{col 54}{space 4}-.0239949{col 67}{space 3} .0198251
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0000457{col 26}{space 2} .0003041{col 37}{space 1}    0.15{col 46}{space 3}0.881{col 54}{space 4}-.0005503{col 67}{space 3} .0006417
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0007423{col 26}{space 2} .0029345{col 37}{space 1}   -0.25{col 46}{space 3}0.800{col 54}{space 4}-.0064939{col 67}{space 3} .0050092
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0004
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0011
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}3033655.18
+{txt}{col 49}        avg{col 67}= {res}  1.67e+07
+{txt}{col 49}        max{col 67}= {res}  4.03e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .3307744{col 26}{space 2} .0403015{col 37}{space 1}    8.21{col 46}{space 3}0.000{col 54}{space 4} .2517849{col 67}{space 3}  .409764
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .3088703{col 26}{space 2} .0407333{col 37}{space 1}    7.58{col 46}{space 3}0.000{col 54}{space 4} .2290344{col 67}{space 3} .3887062
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0127798{col 26}{space 2} .0112085{col 37}{space 1}    1.14{col 46}{space 3}0.254{col 54}{space 4}-.0091885{col 67}{space 3} .0347481
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0028784{col 26}{space 2} .0028149{col 37}{space 1}    1.02{col 46}{space 3}0.307{col 54}{space 4}-.0026387{col 67}{space 3} .0083954
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}  .006246{col 26}{space 2} .0035028{col 37}{space 1}    1.78{col 46}{space 3}0.075{col 54}{space 4}-.0006194{col 67}{space 3} .0131113
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' DEP_ANTIDEP_DICH  AGE_BRg* RACEBRg* ETHNICITYg* MARITAL_BRg* EDUC_BRg* INCOME_BRg*   if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}.   
+. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0004
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0007
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}7845807.75
+{txt}{col 49}        avg{col 67}= {res}  2.85e+08
+{txt}{col 49}        max{col 67}= {res}  1.20e+09
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0562842{col 26}{space 2} .0310793{col 37}{space 1}    1.81{col 46}{space 3}0.070{col 54}{space 4}-.0046302{col 67}{space 3} .1171985
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0714697{col 26}{space 2} .0320694{col 37}{space 1}    2.23{col 46}{space 3}0.026{col 54}{space 4} .0086149{col 67}{space 3} .1343246
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0154762{col 26}{space 2} .0159282{col 37}{space 1}   -0.97{col 46}{space 3}0.331{col 54}{space 4}-.0466949{col 67}{space 3} .0157424
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0001815{col 26}{space 2}  .000855{col 37}{space 1}   -0.21{col 46}{space 3}0.832{col 54}{space 4}-.0018573{col 67}{space 3} .0014943
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0004721{col 26}{space 2} .0021778{col 37}{space 1}    0.22{col 46}{space 3}0.828{col 54}{space 4}-.0037962{col 67}{space 3} .0047405
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0006
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0011
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}3284453.18
+{txt}{col 49}        avg{col 67}= {res}  7.30e+07
+{txt}{col 49}        max{col 67}= {res}  3.26e+08
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1270939{col 26}{space 2} .0343806{col 37}{space 1}    3.70{col 46}{space 3}0.000{col 54}{space 4} .0597092{col 67}{space 3} .1944786
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2}   .13155{col 26}{space 2} .0352833{col 37}{space 1}    3.73{col 46}{space 3}0.000{col 54}{space 4}  .062396{col 67}{space 3} .2007039
+{txt}ereri_intref {c |}{col 14}{res}{space 2} -.005786{col 26}{space 2} .0175338{col 37}{space 1}   -0.33{col 46}{space 3}0.741{col 54}{space 4}-.0401516{col 67}{space 3} .0285796
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0002286{col 26}{space 2} .0007647{col 37}{space 1}   -0.30{col 46}{space 3}0.765{col 54}{space 4}-.0017274{col 67}{space 3} .0012702
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0015585{col 26}{space 2} .0022693{col 37}{space 1}    0.69{col 46}{space 3}0.492{col 54}{space 4}-.0028893{col 67}{space 3} .0060063
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0004
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0007
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}8884040.23
+{txt}{col 49}        avg{col 67}= {res}  2.39e+07
+{txt}{col 49}        max{col 67}= {res}  5.75e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2003803{col 26}{space 2} .0369532{col 37}{space 1}    5.42{col 46}{space 3}0.000{col 54}{space 4} .1279533{col 67}{space 3} .2728073
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .2131345{col 26}{space 2} .0386185{col 37}{space 1}    5.52{col 46}{space 3}0.000{col 54}{space 4} .1374436{col 67}{space 3} .2888253
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0125756{col 26}{space 2} .0181634{col 37}{space 1}   -0.69{col 46}{space 3}0.489{col 54}{space 4}-.0481751{col 67}{space 3}  .023024
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0000809{col 26}{space 2} .0006808{col 37}{space 1}    0.12{col 46}{space 3}0.905{col 54}{space 4}-.0012534{col 67}{space 3} .0014152
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0002595{col 26}{space 2} .0021559{col 37}{space 1}   -0.12{col 46}{space 3}0.904{col 54}{space 4} -.004485{col 67}{space 3} .0039659
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0004
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0010
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}4092568.39
+{txt}{col 49}        avg{col 67}= {res}  4.88e+08
+{txt}{col 49}        max{col 67}= {res}  2.35e+09
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .3265862{col 26}{space 2} .0401867{col 37}{space 1}    8.13{col 46}{space 3}0.000{col 54}{space 4} .2478217{col 67}{space 3} .4053507
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .3254002{col 26}{space 2} .0429338{col 37}{space 1}    7.58{col 46}{space 3}0.000{col 54}{space 4} .2412515{col 67}{space 3}  .409549
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0032931{col 26}{space 2} .0169198{col 37}{space 1}   -0.19{col 46}{space 3}0.846{col 54}{space 4}-.0364553{col 67}{space 3} .0298691
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0004983{col 26}{space 2} .0025666{col 37}{space 1}   -0.19{col 46}{space 3}0.846{col 54}{space 4}-.0055286{col 67}{space 3} .0045321
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0049774{col 26}{space 2} .0028974{col 37}{space 1}    1.72{col 46}{space 3}0.086{col 54}{space 4}-.0007015{col 67}{space 3} .0106562
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. **MODEL 3**
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' DEPRESSION_BASELINE_BR  AGE_BRg* RACEBRg* ETHNICITYg* MARITAL_BRg* EDUC_BRg* INCOME_BRg* SMOKING_BRg* ALCOHOL_BRg*  BMIC_BR2g* CVD_BR12g* HT_BR12g* DIAB_BR12g* HYPERLIPIDEMIA_BRg* SRH_BRg* PHYSICAL_ACTIVITY_MET  if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0005
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0010
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}4053869.10
+{txt}{col 49}        avg{col 67}= {res}9647497.59
+{txt}{col 49}        max{col 67}= {res}  2.64e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0421681{col 26}{space 2}  .030107{col 37}{space 1}    1.40{col 46}{space 3}0.161{col 54}{space 4}-.0168406{col 67}{space 3} .1011767
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0539958{col 26}{space 2} .0316534{col 37}{space 1}    1.71{col 46}{space 3}0.088{col 54}{space 4}-.0080438{col 67}{space 3} .1160354
+{txt}ereri_intref {c |}{col 14}{res}{space 2} -.013236{col 26}{space 2}  .008621{col 37}{space 1}   -1.54{col 46}{space 3}0.125{col 54}{space 4}-.0301329{col 67}{space 3} .0036609
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0009688{col 26}{space 2} .0010732{col 37}{space 1}    0.90{col 46}{space 3}0.367{col 54}{space 4}-.0011346{col 67}{space 3} .0030722
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0004395{col 26}{space 2}  .000734{col 37}{space 1}    0.60{col 46}{space 3}0.549{col 54}{space 4}-.0009992{col 67}{space 3} .0018781
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0007
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0016
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}1589603.53
+{txt}{col 49}        avg{col 67}= {res}  1.60e+07
+{txt}{col 49}        max{col 67}= {res}  5.03e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1138467{col 26}{space 2} .0338644{col 37}{space 1}    3.36{col 46}{space 3}0.001{col 54}{space 4} .0474737{col 67}{space 3} .1802198
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1243702{col 26}{space 2} .0359311{col 37}{space 1}    3.46{col 46}{space 3}0.001{col 54}{space 4} .0539466{col 67}{space 3} .1947939
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0097983{col 26}{space 2} .0094163{col 37}{space 1}   -1.04{col 46}{space 3}0.298{col 54}{space 4}-.0282538{col 67}{space 3} .0086573
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0004507{col 26}{space 2} .0008397{col 37}{space 1}   -0.54{col 46}{space 3}0.591{col 54}{space 4}-.0020964{col 67}{space 3} .0011951
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0002746{col 26}{space 2} .0005896{col 37}{space 1}   -0.47{col 46}{space 3}0.641{col 54}{space 4}-.0014302{col 67}{space 3} .0008811
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0008
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0030
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}454,875.93
+{txt}{col 49}        avg{col 67}= {res}9419580.42
+{txt}{col 49}        max{col 67}= {res}  2.29e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1613808{col 26}{space 2} .0357353{col 37}{space 1}    4.52{col 46}{space 3}0.000{col 54}{space 4}  .091341{col 67}{space 3} .2314207
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1667149{col 26}{space 2} .0372437{col 37}{space 1}    4.48{col 46}{space 3}0.000{col 54}{space 4} .0937186{col 67}{space 3} .2397113
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0054946{col 26}{space 2} .0112992{col 37}{space 1}   -0.49{col 46}{space 3}0.627{col 54}{space 4}-.0276406{col 67}{space 3} .0166514
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0000805{col 26}{space 2} .0004201{col 37}{space 1}    0.19{col 46}{space 3}0.848{col 54}{space 4}-.0007428{col 67}{space 3} .0009038
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}   .00008{col 26}{space 2} .0004075{col 37}{space 1}    0.20{col 46}{space 3}0.844{col 54}{space 4}-.0007188{col 67}{space 3} .0008788
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0046
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0172
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 13,724.36
+{txt}{col 49}        avg{col 67}= {res}1049750.67
+{txt}{col 49}        max{col 67}= {res}4764856.67
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2659594{col 26}{space 2} .0466259{col 37}{space 1}    5.70{col 46}{space 3}0.000{col 54}{space 4} .1745736{col 67}{space 3} .3573452
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .2811688{col 26}{space 2} .0482629{col 37}{space 1}    5.83{col 46}{space 3}0.000{col 54}{space 4} .1865747{col 67}{space 3} .3757628
+{txt}ereri_intref {c |}{col 14}{res}{space 2} -.014723{col 26}{space 2}  .009771{col 37}{space 1}   -1.51{col 46}{space 3}0.132{col 54}{space 4}-.0338738{col 67}{space 3} .0044278
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0003978{col 26}{space 2} .0013079{col 37}{space 1}   -0.30{col 46}{space 3}0.761{col 54}{space 4}-.0029615{col 67}{space 3}  .002166
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0000886{col 26}{space 2} .0003836{col 37}{space 1}   -0.23{col 46}{space 3}0.817{col 54}{space 4}-.0008404{col 67}{space 3} .0006632
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' ANTIDEPRESSANT_BR  AGE_BRg* RACEBRg* ETHNICITYg* MARITAL_BRg* EDUC_BRg* INCOME_BRg* SMOKING_BRg* ALCOHOL_BRg*  BMIC_BR2g* CVD_BR12g* HT_BR12g* DIAB_BR12g* HYPERLIPIDEMIA_BRg* SRH_BRg* PHYSICAL_ACTIVITY_MET  if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0003
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0009
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}4817066.91
+{txt}{col 49}        avg{col 67}= {res}  1.83e+07
+{txt}{col 49}        max{col 67}= {res}  3.62e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0403604{col 26}{space 2} .0304398{col 37}{space 1}    1.33{col 46}{space 3}0.185{col 54}{space 4}-.0193005{col 67}{space 3} .1000212
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2}  .043247{col 26}{space 2} .0305818{col 37}{space 1}    1.41{col 46}{space 3}0.157{col 54}{space 4}-.0166923{col 67}{space 3} .1031863
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0043844{col 26}{space 2} .0094135{col 37}{space 1}   -0.47{col 46}{space 3}0.641{col 54}{space 4}-.0228345{col 67}{space 3} .0140657
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0003137{col 26}{space 2} .0007851{col 37}{space 1}   -0.40{col 46}{space 3}0.690{col 54}{space 4}-.0018525{col 67}{space 3} .0012252
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0018114{col 26}{space 2} .0024205{col 37}{space 1}    0.75{col 46}{space 3}0.454{col 54}{space 4}-.0029327{col 67}{space 3} .0065555
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0008
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0024
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}724,645.02
+{txt}{col 49}        avg{col 67}= {res}  1.10e+07
+{txt}{col 49}        max{col 67}= {res}  2.67e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1124951{col 26}{space 2} .0340254{col 37}{space 1}    3.31{col 46}{space 3}0.001{col 54}{space 4} .0458065{col 67}{space 3} .1791836
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1087815{col 26}{space 2} .0340439{col 37}{space 1}    3.20{col 46}{space 3}0.001{col 54}{space 4} .0420568{col 67}{space 3} .1755063
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0024947{col 26}{space 2} .0106696{col 37}{space 1}    0.23{col 46}{space 3}0.815{col 54}{space 4}-.0184173{col 67}{space 3} .0234067
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0001116{col 26}{space 2} .0005341{col 37}{space 1}    0.21{col 46}{space 3}0.834{col 54}{space 4}-.0009351{col 67}{space 3} .0011584
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0011072{col 26}{space 2} .0023257{col 37}{space 1}    0.48{col 46}{space 3}0.634{col 54}{space 4}-.0034511{col 67}{space 3} .0056655
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0007
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0018
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}1173400.53
+{txt}{col 49}        avg{col 67}= {res}9320561.32
+{txt}{col 49}        max{col 67}= {res}  1.78e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1620465{col 26}{space 2} .0357531{col 37}{space 1}    4.53{col 46}{space 3}0.000{col 54}{space 4} .0919718{col 67}{space 3} .2321212
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1672783{col 26}{space 2} .0365568{col 37}{space 1}    4.58{col 46}{space 3}0.000{col 54}{space 4} .0956283{col 67}{space 3} .2389283
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0037876{col 26}{space 2} .0095307{col 37}{space 1}   -0.40{col 46}{space 3}0.691{col 54}{space 4}-.0224676{col 67}{space 3} .0148923
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0002481{col 26}{space 2} .0007044{col 37}{space 1}    0.35{col 46}{space 3}0.725{col 54}{space 4}-.0011325{col 67}{space 3} .0016288
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0016923{col 26}{space 2} .0022795{col 37}{space 1}   -0.74{col 46}{space 3}0.458{col 54}{space 4}  -.00616{col 67}{space 3} .0027754
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0044
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0125
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 25,897.10
+{txt}{col 49}        avg{col 67}= {res}455,086.29
+{txt}{col 49}        max{col 67}= {res}1177856.61
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2663804{col 26}{space 2} .0468889{col 37}{space 1}    5.68{col 46}{space 3}0.000{col 54}{space 4} .1744793{col 67}{space 3} .3582816
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .2601324{col 26}{space 2} .0469326{col 37}{space 1}    5.54{col 46}{space 3}0.000{col 54}{space 4} .1681458{col 67}{space 3} .3521191
+{txt}ereri_intref {c |}{col 14}{res}{space 2} .0024445{col 26}{space 2} .0093819{col 37}{space 1}    0.26{col 46}{space 3}0.794{col 54}{space 4}-.0159437{col 67}{space 3} .0208328
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0003482{col 26}{space 2} .0013802{col 37}{space 1}    0.25{col 46}{space 3}0.801{col 54}{space 4}-.0023569{col 67}{space 3} .0030532
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0034553{col 26}{space 2} .0031244{col 37}{space 1}    1.11{col 46}{space 3}0.269{col 54}{space 4}-.0026688{col 67}{space 3} .0095794
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist zIEAA zEEAA zAgeAccelPheno zAgeAccelGrimAge {c -(}
+{txt}  2{com}. mi estimate, cmdok esampvaryok: med4way `x' DEP_ANTIDEP_DICH  AGE_BRg* RACEBRg* ETHNICITYg* MARITAL_BRg* EDUC_BRg* INCOME_BRg* SMOKING_BRg* ALCOHOL_BRg*  BMIC_BR2g* CVD_BR12g* HT_BR12g* DIAB_BR12g* HYPERLIPIDEMIA_BRg* SRH_BRg* PHYSICAL_ACTIVITY_MET  if sample_final==1 , a0(0) a1(1) m(0) yreg(cox) mreg(logistic) 
+{txt}  3{com}.   
+. {c )-}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0003
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0009
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}5166197.24
+{txt}{col 49}        avg{col 67}= {res}  4.26e+07
+{txt}{col 49}        max{col 67}= {res}  8.41e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .0375636{col 26}{space 2} .0302536{col 37}{space 1}    1.24{col 46}{space 3}0.214{col 54}{space 4}-.0217325{col 67}{space 3} .0968596
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .0551695{col 26}{space 2} .0319121{col 37}{space 1}    1.73{col 46}{space 3}0.084{col 54}{space 4} -.007377{col 67}{space 3}  .117716
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0175676{col 26}{space 2} .0137826{col 37}{space 1}   -1.27{col 46}{space 3}0.202{col 54}{space 4}-.0445811{col 67}{space 3} .0094458
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0001749{col 26}{space 2} .0009619{col 37}{space 1}    0.18{col 46}{space 3}0.856{col 54}{space 4}-.0017104{col 67}{space 3} .0020602
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0002132{col 26}{space 2} .0011676{col 37}{space 1}   -0.18{col 46}{space 3}0.855{col 54}{space 4}-.0025015{col 67}{space 3} .0020752
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0007
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0015
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}1850787.28
+{txt}{col 49}        avg{col 67}= {res}  1.33e+07
+{txt}{col 49}        max{col 67}= {res}  4.42e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1091429{col 26}{space 2} .0337571{col 37}{space 1}    3.23{col 46}{space 3}0.001{col 54}{space 4} .0429801{col 67}{space 3} .1753057
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1249065{col 26}{space 2} .0363009{col 37}{space 1}    3.44{col 46}{space 3}0.001{col 54}{space 4}  .053758{col 67}{space 3} .1960549
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0158194{col 26}{space 2} .0145078{col 37}{space 1}   -1.09{col 46}{space 3}0.276{col 54}{space 4}-.0442541{col 67}{space 3} .0126154
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0001748{col 26}{space 2} .0009006{col 37}{space 1}   -0.19{col 46}{space 3}0.846{col 54}{space 4}  -.00194{col 67}{space 3} .0015904
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0002306{col 26}{space 2} .0011803{col 37}{space 1}    0.20{col 46}{space 3}0.845{col 54}{space 4}-.0020827{col 67}{space 3}  .002544
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0008
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0024
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}674,524.77
+{txt}{col 49}        avg{col 67}= {res}8314431.98
+{txt}{col 49}        max{col 67}= {res}  1.85e+07
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .1600727{col 26}{space 2} .0357595{col 37}{space 1}    4.48{col 46}{space 3}0.000{col 54}{space 4} .0899854{col 67}{space 3} .2301601
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .1740371{col 26}{space 2} .0380895{col 37}{space 1}    4.57{col 46}{space 3}0.000{col 54}{space 4} .0993831{col 67}{space 3} .2486911
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0135849{col 26}{space 2} .0156717{col 37}{space 1}   -0.87{col 46}{space 3}0.386{col 54}{space 4}-.0443009{col 67}{space 3} .0171311
+{txt}ereri_intmed {c |}{col 14}{res}{space 2} .0005863{col 26}{space 2} .0009974{col 37}{space 1}    0.59{col 46}{space 3}0.557{col 54}{space 4}-.0013686{col 67}{space 3} .0025412
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2}-.0009657{col 26}{space 2} .0013341{col 37}{space 1}   -0.72{col 46}{space 3}0.469{col 54}{space 4}-.0035806{col 67}{space 3} .0016492
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}{err}Warning: this analysis assumes a rare outcome.
+Warning: fixed values for the covariates AGE_BRg1 AGE_BRg2 AGE_BRg3 RACEBRg1 RACEBRg2 RACEBRg3 ETHNICITYg1 ETHNICITYg2 MARITAL_BRg1 MARITAL_BRg2 MARITAL_BRg3 MARITAL_BRg4 EDUC_BRg1 EDUC_BRg2 EDUC_BRg3 EDUC_BRg4 INCOME_BRg1 INCOME_BRg2 INCOME_BRg3 INCOME_BRg4 SMOKING_BRg1 SMOKING_BRg2 SMOKING_BRg3 ALCOHOL_BRg1 ALCOHOL_BRg2 ALCOHOL_BRg3 ALCOHOL_BRg4 BMIC_BR2g1 BMIC_BR2g2 BMIC_BR2g3 CVD_BR12g1 CVD_BR12g2 HT_BR12g1 HT_BR12g2 DIAB_BR12g1 DIAB_BR12g2 HYPERLIPIDEMIA_BRg1 HYPERLIPIDEMIA_BRg2 SRH_BRg1 SRH_BRg2 PHYSICAL_ACTIVITY_MET were not provided. All covariates are fixed at their respective mean.
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0060
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0184
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 12,051.04
+{txt}{col 49}        avg{col 67}= {res}361,750.91
+{txt}{col 49}        max{col 67}= {res}1233001.73
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}tereri {c |}{col 14}{res}{space 2} .2641043{col 26}{space 2} .0466827{col 37}{space 1}    5.66{col 46}{space 3}0.000{col 54}{space 4} .1726072{col 67}{space 3} .3556013
+{txt}{space 3}ereri_cde {c |}{col 14}{res}{space 2} .2825765{col 26}{space 2} .0486968{col 37}{space 1}    5.80{col 46}{space 3}0.000{col 54}{space 4} .1871323{col 67}{space 3} .3780207
+{txt}ereri_intref {c |}{col 14}{res}{space 2}-.0185941{col 26}{space 2}  .014623{col 37}{space 1}   -1.27{col 46}{space 3}0.204{col 54}{space 4}-.0472546{col 67}{space 3} .0100665
+{txt}ereri_intmed {c |}{col 14}{res}{space 2}-.0004707{col 26}{space 2} .0013165{col 37}{space 1}   -0.36{col 46}{space 3}0.721{col 54}{space 4}-.0030513{col 67}{space 3} .0021099
+{txt}{space 3}ereri_pie {c |}{col 14}{res}{space 2} .0005926{col 26}{space 2}  .001632{col 37}{space 1}    0.36{col 46}{space 3}0.717{col 54}{space 4}-.0026063{col 67}{space 3} .0037915
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. capture log close
+{smcl}
+{com}{sf}{ul off}

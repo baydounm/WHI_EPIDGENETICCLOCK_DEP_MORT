@@ -1,0 +1,1502 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. 
+. ///////////////////////////TABLE 2: Associations of sociodemographic, lifestyle and health characteristics with depression, antidepression use and all-cause mortality risk (n=) – Women's Health Initiative////////////////////////
+> 
+. use finaldata_imputedFINAL,clear
+{txt}
+{com}. 
+. mi stset, clear
+{res}{txt}
+{com}. 
+. mi stset AGE_EVENT, failure(DEATH_EVENT==1) enter(AGE) origin(AGE) id(ID) scale(1)
+{res}{txt}{p}
+(regular variables
+{res}_st _d _t _t0 _origin
+{txt}unregistered because not in {it:m}=0)
+{p_end}
+{res}
+{txt}Survival-time data settings
+
+{col 12}ID variable: {res}ID
+{col 10}{txt}Failure event: {res}DEATH_EVENT==1
+{col 1}{txt}Observed time interval: {res}(AGE_EVENT[_n-1], AGE_EVENT]
+{col 6}{txt}Enter on or after: {res}time AGE
+{col 6}{txt}Exit on or before: {res}failure
+{col 6}{txt}Time for analysis: {res}(time-origin)
+{col 17}{txt}Origin: {res}time AGE
+
+{txt}{hline 74}
+{res}      1,900{txt}  total observations
+{res}          0{txt}  exclusions
+{hline 74}
+{res}      1,900{txt}  observations remaining, representing
+{res}      1,900{txt}  subjects
+{res}      1,161{txt}  failures in single-failure-per-subject data
+{res} 35,748.047{txt}  total analysis time at risk and under observation
+                                                At risk from t = {res}        0
+                                     {txt}Earliest observed entry t = {res}        0
+                                          {txt}Last observed exit t = {res} 28.82136
+{txt}
+{com}. 
+. 
+. ***************Y=DEPRESSION_BASELINE_BR***********************************
+. 
+. foreach x of varlist AGE BMI PHYSICAL_ACTIVITY_MET {c -(}
+{txt}  2{com}.                 mi estimate: mlogit  DEPRESSION_BASELINE_BR `x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}     14.45
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 9}AGE {c |}{col 14}{res}{space 2}-.0395507{col 26}{space 2} .0104051{col 37}{space 1}   -3.80{col 46}{space 3}0.000{col 54}{space 4}-.0599443{col 67}{space 3} -.019157
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .4233014{col 26}{space 2} .6603257{col 37}{space 1}    0.64{col 46}{space 3}0.521{col 54}{space 4}-.8709132{col 67}{space 3} 1.717516
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0008
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0016
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}1600234.90
+{txt}{col 49}        avg{col 67}= {res}1861716.93
+{txt}{col 49}        max{col 67}= {res}2123198.96
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1.6e+06{txt}){col 67}= {res}     11.47
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0007
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 9}BMI {c |}{col 14}{res}{space 2} .0378168{col 26}{space 2} .0111642{col 37}{space 1}    3.39{col 46}{space 3}0.001{col 54}{space 4} .0159353{col 67}{space 3} .0596982
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-3.251552{col 26}{space 2} .3538209{col 37}{space 1}   -9.19{col 46}{space 3}0.000{col 54}{space 4}-3.945029{col 67}{space 3}-2.558076
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0481
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0911
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    520.50
+{txt}{col 49}        avg{col 67}= {res}  1,857.26
+{txt}{col 49}        max{col 67}= {res}  3,194.03
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}  520.5{txt}){col 67}= {res}     10.04
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0016
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BASELINE~R{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0247101{col 35}{space 2}  .007799{col 46}{space 1}   -3.17{col 55}{space 3}0.002{col 63}{space 4}-.0400315{col 76}{space 3}-.0093887
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.886011{col 35}{space 2} .0944952{col 46}{space 1}  -19.96{col 55}{space 3}0.000{col 63}{space 4}-2.071288{col 76}{space 3}-1.700733
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. 
+. foreach x of varlist AGE_BR RACEBR ETHNICITY MARITAL_BR EDUC_BR INCOME_BR SMOKING_BR ALCOHOL_BR  BMIC_BR2 CVD_BR12 HT_BR12 DIAB_BR12 HYPERLIPIDEMIA_BR SRH_BR {c -(}
+{txt}  2{com}.                 mi estimate: mlogit  DEPRESSION_BASELINE_BR i.`x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   2,      .)}{col 67}= {res}      5.54
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0039
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.4387501{col 26}{space 2} .1686298{col 37}{space 1}   -2.60{col 46}{space 3}0.009{col 54}{space 4}-.7692585{col 67}{space 3}-.1082417
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} -.618748{col 26}{space 2} .2023228{col 37}{space 1}   -3.06{col 46}{space 3}0.002{col 54}{space 4}-1.015293{col 67}{space 3}-.2222027
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.749795{col 26}{space 2} .1268053{col 37}{space 1}  -13.80{col 46}{space 3}0.000{col 54}{space 4}-1.998329{col 67}{space 3}-1.501261
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   2,      .)}{col 67}= {res}      1.78
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1689
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}  .149503{col 26}{space 2} .1563172{col 37}{space 1}    0.96{col 46}{space 3}0.339{col 54}{space 4}-.1568731{col 67}{space 3} .4558791
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .7485605{col 26}{space 2} .4313287{col 37}{space 1}    1.74{col 46}{space 3}0.083{col 54}{space 4}-.0968283{col 67}{space 3} 1.593949
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.169946{col 26}{space 2} .0932982{col 37}{space 1}  -23.26{col 46}{space 3}0.000{col 54}{space 4}-2.352807{col 67}{space 3}-1.987085
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  2.19e+62
+{txt}{col 49}        avg{col 67}= {res}  2.19e+62
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 2.2e+62{txt}){col 67}= {res}      6.37
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0116
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} .4669444{col 26}{space 2} .1850006{col 37}{space 1}    2.52{col 46}{space 3}0.012{col 54}{space 4} .1043499{col 67}{space 3} .8295389
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.182207{col 26}{space 2}  .082373{col 37}{space 1}  -26.49{col 46}{space 3}0.000{col 54}{space 4}-2.343655{col 67}{space 3}-2.020759
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0077
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0189
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 11,450.65
+{txt}{col 49}        avg{col 67}= {res}  1.32e+08
+{txt}{col 49}        max{col 67}= {res}  5.28e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}53754.2{txt}){col 67}= {res}      1.56
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1975
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .2222155{col 26}{space 2} .3704644{col 37}{space 1}    0.60{col 46}{space 3}0.549{col 54}{space 4}-.5039582{col 67}{space 3} .9483892
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .3173969{col 26}{space 2}  .190738{col 37}{space 1}    1.66{col 46}{space 3}0.096{col 54}{space 4}-.0564438{col 67}{space 3} .6912377
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .3343812{col 26}{space 2} .1790266{col 37}{space 1}    1.87{col 46}{space 3}0.062{col 54}{space 4}-.0165057{col 67}{space 3} .6852681
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.260885{col 26}{space 2} .1078183{col 37}{space 1}  -20.97{col 46}{space 3}0.000{col 54}{space 4}-2.472205{col 67}{space 3}-2.049565
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0047
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0092
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 47,516.05
+{txt}{col 49}        avg{col 67}= {res}191,073.83
+{txt}{col 49}        max{col 67}= {res}505,438.82
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}146225.5{txt}){col 67}= {res}      5.96
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0005
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.6162231{col 26}{space 2} .2414927{col 37}{space 1}   -2.55{col 46}{space 3}0.011{col 54}{space 4}-1.089548{col 67}{space 3}-.1428987
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.6395969{col 26}{space 2} .2131791{col 37}{space 1}   -3.00{col 46}{space 3}0.003{col 54}{space 4}-1.057431{col 67}{space 3} -.221763
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.9958959{col 26}{space 2} .2367912{col 37}{space 1}   -4.21{col 46}{space 3}0.000{col 54}{space 4}-1.459999{col 67}{space 3}-.5317925
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.465629{col 26}{space 2} .1772518{col 37}{space 1}   -8.27{col 46}{space 3}0.000{col 54}{space 4}-1.813039{col 67}{space 3}-1.118218
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0326
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0888
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    547.65
+{txt}{col 49}        avg{col 67}= {res} 70,872.29
+{txt}{col 49}        max{col 67}= {res}236,938.41
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 3289.1{txt}){col 67}= {res}     11.64
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.8890244{col 26}{space 2} .1659608{col 37}{space 1}   -5.36{col 46}{space 3}0.000{col 54}{space 4}-1.214316{col 67}{space 3}-.5637333
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.7703904{col 26}{space 2} .2187849{col 37}{space 1}   -3.52{col 46}{space 3}0.000{col 54}{space 4} -1.19923{col 67}{space 3}-.3415505
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.560371{col 26}{space 2} .5803574{col 37}{space 1}   -2.69{col 46}{space 3}0.007{col 54}{space 4} -2.70037{col 67}{space 3}-.4203723
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.547453{col 26}{space 2} .1104671{col 37}{space 1}  -14.01{col 46}{space 3}0.000{col 54}{space 4}-1.763965{col 67}{space 3} -1.33094
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0187
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0374
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  2,960.65
+{txt}{col 49}        avg{col 67}= {res}  8,302.82
+{txt}{col 49}        max{col 67}= {res} 13,492.61
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 3104.6{txt}){col 67}= {res}      5.96
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0026
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}  .024365{col 26}{space 2}  .166497{col 37}{space 1}    0.15{col 46}{space 3}0.884{col 54}{space 4}-.3020966{col 67}{space 3} .3508265
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .7210072{col 26}{space 2} .2165924{col 37}{space 1}    3.33{col 46}{space 3}0.001{col 54}{space 4} .2964331{col 67}{space 3} 1.145581
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.202105{col 26}{space 2} .1058849{col 37}{space 1}  -20.80{col 46}{space 3}0.000{col 54}{space 4}-2.409655{col 67}{space 3}-1.994556
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0135
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0237
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  7,287.80
+{txt}{col 49}        avg{col 67}= {res} 62,409.32
+{txt}{col 49}        max{col 67}= {res}170,173.58
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}17846.7{txt}){col 67}= {res}      3.95
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0079
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3282447{col 26}{space 2} .2310945{col 37}{space 1}    1.42{col 46}{space 3}0.156{col 54}{space 4}-.1247084{col 67}{space 3} .7811978
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0129223{col 26}{space 2} .2283838{col 37}{space 1}   -0.06{col 46}{space 3}0.955{col 54}{space 4}-.4606207{col 67}{space 3} .4347761
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.4088831{col 26}{space 2} .2503582{col 37}{space 1}   -1.63{col 46}{space 3}0.102{col 54}{space 4}-.8995796{col 67}{space 3} .0818135
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.089544{col 26}{space 2} .1877876{col 37}{space 1}  -11.13{col 46}{space 3}0.000{col 54}{space 4}-2.457613{col 67}{space 3}-1.721476
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0007
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0018
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}1300904.94
+{txt}{col 49}        avg{col 67}= {res}3519282.60
+{txt}{col 49}        max{col 67}= {res}5689360.17
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 2.3e+06{txt}){col 67}= {res}      6.34
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0018
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .1041015{col 26}{space 2} .2245458{col 37}{space 1}    0.46{col 46}{space 3}0.643{col 54}{space 4}-.3360003{col 67}{space 3} .5442034
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}  .587968{col 26}{space 2} .2031361{col 37}{space 1}    2.89{col 46}{space 3}0.004{col 54}{space 4} .1898282{col 67}{space 3} .9861078
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.422006{col 26}{space 2} .1764652{col 37}{space 1}  -13.73{col 46}{space 3}0.000{col 54}{space 4}-2.767872{col 67}{space 3}-2.076141
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      1.48
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.2230
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2} .2249474{col 26}{space 2} .1846006{col 37}{space 1}    1.22{col 46}{space 3}0.223{col 54}{space 4} -.136863{col 67}{space 3} .5867578
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -2.14327{col 26}{space 2} .0822881{col 37}{space 1}  -26.05{col 46}{space 3}0.000{col 54}{space 4}-2.304551{col 67}{space 3}-1.981988
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      2.06
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1509
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} .2139784{col 26}{space 2} .1489869{col 37}{space 1}    1.44{col 46}{space 3}0.151{col 54}{space 4}-.0780306{col 67}{space 3} .5059874
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.219953{col 26}{space 2} .1128835{col 37}{space 1}  -19.67{col 46}{space 3}0.000{col 54}{space 4}  -2.4412{col 67}{space 3}-1.998705
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  2.32e+63
+{txt}{col 49}        avg{col 67}= {res}  2.32e+63
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 2.3e+63{txt}){col 67}= {res}      1.60
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.2057
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} .2110211{col 26}{space 2} .1667491{col 37}{space 1}    1.27{col 46}{space 3}0.206{col 54}{space 4}-.1158011{col 67}{space 3} .5378433
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.154377{col 26}{space 2} .0859684{col 37}{space 1}  -25.06{col 46}{space 3}0.000{col 54}{space 4}-2.322872{col 67}{space 3}-1.985882
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0251
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0489
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,747.63
+{txt}{col 49}        avg{col 67}= {res} 28,322.28
+{txt}{col 49}        max{col 67}= {res} 54,896.94
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1747.6{txt}){col 67}= {res}      0.11
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.7435
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESSION_BASELI~R{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                  {col 21}{txt}{c |}  (base outcome)
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                   {txt}{c |}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2} .0657785{col 33}{space 2} .2009639{col 44}{space 1}    0.33{col 53}{space 3}0.743{col 61}{space 4}-.3283764{col 74}{space 3} .4599335
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-2.112557{col 33}{space 2} .0811707{col 44}{space 1}  -26.03{col 53}{space 3}0.000{col 61}{space 4}-2.271652{col 74}{space 3}-1.953462
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0002
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0003
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  3.68e+07
+{txt}{col 49}        avg{col 67}= {res}  1.05e+10
+{txt}{col 49}        max{col 67}= {res}  2.10e+10
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 3.7e+07{txt}){col 67}= {res}     58.32
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEPRESS~E_BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} 1.309492{col 26}{space 2} .1714699{col 37}{space 1}    7.64{col 46}{space 3}0.000{col 54}{space 4} .9734174{col 67}{space 3} 1.645567
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.348283{col 26}{space 2} .0869224{col 37}{space 1}  -27.02{col 46}{space 3}0.000{col 54}{space 4}-2.518648{col 67}{space 3}-2.177919
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. *****************Y=ANTIDEPRESSANT_BR**************************************
+. 
+. 
+. foreach x of varlist AGE BMI PHYSICAL_ACTIVITY_MET {c -(}
+{txt}  2{com}.                 mi estimate: mlogit  ANTIDEPRESSANT_BR `x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  7.77e+64
+{txt}{col 49}        avg{col 67}= {res}  7.77e+64
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 7.8e+64{txt}){col 67}= {res}      0.27
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.6016
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 9}AGE {c |}{col 14}{res}{space 2}-.0065467{col 26}{space 2} .0125392{col 37}{space 1}   -0.52{col 46}{space 3}0.602{col 54}{space 4} -.031123{col 67}{space 3} .0180296
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.148522{col 26}{space 2} .8116318{col 37}{space 1}   -2.65{col 46}{space 3}0.008{col 54}{space 4}-3.739291{col 67}{space 3}-.5577524
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0035
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0070
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 81,984.95
+{txt}{col 49}        avg{col 67}= {res} 86,618.12
+{txt}{col 49}        max{col 67}= {res} 91,251.29
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}81984.9{txt}){col 67}= {res}      1.26
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.2622
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 9}BMI {c |}{col 14}{res}{space 2} .0157333{col 26}{space 2} .0140337{col 37}{space 1}    1.12{col 46}{space 3}0.262{col 54}{space 4}-.0117727{col 67}{space 3} .0432393
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-3.044125{col 26}{space 2}  .435317{col 37}{space 1}   -6.99{col 46}{space 3}0.000{col 54}{space 4}-3.897341{col 67}{space 3}-2.190908
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0163
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0320
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  4,030.75
+{txt}{col 49}        avg{col 67}= {res} 14,153.15
+{txt}{col 49}        max{col 67}= {res} 24,275.54
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 4030.8{txt}){col 67}= {res}      3.06
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0803
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    ANTIDEPRESSANT_BR{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0147347{col 35}{space 2} .0084237{col 46}{space 1}   -1.75{col 55}{space 3}0.080{col 63}{space 4}-.0312498{col 76}{space 3} .0017804
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-2.435646{col 35}{space 2} .1136539{col 46}{space 1}  -21.43{col 55}{space 3}0.000{col 63}{space 4}-2.658415{col 76}{space 3}-2.212878
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. 
+. foreach x of varlist AGE_BR RACEBR ETHNICITY MARITAL_BR EDUC_BR INCOME_BR SMOKING_BR ALCOHOL_BR  BMIC_BR2 CVD_BR12 HT_BR12 DIAB_BR12 HYPERLIPIDEMIA_BR SRH_BR {c -(}
+{txt}  2{com}.                 mi estimate: mlogit  ANTIDEPRESSANT_BR i.`x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  2.75e+67
+{txt}{col 49}        avg{col 67}= {res}  2.75e+67
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 2.8e+67{txt}){col 67}= {res}      0.05
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.9470
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .0268953{col 26}{space 2} .2175941{col 37}{space 1}    0.12{col 46}{space 3}0.902{col 54}{space 4}-.3995813{col 67}{space 3} .4533718
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0448311{col 26}{space 2} .2478184{col 37}{space 1}   -0.18{col 46}{space 3}0.856{col 54}{space 4}-.5305461{col 67}{space 3}  .440884
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.571521{col 26}{space 2} .1753706{col 37}{space 1}  -14.66{col 46}{space 3}0.000{col 54}{space 4}-2.915241{col 67}{space 3}-2.227801
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   2,      .)}{col 67}= {res}      6.31
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0018
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}-.7628005{col 26}{space 2} .2242655{col 37}{space 1}   -3.40{col 46}{space 3}0.001{col 54}{space 4}-1.202353{col 67}{space 3}-.3232482
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}-1.197819{col 26}{space 2}  1.01917{col 37}{space 1}   -1.18{col 46}{space 3}0.240{col 54}{space 4}-3.195355{col 67}{space 3} .7997172
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.357529{col 26}{space 2} .1006761{col 37}{space 1}  -23.42{col 46}{space 3}0.000{col 54}{space 4}-2.554851{col 67}{space 3}-2.160208
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.55
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.4572
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} .1773797{col 26}{space 2}  .238604{col 37}{space 1}    0.74{col 46}{space 3}0.457{col 54}{space 4}-.2902755{col 67}{space 3} .6450348
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.598714{col 26}{space 2} .0979417{col 37}{space 1}  -26.53{col 46}{space 3}0.000{col 54}{space 4}-2.790676{col 67}{space 3}-2.406751
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0006
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0010
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}3843668.39
+{txt}{col 49}        avg{col 67}= {res}  2.84e+08
+{txt}{col 49}        max{col 67}= {res}  1.09e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 8.4e+06{txt}){col 67}= {res}      2.14
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0924
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} -1.03646{col 26}{space 2} .7272355{col 37}{space 1}   -1.43{col 46}{space 3}0.154{col 54}{space 4}-2.461816{col 67}{space 3} .3888954
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .3956515{col 26}{space 2} .2158416{col 37}{space 1}    1.83{col 46}{space 3}0.067{col 54}{space 4}-.0273903{col 67}{space 3} .8186933
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.0355567{col 26}{space 2}  .229542{col 37}{space 1}   -0.15{col 46}{space 3}0.877{col 54}{space 4}-.4854508{col 67}{space 3} .4143373
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.624455{col 26}{space 2} .1255894{col 37}{space 1}  -20.90{col 46}{space 3}0.000{col 54}{space 4}-2.870606{col 67}{space 3}-2.378304
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0004
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0006
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1.32e+07
+{txt}{col 49}        avg{col 67}= {res}  3.98e+07
+{txt}{col 49}        max{col 67}= {res}  6.22e+07
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 2.5e+07{txt}){col 67}= {res}      1.09
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.3521
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .4725977{col 26}{space 2}  .362058{col 37}{space 1}    1.31{col 46}{space 3}0.192{col 54}{space 4} -.237023{col 67}{space 3} 1.182218
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .4353794{col 26}{space 2} .3382225{col 37}{space 1}    1.29{col 46}{space 3}0.198{col 54}{space 4}-.2275245{col 67}{space 3} 1.098283
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .1568434{col 26}{space 2} .3567722{col 37}{space 1}    0.44{col 46}{space 3}0.660{col 54}{space 4}-.5424172{col 67}{space 3}  .856104
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.895399{col 26}{space 2} .3097815{col 37}{space 1}   -9.35{col 46}{space 3}0.000{col 54}{space 4} -3.50256{col 67}{space 3}-2.288239
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0348
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0579
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,257.95
+{txt}{col 49}        avg{col 67}= {res} 43,154.70
+{txt}{col 49}        max{col 67}= {res}157,447.93
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 2880.0{txt}){col 67}= {res}      0.78
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.5049
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.1619405{col 26}{space 2} .2064501{col 37}{space 1}   -0.78{col 46}{space 3}0.433{col 54}{space 4} -.566965{col 67}{space 3} .2430839
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.3816737{col 26}{space 2} .2760928{col 37}{space 1}   -1.38{col 46}{space 3}0.167{col 54}{space 4}-.9228097{col 67}{space 3} .1594624
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.4815855{col 26}{space 2} .5262567{col 37}{space 1}   -0.92{col 46}{space 3}0.360{col 54}{space 4}-1.513521{col 67}{space 3} .5503503
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.411899{col 26}{space 2} .1540579{col 37}{space 1}  -15.66{col 46}{space 3}0.000{col 54}{space 4}-2.713879{col 67}{space 3}-2.109919
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0135
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0217
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  8,712.68
+{txt}{col 49}        avg{col 67}= {res} 14,039.81
+{txt}{col 49}        max{col 67}= {res} 24,044.94
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 5842.5{txt}){col 67}= {res}      1.89
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1513
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}  .316533{col 26}{space 2} .1934605{col 37}{space 1}    1.64{col 46}{space 3}0.102{col 54}{space 4}-.0626953{col 67}{space 3} .6957614
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .4361951{col 26}{space 2} .2882153{col 37}{space 1}    1.51{col 46}{space 3}0.130{col 54}{space 4}-.1287696{col 67}{space 3}  1.00116
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.743649{col 26}{space 2} .1327438{col 37}{space 1}  -20.67{col 46}{space 3}0.000{col 54}{space 4}-3.003835{col 67}{space 3}-2.483463
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0107
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0128
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 24,571.45
+{txt}{col 49}        avg{col 67}= {res} 42,842.90
+{txt}{col 49}        max{col 67}= {res} 71,498.82
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}28001.9{txt}){col 67}= {res}      0.53
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.6643
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.1527601{col 26}{space 2} .2770008{col 37}{space 1}   -0.55{col 46}{space 3}0.581{col 54}{space 4}-.6956955{col 67}{space 3} .3901754
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.2997681{col 26}{space 2}  .263724{col 37}{space 1}   -1.14{col 46}{space 3}0.256{col 54}{space 4}-.8166707{col 67}{space 3} .2171346
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.2832734{col 26}{space 2} .2748447{col 37}{space 1}   -1.03{col 46}{space 3}0.303{col 54}{space 4}-.8219856{col 67}{space 3} .2554388
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.361268{col 26}{space 2} .2091942{col 37}{space 1}  -11.29{col 46}{space 3}0.000{col 54}{space 4}-2.771288{col 67}{space 3}-1.951248
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0004
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0012
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}2939287.35
+{txt}{col 49}        avg{col 67}= {res}6166639.98
+{txt}{col 49}        max{col 67}= {res}9324859.12
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 5.2e+06{txt}){col 67}= {res}      0.32
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.7292
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .1964142{col 26}{space 2} .2491936{col 37}{space 1}    0.79{col 46}{space 3}0.431{col 54}{space 4}-.2919963{col 67}{space 3} .6848248
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .1433413{col 26}{space 2} .2398888{col 37}{space 1}    0.60{col 46}{space 3}0.550{col 54}{space 4}-.3268323{col 67}{space 3} .6135149
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-2.701599{col 26}{space 2} .1988815{col 37}{space 1}  -13.58{col 46}{space 3}0.000{col 54}{space 4}  -3.0914{col 67}{space 3}-2.311798
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.40
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.5246
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2}  .144566{col 26}{space 2} .2272238{col 37}{space 1}    0.64{col 46}{space 3}0.525{col 54}{space 4}-.3007843{col 67}{space 3} .5899164
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.596897{col 26}{space 2} .0992867{col 37}{space 1}  -26.16{col 46}{space 3}0.000{col 54}{space 4}-2.791495{col 67}{space 3}-2.402298
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      0.54
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.4639
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} .1318006{col 26}{space 2} .1799491{col 37}{space 1}    0.73{col 46}{space 3}0.464{col 54}{space 4}-.2208933{col 67}{space 3} .4844944
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.642683{col 26}{space 2} .1347421{col 37}{space 1}  -19.61{col 46}{space 3}0.000{col 54}{space 4}-2.906772{col 67}{space 3}-2.378593
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      1.72
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1901
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} .2614545{col 26}{space 2} .1995182{col 37}{space 1}    1.31{col 46}{space 3}0.190{col 54}{space 4} -.129594{col 67}{space 3}  .652503
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.637583{col 26}{space 2} .1051035{col 37}{space 1}  -25.10{col 46}{space 3}0.000{col 54}{space 4}-2.843583{col 67}{space 3}-2.431584
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0310
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0599
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,175.57
+{txt}{col 49}        avg{col 67}= {res} 17,205.46
+{txt}{col 49}        max{col 67}= {res} 33,235.34
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1175.6{txt}){col 67}= {res}      0.08
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.7780
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}  ANTIDEPRESSANT_BR{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                  {col 21}{txt}{c |}  (base outcome)
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                   {txt}{c |}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2} .0689415{col 33}{space 2} .2445011{col 44}{space 1}    0.28{col 53}{space 3}0.778{col 61}{space 4}-.4107657{col 74}{space 3} .5486487
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-2.582312{col 33}{space 2} .0986316{col 44}{space 1}  -26.18{col 53}{space 3}0.000{col 61}{space 4}-2.775633{col 74}{space 3} -2.38899
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0001
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0001
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  2.19e+08
+{txt}{col 49}        avg{col 67}= {res}  2.00e+10
+{txt}{col 49}        max{col 67}= {res}  3.98e+10
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 2.2e+08{txt}){col 67}= {res}      7.31
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0069
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}ANTIDEPRE~BR{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} .6147502{col 26}{space 2} .2273848{col 37}{space 1}    2.70{col 46}{space 3}0.007{col 54}{space 4} .1690842{col 67}{space 3} 1.060416
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.666971{col 26}{space 2} .0995114{col 37}{space 1}  -26.80{col 46}{space 3}0.000{col 54}{space 4} -2.86201{col 67}{space 3}-2.471932
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. **************Y=DEP_ANTIDEP_DICH*****************************************
+. 
+. 
+. foreach x of varlist AGE BMI PHYSICAL_ACTIVITY_MET {c -(}
+{txt}  2{com}.                 mi estimate: mlogit  DEP_ANTIDEP_DICH `x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  2.91e+65
+{txt}{col 49}        avg{col 67}= {res}  2.91e+65
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      6.21
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0127
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 9}AGE {c |}{col 14}{res}{space 2}-.0216471{col 26}{space 2} .0086842{col 37}{space 1}   -2.49{col 46}{space 3}0.013{col 54}{space 4}-.0386678{col 67}{space 3}-.0046263
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2286844{col 26}{space 2} .5582602{col 37}{space 1}   -0.41{col 46}{space 3}0.682{col 54}{space 4}-1.322854{col 67}{space 3} .8654855
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0033
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0065
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 96,343.48
+{txt}{col 49}        avg{col 67}= {res}104,140.70
+{txt}{col 49}        max{col 67}= {res}111,937.91
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}96343.5{txt}){col 67}= {res}      6.71
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0096
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 9}BMI {c |}{col 14}{res}{space 2} .0250852{col 26}{space 2} .0096821{col 37}{space 1}    2.59{col 46}{space 3}0.010{col 54}{space 4} .0061085{col 67}{space 3} .0440619
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.375994{col 26}{space 2} .3014422{col 37}{space 1}   -7.88{col 46}{space 3}0.000{col 54}{space 4}-2.966816{col 67}{space 3}-1.785172
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0388
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0742
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    774.62
+{txt}{col 49}        avg{col 67}= {res}  2,664.27
+{txt}{col 49}        max{col 67}= {res}  4,553.93
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}  774.6{txt}){col 67}= {res}     10.10
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0015
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     DEP_ANTIDEP_DICH{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                    {col 23}{txt}{c |}  (base outcome)
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                     {txt}{c |}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0192634{col 35}{space 2} .0060625{col 46}{space 1}   -3.18{col 55}{space 3}0.002{col 63}{space 4}-.0311643{col 76}{space 3}-.0073626
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2}-1.443943{col 35}{space 2}  .079598{col 46}{space 1}  -18.14{col 55}{space 3}0.000{col 63}{space 4}-1.599993{col 76}{space 3}-1.287892
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. 
+. foreach x of varlist AGE_BR RACEBR ETHNICITY MARITAL_BR EDUC_BR INCOME_BR SMOKING_BR ALCOHOL_BR  BMIC_BR2 CVD_BR12 HT_BR12 DIAB_BR12 HYPERLIPIDEMIA_BR SRH_BR {c -(}
+{txt}  2{com}.                 mi estimate: mlogit  DEP_ANTIDEP_DICH i.`x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  1.37e+63
+{txt}{col 49}        avg{col 67}= {res}  1.37e+63
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1.6e+63{txt}){col 67}= {res}      1.99
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1372
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2246535{col 26}{space 2} .1461685{col 37}{space 1}   -1.54{col 46}{space 3}0.124{col 54}{space 4}-.5111384{col 67}{space 3} .0618315
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.3189105{col 26}{space 2} .1687598{col 37}{space 1}   -1.89{col 46}{space 3}0.059{col 54}{space 4}-.6496736{col 67}{space 3} .0118527
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.432575{col 26}{space 2} .1141879{col 37}{space 1}  -12.55{col 46}{space 3}0.000{col 54}{space 4}-1.656379{col 67}{space 3}-1.208771
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  1.06e+63
+{txt}{col 49}        avg{col 67}= {res}  1.06e+63
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 2.3e+63{txt}){col 67}= {res}      1.66
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.1899
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}-.2416214{col 26}{space 2} .1371067{col 37}{space 1}   -1.76{col 46}{space 3}0.078{col 54}{space 4}-.5103456{col 67}{space 3} .0271029
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .1268567{col 26}{space 2} .4276412{col 37}{space 1}    0.30{col 46}{space 3}0.767{col 54}{space 4}-.7113047{col 67}{space 3}  .965018
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.548242{col 26}{space 2} .0744116{col 37}{space 1}  -20.81{col 46}{space 3}0.000{col 54}{space 4}-1.694086{col 67}{space 3}-1.402398
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      4.60
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0319
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} .3465456{col 26}{space 2}   .16152{col 37}{space 1}    2.15{col 46}{space 3}0.032{col 54}{space 4} .0299722{col 67}{space 3} .6631189
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -1.67618{col 26}{space 2} .0682294{col 37}{space 1}  -24.57{col 46}{space 3}0.000{col 54}{space 4}-1.809907{col 67}{space 3}-1.542453
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0064
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0174
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 13,361.46
+{txt}{col 49}        avg{col 67}= {res}  4.36e+07
+{txt}{col 49}        max{col 67}= {res}  1.73e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}77208.0{txt}){col 67}= {res}      1.25
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.2890
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2178301{col 26}{space 2} .3497054{col 37}{space 1}   -0.62{col 46}{space 3}0.533{col 54}{space 4}-.9033023{col 67}{space 3}  .467642
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .2536215{col 26}{space 2} .1588015{col 37}{space 1}    1.60{col 46}{space 3}0.110{col 54}{space 4}-.0576241{col 67}{space 3} .5648671
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .1645875{col 26}{space 2} .1522687{col 37}{space 1}    1.08{col 46}{space 3}0.280{col 54}{space 4}-.1338544{col 67}{space 3} .4630294
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.703222{col 26}{space 2}  .087336{col 37}{space 1}  -19.50{col 46}{space 3}0.000{col 54}{space 4}-1.874397{col 67}{space 3}-1.532046
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0037
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0069
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 83,773.00
+{txt}{col 49}        avg{col 67}= {res}310,686.79
+{txt}{col 49}        max{col 67}= {res}743,611.63
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}230529.3{txt}){col 67}= {res}      3.40
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0170
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.3071039{col 26}{space 2} .2134035{col 37}{space 1}   -1.44{col 46}{space 3}0.150{col 54}{space 4}-.7253701{col 67}{space 3} .1111623
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.3722449{col 26}{space 2} .1925677{col 37}{space 1}   -1.93{col 46}{space 3}0.053{col 54}{space 4}-.7496761{col 67}{space 3} .0051863
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.6490069{col 26}{space 2} .2071737{col 37}{space 1}   -3.13{col 46}{space 3}0.002{col 54}{space 4}-1.055061{col 67}{space 3}-.2429533
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} -1.23272{col 26}{space 2} .1654099{col 37}{space 1}   -7.45{col 46}{space 3}0.000{col 54}{space 4}-1.556919{col 67}{space 3}-.9085206
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0496
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1200
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    306.35
+{txt}{col 49}        avg{col 67}= {res} 13,134.87
+{txt}{col 49}        max{col 67}= {res} 32,216.63
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1484.7{txt}){col 67}= {res}      8.23
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.5947734{col 26}{space 2} .1401408{col 37}{space 1}   -4.24{col 46}{space 3}0.000{col 54}{space 4}-.8695177{col 67}{space 3}-.3200291
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.6256818{col 26}{space 2} .1855752{col 37}{space 1}   -3.37{col 46}{space 3}0.001{col 54}{space 4} -.989431{col 67}{space 3}-.2619326
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.193297{col 26}{space 2} .4358337{col 37}{space 1}   -2.74{col 46}{space 3}0.007{col 54}{space 4}-2.050904{col 67}{space 3}-.3356905
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.204596{col 26}{space 2} .1000963{col 37}{space 1}  -12.03{col 46}{space 3}0.000{col 54}{space 4}-1.400788{col 67}{space 3}-1.008403
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0179
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0317
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  4,105.41
+{txt}{col 49}        avg{col 67}= {res}  8,178.38
+{txt}{col 49}        max{col 67}= {res} 14,442.38
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 3364.4{txt}){col 67}= {res}      5.95
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0026
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .1756277{col 26}{space 2} .1366063{col 37}{space 1}    1.29{col 46}{space 3}0.199{col 54}{space 4}-.0921947{col 67}{space 3} .4434501
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .6618582{col 26}{space 2} .1922854{col 37}{space 1}    3.44{col 46}{space 3}0.001{col 54}{space 4} .2849094{col 67}{space 3} 1.038807
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.763267{col 26}{space 2} .0896605{col 37}{space 1}  -19.67{col 46}{space 3}0.000{col 54}{space 4}-1.939013{col 67}{space 3}-1.587521
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0088
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0122
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 27,368.87
+{txt}{col 49}        avg{col 67}= {res} 56,357.10
+{txt}{col 49}        max{col 67}= {res} 94,280.44
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}41129.5{txt}){col 67}= {res}      3.44
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0161
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .2538005{col 26}{space 2} .1960988{col 37}{space 1}    1.29{col 46}{space 3}0.196{col 54}{space 4} -.130563{col 67}{space 3} .6381641
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0453363{col 26}{space 2}  .190167{col 37}{space 1}   -0.24{col 46}{space 3}0.812{col 54}{space 4}-.4180695{col 67}{space 3} .3273969
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.3081442{col 26}{space 2} .2041706{col 37}{space 1}   -1.51{col 46}{space 3}0.131{col 54}{space 4}-.7083164{col 67}{space 3} .0920281
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.593146{col 26}{space 2} .1566774{col 37}{space 1}  -10.17{col 46}{space 3}0.000{col 54}{space 4}-1.900234{col 67}{space 3}-1.286059
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0011
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0030
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}455,892.04
+{txt}{col 49}        avg{col 67}= {res}1099998.37
+{txt}{col 49}        max{col 67}= {res}1734070.26
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res}817288.9{txt}){col 67}= {res}      2.81
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0601
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .1465288{col 26}{space 2} .1779354{col 37}{space 1}    0.82{col 46}{space 3}0.410{col 54}{space 4}-.2022183{col 67}{space 3}  .495276
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .3665663{col 26}{space 2} .1661754{col 37}{space 1}    2.21{col 46}{space 3}0.027{col 54}{space 4} .0408677{col 67}{space 3} .6922649
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.837034{col 26}{space 2} .1403081{col 37}{space 1}  -13.09{col 46}{space 3}0.000{col 54}{space 4}-2.112033{col 67}{space 3}-1.562034
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      1.62
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.2033
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2}  .199596{col 26}{space 2} .1568893{col 37}{space 1}    1.27{col 46}{space 3}0.203{col 54}{space 4}-.1079014{col 67}{space 3} .5070934
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.655958{col 26}{space 2} .0687447{col 37}{space 1}  -24.09{col 46}{space 3}0.000{col 54}{space 4}-1.790695{col 67}{space 3}-1.521221
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  5.79e+58
+{txt}{col 49}        avg{col 67}= {res}  5.79e+58
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      3.33
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0681
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} .2278204{col 26}{space 2} .1248913{col 37}{space 1}    1.82{col 46}{space 3}0.068{col 54}{space 4} -.016962{col 67}{space 3} .4726029
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.745239{col 26}{space 2} .0943319{col 37}{space 1}  -18.50{col 46}{space 3}0.000{col 54}{space 4}-1.930127{col 67}{space 3}-1.560352
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}  1.15e+63
+{txt}{col 49}        avg{col 67}= {res}  1.15e+63
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1.2e+63{txt}){col 67}= {res}      3.11
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0779
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} .2468198{col 26}{space 2}  .140001{col 37}{space 1}    1.76{col 46}{space 3}0.078{col 54}{space 4}-.0275771{col 67}{space 3} .5212168
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -1.68135{col 26}{space 2} .0721269{col 37}{space 1}  -23.31{col 46}{space 3}0.000{col 54}{space 4}-1.822717{col 67}{space 3}-1.539984
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0280
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0544
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1,420.94
+{txt}{col 49}        avg{col 67}= {res} 20,892.46
+{txt}{col 49}        max{col 67}= {res} 40,363.97
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1420.9{txt}){col 67}= {res}      0.25
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.6190
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}   DEP_ANTIDEP_DICH{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0                  {col 21}{txt}{c |}  (base outcome)
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1                   {txt}{c |}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2} .0839523{col 33}{space 2} .1688037{col 44}{space 1}    0.50{col 53}{space 3}0.619{col 61}{space 4}-.2471788{col 74}{space 3} .4150834
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-1.633638{col 33}{space 2} .0681684{col 44}{space 1}  -23.96{col 53}{space 3}0.000{col 61}{space 4} -1.76725{col 74}{space 3}-1.500026
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Multinomial logistic regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0003
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0005
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  1.76e+07
+{txt}{col 49}        avg{col 67}= {res}  3.48e+09
+{txt}{col 49}        max{col 67}= {res}  6.94e+09
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1.8e+07{txt}){col 67}= {res}     46.66
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}DEP_ANTIDE~H{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}{res}0           {col 14}{txt}{c |}  (base outcome)
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}1            {txt}{c |}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} 1.061814{col 26}{space 2} .1554399{col 37}{space 1}    6.83{col 46}{space 3}0.000{col 54}{space 4} .7571571{col 67}{space 3}  1.36647
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.794428{col 26}{space 2}  .070149{col 37}{space 1}  -25.58{col 46}{space 3}0.000{col 54}{space 4}-1.931918{col 67}{space 3}-1.656939
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. *****************Y=ALL-CAUSE MORTALITY************************************
+. 
+. foreach x of varlist AGE BMI PHYSICAL_ACTIVITY_MET {c -(}
+{txt}  2{com}.                 mi estimate: stcox `x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}    464.41
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}AGE {c |}{col 14}{res}{space 2} .1037153{col 26}{space 2} .0048127{col 37}{space 1}   21.55{col 46}{space 3}0.000{col 54}{space 4} .0942825{col 67}{space 3} .1131481
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0138
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0137
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 21,683.80
+{txt}{col 49}        avg{col 67}= {res} 21,683.80
+{txt}{col 49}        max{col 67}= {res} 21,683.80
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}21683.8{txt}){col 67}= {res}      0.00
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.9834
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}BMI {c |}{col 14}{res}{space 2} .0001034{col 26}{space 2} .0049745{col 37}{space 1}    0.02{col 46}{space 3}0.983{col 54}{space 4} -.009647{col 67}{space 3} .0098538
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0954
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0905
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    527.49
+{txt}{col 49}        avg{col 67}= {res}    527.49
+{txt}{col 49}        max{col 67}= {res}    527.49
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}  527.5{txt}){col 67}= {res}      4.38
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0369
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                   _t{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0053411{col 35}{space 2} .0025529{col 46}{space 1}   -2.09{col 55}{space 3}0.037{col 63}{space 4}-.0103561{col 76}{space 3} -.000326
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist AGE_BR RACEBR ETHNICITY MARITAL_BR EDUC_BR INCOME_BR SMOKING_BR ALCOHOL_BR  BMIC_BR2 CVD_BR12 HT_BR12 DIAB_BR12 HYPERLIPIDEMIA_BR SRH_BR {c -(}
+{txt}  2{com}.                 mi estimate: stcox i.`x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   2,      .)}{col 67}= {res}    193.73
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} 1.037149{col 26}{space 2}  .095021{col 37}{space 1}   10.91{col 46}{space 3}0.000{col 54}{space 4} .8509111{col 67}{space 3} 1.223387
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} 1.854227{col 26}{space 2} .0989476{col 37}{space 1}   18.74{col 46}{space 3}0.000{col 54}{space 4} 1.660293{col 67}{space 3}  2.04816
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   2,      .)}{col 67}= {res}      3.87
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0208
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} -.181351{col 26}{space 2} .0651946{col 37}{space 1}   -2.78{col 46}{space 3}0.005{col 54}{space 4}  -.30913{col 67}{space 3} -.053572
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}-.0316797{col 26}{space 2} .2161233{col 37}{space 1}   -0.15{col 46}{space 3}0.883{col 54}{space 4}-.4552736{col 67}{space 3} .3919143
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}     34.49
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2}-.5817126{col 26}{space 2} .0990552{col 37}{space 1}   -5.87{col 46}{space 3}0.000{col 54}{space 4}-.7758573{col 67}{space 3}-.3875679
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0032
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0035
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}334,643.73
+{txt}{col 49}        avg{col 67}= {res}426,561.39
+{txt}{col 49}        max{col 67}= {res}551,822.55
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}543744.0{txt}){col 67}= {res}     29.05
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .2881883{col 26}{space 2} .1454338{col 37}{space 1}    1.98{col 46}{space 3}0.048{col 54}{space 4} .0031424{col 67}{space 3} .5732343
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0293495{col 26}{space 2} .0823662{col 37}{space 1}    0.36{col 46}{space 3}0.722{col 54}{space 4} -.132086{col 67}{space 3}  .190785
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .6171874{col 26}{space 2} .0689355{col 37}{space 1}    8.95{col 46}{space 3}0.000{col 54}{space 4} .4820761{col 67}{space 3} .7522988
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0084
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0081
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 61,592.57
+{txt}{col 49}        avg{col 67}= {res}3612196.14
+{txt}{col 49}        max{col 67}= {res}7536154.37
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}80184.3{txt}){col 67}= {res}      6.75
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0002
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.1391291{col 26}{space 2} .1098451{col 37}{space 1}   -1.27{col 46}{space 3}0.205{col 54}{space 4}-.3544216{col 67}{space 3} .0761634
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.1738729{col 26}{space 2} .1003589{col 37}{space 1}   -1.73{col 46}{space 3}0.083{col 54}{space 4}-.3705727{col 67}{space 3} .0228269
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.4143784{col 26}{space 2} .1061466{col 37}{space 1}   -3.90{col 46}{space 3}0.000{col 54}{space 4}-.6224261{col 67}{space 3}-.2063308
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0761
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1309
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}    259.37
+{txt}{col 49}        avg{col 67}= {res}  4,105.61
+{txt}{col 49}        max{col 67}= {res} 10,922.81
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1145.7{txt}){col 67}= {res}     19.17
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2420955{col 26}{space 2} .0683748{col 37}{space 1}   -3.54{col 46}{space 3}0.000{col 54}{space 4}-.3762507{col 67}{space 3}-.1079403
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.5873071{col 26}{space 2} .0969487{col 37}{space 1}   -6.06{col 46}{space 3}0.000{col 54}{space 4}-.7782138{col 67}{space 3}-.3964004
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.001166{col 26}{space 2} .1856408{col 37}{space 1}   -5.39{col 46}{space 3}0.000{col 54}{space 4}-1.365056{col 67}{space 3}-.6372766
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0171
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0211
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  9,134.31
+{txt}{col 49}        avg{col 67}= {res} 13,995.13
+{txt}{col 49}        max{col 67}= {res} 18,855.96
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 8054.2{txt}){col 67}= {res}      3.72
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0244
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}    .0214{col 26}{space 2} .0641094{col 37}{space 1}    0.33{col 46}{space 3}0.739{col 54}{space 4}-.1042686{col 67}{space 3} .1470687
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .2611555{col 26}{space 2} .0967704{col 37}{space 1}    2.70{col 46}{space 3}0.007{col 54}{space 4} .0714768{col 67}{space 3} .4508341
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0056
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0134
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 22,488.17
+{txt}{col 49}        avg{col 67}= {res} 63,326.81
+{txt}{col 49}        max{col 67}= {res}119,837.56
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}178113.2{txt}){col 67}= {res}      3.25
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0208
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .0824195{col 26}{space 2} .0960107{col 37}{space 1}    0.86{col 46}{space 3}0.391{col 54}{space 4}-.1057629{col 67}{space 3} .2706018
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.1427749{col 26}{space 2} .0916446{col 37}{space 1}   -1.56{col 46}{space 3}0.119{col 54}{space 4}-.3224047{col 67}{space 3} .0368549
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.1090837{col 26}{space 2} .0941426{col 37}{space 1}   -1.16{col 46}{space 3}0.247{col 54}{space 4}-.2936016{col 67}{space 3} .0754342
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0081
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0118
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res} 28,853.15
+{txt}{col 49}        avg{col 67}= {res}380,495.65
+{txt}{col 49}        max{col 67}= {res}732,138.14
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res}34888.2{txt}){col 67}= {res}      3.82
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0219
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2115182{col 26}{space 2} .0795695{col 37}{space 1}   -2.66{col 46}{space 3}0.008{col 54}{space 4}-.3674718{col 67}{space 3}-.0555647
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0735389{col 26}{space 2} .0748355{col 37}{space 1}   -0.98{col 46}{space 3}0.326{col 54}{space 4}-.2202199{col 67}{space 3} .0731422
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}     18.33
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2} .3166365{col 26}{space 2} .0739477{col 37}{space 1}    4.28{col 46}{space 3}0.000{col 54}{space 4} .1717017{col 67}{space 3} .4615713
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}     94.83
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} .5916924{col 26}{space 2} .0607592{col 37}{space 1}    9.74{col 46}{space 3}0.000{col 54}{space 4} .4726066{col 67}{space 3} .7107783
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}{help mi_missingdf##|_new:DF}:     min{col 67}= {res}         .
+{txt}{col 49}        avg{col 67}= {res}         .
+{txt}{col 49}        max{col 67}= {res}         .
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}{help mi_missingdf##|_new:F(   1,      .)}{col 67}= {res}      5.90
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0151
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} .1636842{col 26}{space 2} .0673668{col 37}{space 1}    2.43{col 46}{space 3}0.015{col 54}{space 4} .0316477{col 67}{space 3} .2957208
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0272
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0269
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  5,686.25
+{txt}{col 49}        avg{col 67}= {res}  5,686.25
+{txt}{col 49}        max{col 67}= {res}  5,686.25
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 5686.2{txt}){col 67}= {res}     15.58
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                 _t{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2} .3036299{col 33}{space 2} .0769151{col 44}{space 1}    3.95{col 53}{space 3}0.000{col 61}{space 4} .1528469{col 74}{space 3} .4544129
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Cox regression: Breslow method for ties{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0001
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0001
+{txt}DF adjustment:{ralign 15: {res:Large sample}}{col 49}DF:     min{col 67}= {res}  8.27e+08
+{txt}{col 49}        avg{col 67}= {res}  8.27e+08
+{txt}{col 49}        max{col 67}= {res}  8.27e+08
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 8.3e+08{txt}){col 67}= {res}     14.38
+{txt}Within VCE type: {ralign 12:{res:OIM}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}          _t{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} .3286836{col 26}{space 2} .0866775{col 37}{space 1}    3.79{col 46}{space 3}0.000{col 54}{space 4} .1587989{col 67}{space 3} .4985684
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. capture log close
+{smcl}
+{com}{sf}{ul off}

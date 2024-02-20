@@ -1,0 +1,1888 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. ///////////////////////////TABLE 1: Associations of sociodemographic, lifestyle and health characteristics with epigenetic age acceleration (n=) – Women's Health Initiative/////////////////
+> 
+. 
+. **EEAA  
+. **IEAA  
+. **AgeAccelPheno 
+. **AgeAccelGrimAge
+. 
+. 
+. **DEPRESSION_BASELINE_BR
+. **DEPRESSION_3YR_BR
+. **DEPRESSION_PATTERN
+. **ANTIDEPRESSANT_BR
+. **ANTIDEPRESSANT_BR_3YR
+. **ANTIDEPRESSANT_BASELINE_3YR
+. **DEP_ANTIDEP_DICH
+. **DEP_ANTIDEP_DICH_3YRS
+. **DEATH_EVENT
+. **DEATH_TTE
+. **WHI_CT_OS
+. 
+. 
+. 
+. **AGE 
+. **AGE_BR
+. **RACEBR
+. **ETHNICITY
+. **MARITAL_BR
+. **EDUC_BR
+. **INCOME_BR 
+. **SMOKING_BR 
+. **ALCOHOL_BR 
+. **PHYSICAL_ACTIVITY_MET 
+. **BMI 
+. **BMIC_BR 
+. **CVD_BR12 
+. **HT_BR12 
+. **DIAB_BR12 
+. **HYPERLIPIDEMIA_BR 
+. **SRH_BR
+. 
+. use finaldata_imputedFINAL,clear
+{txt}
+{com}. 
+. 
+. 
+. ************OVERALL DISTRIBUTION****************
+. 
+. foreach x of varlist  AGE_BR RACEBR ETHNICITY MARITAL_BR EDUC_BR INCOME_BR SMOKING_BR  ALCOHOL_BR BMIC_BR2 CVD_BR12 HT_BR12 DIAB_BR12 HYPERLIPIDEMIA_BR SRH_BR DEPRESSION_BASELINE_BR {c -(}
+{txt}  2{com}.         mi estimate: prop `x' if sample_final==1
+{txt}  3{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 6}AGE_BR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .2594737{col 26}{space 2} .0100563{col 37}{space 5}  .239751{col 51}{space 3} .2791963
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}      .47{col 26}{space 2} .0114501{col 37}{space 5} .4475438{col 51}{space 3} .4924562
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .2705263{col 26}{space 2} .0101914{col 37}{space 5} .2505388{col 51}{space 3} .2905138
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 6}RACEBR {c |}
+{space 10}0  {c |}{col 14}{res}{space 2} .6573684{col 26}{space 2} .0108878{col 37}{space 5}  .636015{col 51}{space 3} .6787218
+{txt}{space 10}1  {c |}{col 14}{res}{space 2} .3236842{col 26}{space 2} .0107339{col 37}{space 5} .3026327{col 51}{space 3} .3447358
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .0189474{col 26}{space 2} .0031278{col 37}{space 5}  .012813{col 51}{space 3} .0250817
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 3}ETHNICITY {c |}
+{space 10}0  {c |}{col 14}{res}{space 2} .8515789{col 26}{space 2} .0081561{col 37}{space 5}  .835583{col 51}{space 3} .8675748
+{txt}{space 10}1  {c |}{col 14}{res}{space 2} .1484211{col 26}{space 2} .0081561{col 37}{space 5} .1324252{col 51}{space 3}  .164417
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0101
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0187
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,606.35
+{txt}{col 35}        avg{col 51}= {res}  1,734.48
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,890.83
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 2}MARITAL_BR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .5295789{col 26}{space 2} .0114608{col 37}{space 5} .5071017{col 51}{space 3} .5520562
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}     .042{col 26}{space 2}  .004645{col 37}{space 5} .0328892{col 51}{space 3} .0511108
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .1949474{col 26}{space 2} .0091668{col 37}{space 5} .1769675{col 51}{space 3} .2129272
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2334737{col 26}{space 2}  .009753{col 37}{space 5} .2143452{col 51}{space 3} .2526022
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0068
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0113
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,770.75
+{txt}{col 35}        avg{col 51}= {res}  1,828.49
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,893.51
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 5}EDUC_BR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .1105263{col 26}{space 2} .0072163{col 37}{space 5} .0963734{col 51}{space 3} .1246792
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .2003158{col 26}{space 2} .0091875{col 37}{space 5} .1822971{col 51}{space 3} .2183344
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .3945263{col 26}{space 2} .0112762{col 37}{space 5} .3724103{col 51}{space 3} .4166424
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2946316{col 26}{space 2} .0105092{col 37}{space 5}   .27402{col 51}{space 3} .3152432
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0603
+{txt}{col 35}Largest FMI{col 51}= {res}    0.1166
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}    272.07
+{txt}{col 35}        avg{col 51}= {res}  1,066.81
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,420.69
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 3}INCOME_BR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .2993684{col 26}{space 2} .0106435{col 37}{space 5} .2784898{col 51}{space 3} .3202471
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .4724211{col 26}{space 2} .0116161{col 37}{space 5} .4496336{col 51}{space 3} .4952085
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .1843158{col 26}{space 2} .0090473{col 37}{space 5} .1665658{col 51}{space 3} .2020658
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .0438947{col 26}{space 2} .0049846{col 37}{space 5} .0340814{col 51}{space 3} .0537081
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0132
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0221
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,519.37
+{txt}{col 35}        avg{col 51}= {res}  1,568.19
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,637.43
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 2}SMOKING_BR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .5328421{col 26}{space 2}  .011573{col 37}{space 5} .5101413{col 51}{space 3} .5555429
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .3671579{col 26}{space 2} .0111751{col 37}{space 5}  .345238{col 51}{space 3} .3890778
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}       .1{col 26}{space 2} .0069426{col 37}{space 5} .0863828{col 51}{space 3} .1136172
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0062
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0111
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,774.75
+{txt}{col 35}        avg{col 51}= {res}  1,845.26
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,890.92
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 2}ALCOHOL_BR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .1538947{col 26}{space 2} .0083244{col 37}{space 5}  .137568{col 51}{space 3} .1702215
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .2347368{col 26}{space 2}  .009732{col 37}{space 5} .2156503{col 51}{space 3} .2538234
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .3384211{col 26}{space 2} .0108935{col 37}{space 5} .3170561{col 51}{space 3}  .359786
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2729474{col 26}{space 2}  .010241{col 37}{space 5} .2528624{col 51}{space 3} .2930323
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0062
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0154
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,684.17
+{txt}{col 35}        avg{col 51}= {res}  1,792.74
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,889.73
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 4}BMIC_BR2 {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}     .226{col 26}{space 2} .0096692{col 37}{space 5}  .207035{col 51}{space 3}  .244965
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .3346316{col 26}{space 2}  .010836{col 37}{space 5} .3133798{col 51}{space 3} .3558833
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .4393684{col 26}{space 2}   .01144{col 37}{space 5} .4169314{col 51}{space 3} .4618055
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 4}CVD_BR12 {c |}
+{space 10}0  {c |}{col 14}{res}{space 2} .8273684{col 26}{space 2} .0086703{col 37}{space 5} .8103641{col 51}{space 3} .8443727
+{txt}{space 10}1  {c |}{col 14}{res}{space 2} .1726316{col 26}{space 2} .0086703{col 37}{space 5} .1556273{col 51}{space 3} .1896359
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 5}HT_BR12 {c |}
+{space 10}0  {c |}{col 14}{res}{space 2} .4673684{col 26}{space 2} .0114463{col 37}{space 5} .4449197{col 51}{space 3} .4898171
+{txt}{space 10}1  {c |}{col 14}{res}{space 2} .5326316{col 26}{space 2} .0114463{col 37}{space 5} .5101829{col 51}{space 3} .5550803
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 3}DIAB_BR12 {c |}
+{space 10}0  {c |}{col 14}{res}{space 2} .7647368{col 26}{space 2}  .009731{col 37}{space 5} .7456523{col 51}{space 3} .7838214
+{txt}{space 10}1  {c |}{col 14}{res}{space 2} .2352632{col 26}{space 2}  .009731{col 37}{space 5} .2161786{col 51}{space 3} .2543477
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0524
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0510
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}    852.17
+{txt}{col 35}        avg{col 51}= {res}    852.17
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}    852.17
+
+{txt}{hline 18}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 19}{c |}{col 42}             N{col 56}ormal
+{col 19}{c |} Proportion{col 31}   Std. err.{col 43}     [95% con{col 56}f. interval]
+{hline 18}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+HYPERLIPIDEMIA_BR {c |}
+{space 15}0  {c |}{col 19}{res}{space 2} .8371579{col 31}{space 2} .0086893{col 42}{space 5} .8201029{col 56}{space 3} .8542129
+{txt}{space 15}1  {c |}{col 19}{res}{space 2} .1628421{col 31}{space 2} .0086893{col 42}{space 5} .1457871{col 56}{space 3} .1798971
+{txt}{hline 18}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0012
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0012
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,893.62
+{txt}{col 35}        avg{col 51}= {res}  1,893.62
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,893.62
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}{col 37}             N{col 51}ormal
+{col 14}{c |} Proportion{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 6}SRH_BR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .8751579{col 26}{space 2} .0075875{col 37}{space 5} .8602772{col 51}{space 3} .8900386
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .1248421{col 26}{space 2} .0075875{col 37}{space 5} .1099614{col 51}{space 3} .1397228
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Proportion estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 23}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 24}{c |}{col 47}             N{col 61}ormal
+{col 24}{c |} Proportion{col 36}   Std. err.{col 48}     [95% con{col 61}f. interval]
+{hline 23}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+DEPRESSION_BASELINE_BR {c |}
+{space 20}0  {c |}{col 24}{res}{space 2} .8910526{col 36}{space 2}  .007148{col 47}{space 5} .8770339{col 61}{space 3} .9050714
+{txt}{space 20}1  {c |}{col 24}{res}{space 2} .1089474{col 36}{space 2}  .007148{col 47}{space 5} .0949286{col 61}{space 3} .1229661
+{txt}{hline 23}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. foreach x of varlist AGE BMI  PHYSICAL_ACTIVITY_MET EEAA IEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  2{com}.         mi estimate: mean `x' if sample_final==1
+{txt}  3{com}.         
+.         {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Mean estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 9}AGE {c |}{col 14}{res}{space 2} 64.61895{col 26}{space 2}  .163082{col 37}{space 5} 64.29911{col 51}{space 3} 64.93879
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Mean estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0154
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0153
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,686.31
+{txt}{col 35}        avg{col 51}= {res}  1,686.31
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,686.31
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 9}BMI {c |}{col 14}{res}{space 2} 29.83371{col 26}{space 2} .1423949{col 37}{space 5} 29.55442{col 51}{space 3}   30.113
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Mean estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0181
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0180
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,623.08
+{txt}{col 35}        avg{col 51}= {res}  1,623.08
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,623.08
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 23}{c |}       Mean{col 35}   Std. err.{col 47}     [95% con{col 60}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2} 10.08647{col 35}{space 2} .2927162{col 46}{space 5} 9.512329{col 60}{space 3} 10.66061
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Mean estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 8}EEAA {c |}{col 14}{res}{space 2}-.2309533{col 26}{space 2} .1463744{col 37}{space 5}-.5180251{col 51}{space 3} .0561184
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Mean estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 8}IEAA {c |}{col 14}{res}{space 2} .0428928{col 26}{space 2} .1161733{col 37}{space 5}-.1849481{col 51}{space 3} .2707337
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Mean estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 14}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 15}{c |}       Mean{col 27}   Std. err.{col 39}     [95% con{col 52}f. interval]
+{hline 14}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+AgeAccelPheno {c |}{col 15}{res}{space 2}-.1541679{col 27}{space 2} .1485962{col 38}{space 5} -.445597{col 52}{space 3} .1372613
+{txt}{hline 14}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 35}Imputations{col 51}= {res}         5
+{txt}Mean estimation{col 35}Number of obs{col 51}= {res}     1,900
+{txt}{col 35}Average RVI{col 51}= {res}    0.0000
+{txt}{col 35}Largest FMI{col 51}= {res}    0.0000
+{txt}{col 35}Complete DF{col 51}= {res}      1899
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 35}DF:     min{col 51}= {res}  1,897.00
+{txt}{col 35}        avg{col 51}= {res}  1,897.00
+{txt}Within VCE type: {ralign 12:{res:Analytic}}{col 35}        max{col 51}= {res}  1,897.00
+
+{txt}{hline 16}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 17}{c |}       Mean{col 29}   Std. err.{col 41}     [95% con{col 54}f. interval]
+{hline 16}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+AgeAccelGrimAge {c |}{col 17}{res}{space 2}-.0567199{col 29}{space 2} .0881472{col 40}{space 5}-.2295956{col 54}{space 3} .1161558
+{txt}{hline 16}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+{res}{txt}
+{com}. 
+.         
+.         
+. ******************ASSOCIATION WITH EACH EPIGENETIC CLOCK***************
+. 
+. foreach x of varlist  AGE_BR RACEBR ETHNICITY MARITAL_BR EDUC_BR INCOME_BR SMOKING_BR ALCOHOL_BR  BMIC_BR2 CVD_BR12 HT_BR12 DIAB_BR12 HYPERLIPIDEMIA_BR SRH_BR DEPRESSION_BASELINE_BR {c -(}
+{txt}  2{com}.         foreach y of varlist EEAA IEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  3{com}.         mi estimate: reg  `y' i.`x' if sample_final==1
+{txt}  4{com}. {c )-}
+{txt}  5{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}      0.16
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.8489
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.0397866{col 26}{space 2} .3581506{col 37}{space 1}   -0.11{col 46}{space 3}0.912{col 54}{space 4}-.7421976{col 67}{space 3} .6626244
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}  .159486{col 26}{space 2} .4023861{col 37}{space 1}    0.40{col 46}{space 3}0.692{col 54}{space 4}-.6296804{col 67}{space 3} .9486523
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.2553988{col 26}{space 2} .2874815{col 37}{space 1}   -0.89{col 46}{space 3}0.374{col 54}{space 4}-.8192122{col 67}{space 3} .3084147
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}      0.71
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.4928
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .1877085{col 26}{space 2} .2841728{col 37}{space 1}    0.66{col 46}{space 3}0.509{col 54}{space 4}-.3696159{col 67}{space 3} .7450328
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.1379366{col 26}{space 2} .3192712{col 37}{space 1}   -0.43{col 46}{space 3}0.666{col 54}{space 4}-.7640966{col 67}{space 3} .4882234
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.0080147{col 26}{space 2} .2281007{col 37}{space 1}   -0.04{col 46}{space 3}0.972{col 54}{space 4}-.4553695{col 67}{space 3} .4393402
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}      1.89
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.1510
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .6472902{col 26}{space 2} .3632562{col 37}{space 1}    1.78{col 46}{space 3}0.075{col 54}{space 4}-.0651339{col 67}{space 3} 1.359714
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .1561442{col 26}{space 2} .4081223{col 37}{space 1}    0.38{col 46}{space 3}0.702{col 54}{space 4}-.6442721{col 67}{space 3} .9565604
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.5006354{col 26}{space 2} .2915796{col 37}{space 1}   -1.72{col 46}{space 3}0.086{col 54}{space 4}-1.072486{col 67}{space 3} .0712154
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}      0.36
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.6991
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}AGE_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .1771849{col 26}{space 2} .2156576{col 37}{space 1}    0.82{col 46}{space 3}0.411{col 54}{space 4}-.2457664{col 67}{space 3} .6001362
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .1543075{col 26}{space 2} .2422937{col 37}{space 1}    0.64{col 46}{space 3}0.524{col 54}{space 4}-.3208829{col 67}{space 3} .6294979
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.1817411{col 26}{space 2} .1731047{col 37}{space 1}   -1.05{col 46}{space 3}0.294{col 54}{space 4} -.521237{col 67}{space 3} .1577548
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}     15.45
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2}-1.727867{col 26}{space 2} .3119363{col 37}{space 1}   -5.54{col 46}{space 3}0.000{col 54}{space 4}-2.339642{col 67}{space 3}-1.116093
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}-.0687005{col 26}{space 2} 1.070486{col 37}{space 1}   -0.06{col 46}{space 3}0.949{col 54}{space 4}-2.168155{col 67}{space 3} 2.030754
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .3296317{col 26}{space 2} .1791763{col 37}{space 1}    1.84{col 46}{space 3}0.066{col 54}{space 4}-.0217718{col 67}{space 3} .6810353
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}      2.35
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0952
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .0424845{col 26}{space 2} .2492745{col 37}{space 1}    0.17{col 46}{space 3}0.865{col 54}{space 4}-.4463968{col 67}{space 3} .5313659
+{txt}{space 10}2  {c |}{col 14}{res}{space 2}-1.827942{col 26}{space 2} .8554465{col 37}{space 1}   -2.14{col 46}{space 3}0.033{col 54}{space 4}-3.505658{col 67}{space 3} -.150226
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .0637759{col 26}{space 2} .1431833{col 37}{space 1}    0.45{col 46}{space 3}0.656{col 54}{space 4}-.2170376{col 67}{space 3} .3445895
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}      4.27
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0142
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} .9281575{col 26}{space 2} .3185248{col 37}{space 1}    2.91{col 46}{space 3}0.004{col 54}{space 4} .3034614{col 67}{space 3} 1.552854
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} .5222278{col 26}{space 2} 1.093096{col 37}{space 1}    0.48{col 46}{space 3}0.633{col 54}{space 4} -1.62157{col 67}{space 3} 2.666025
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.4644926{col 26}{space 2} .1829607{col 37}{space 1}   -2.54{col 46}{space 3}0.011{col 54}{space 4}-.8233182{col 67}{space 3} -.105667
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.00
+{txt}{col 49}        avg{col 67}= {res}  1,895.00
+{txt}{col 49}        max{col 67}= {res}  1,895.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1895.0{txt}){col 67}= {res}     27.26
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}RACEBR {c |}
+{space 10}1  {c |}{col 14}{res}{space 2} 1.351257{col 26}{space 2} .1867089{col 37}{space 1}    7.24{col 46}{space 3}0.000{col 54}{space 4} .9850803{col 67}{space 3} 1.717434
+{txt}{space 10}2  {c |}{col 14}{res}{space 2} 1.380393{col 26}{space 2} .6407373{col 37}{space 1}    2.15{col 46}{space 3}0.031{col 54}{space 4} .1237684{col 67}{space 3} 2.637018
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.5202553{col 26}{space 2} .1072457{col 37}{space 1}   -4.85{col 46}{space 3}0.000{col 54}{space 4}-.7305873{col 67}{space 3}-.3099233
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}     27.29
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2} 2.136204{col 26}{space 2} .4089019{col 37}{space 1}    5.22{col 46}{space 3}0.000{col 54}{space 4} 1.334259{col 67}{space 3} 2.938149
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.5480109{col 26}{space 2} .1575313{col 37}{space 1}   -3.48{col 46}{space 3}0.001{col 54}{space 4}-.8569638{col 67}{space 3}-.2390581
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}     13.35
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0003
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2}-1.189951{col 26}{space 2} .3257159{col 37}{space 1}   -3.65{col 46}{space 3}0.000{col 54}{space 4} -1.82875{col 67}{space 3}-.5511518
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .2195066{col 26}{space 2} .1254835{col 37}{space 1}    1.75{col 46}{space 3}0.080{col 54}{space 4}-.0265937{col 67}{space 3} .4656069
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      0.70
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.4030
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2}  .349659{col 26}{space 2} .4180054{col 37}{space 1}    0.84{col 46}{space 3}0.403{col 54}{space 4}-.4701398{col 67}{space 3} 1.169458
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2060646{col 26}{space 2} .1610385{col 37}{space 1}   -1.28{col 46}{space 3}0.201{col 54}{space 4}-.5218958{col 67}{space 3} .1097666
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}     12.25
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0005
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.ETHNICITY {c |}{col 14}{res}{space 2}-.8650723{col 26}{space 2} .2472102{col 37}{space 1}   -3.50{col 46}{space 3}0.000{col 54}{space 4}-1.349905{col 67}{space 3}-.3802397
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  .071675{col 26}{space 2} .0952388{col 37}{space 1}    0.75{col 46}{space 3}0.452{col 54}{space 4} -.115109{col 67}{space 3} .2584589
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0181
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0551
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    782.13
+{txt}{col 49}        avg{col 67}= {res}  1,595.43
+{txt}{col 49}        max{col 67}= {res}  1,887.13
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1594.9{txt}){col 67}= {res}      1.12
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.3379
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.9717142{col 26}{space 2} .7627266{col 37}{space 1}   -1.27{col 46}{space 3}0.203{col 54}{space 4}-2.468948{col 67}{space 3} .5255195
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.3048419{col 26}{space 2}  .389153{col 37}{space 1}   -0.78{col 46}{space 3}0.434{col 54}{space 4}-1.068072{col 67}{space 3} .4583879
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2741494{col 26}{space 2} .3641562{col 37}{space 1}    0.75{col 46}{space 3}0.452{col 54}{space 4}-.4400436{col 67}{space 3} .9883424
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.1946773{col 26}{space 2} .2013063{col 37}{space 1}   -0.97{col 46}{space 3}0.334{col 54}{space 4}-.5894837{col 67}{space 3}  .200129
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0165
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0379
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,119.32
+{txt}{col 49}        avg{col 67}= {res}  1,657.97
+{txt}{col 49}        max{col 67}= {res}  1,893.27
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1636.0{txt}){col 67}= {res}      1.08
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.3584
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2929706{col 26}{space 2} .6001593{col 37}{space 1}   -0.49{col 46}{space 3}0.626{col 54}{space 4}-1.470534{col 67}{space 3} .8845933
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.1364731{col 26}{space 2} .3088596{col 37}{space 1}   -0.44{col 46}{space 3}0.659{col 54}{space 4}-.7422264{col 67}{space 3} .4692801
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.5189614{col 26}{space 2} .2900824{col 37}{space 1}   -1.79{col 46}{space 3}0.074{col 54}{space 4}-1.087898{col 67}{space 3} .0499755
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .2030213{col 26}{space 2}  .159652{col 37}{space 1}    1.27{col 46}{space 3}0.204{col 54}{space 4}-.1100911{col 67}{space 3} .5161337
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0008
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0016
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,888.62
+{txt}{col 49}        avg{col 67}= {res}  1,891.72
+{txt}{col 49}        max{col 67}= {res}  1,893.58
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1893.2{txt}){col 67}= {res}      2.04
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.1066
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-1.278124{col 26}{space 2} .7527891{col 37}{space 1}   -1.70{col 46}{space 3}0.090{col 54}{space 4}-2.754507{col 67}{space 3} .1982595
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}  .605411{col 26}{space 2} .3936485{col 37}{space 1}    1.54{col 46}{space 3}0.124{col 54}{space 4}-.1666207{col 67}{space 3} 1.377443
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .1218044{col 26}{space 2} .3690357{col 37}{space 1}    0.33{col 46}{space 3}0.741{col 54}{space 4}-.6019555{col 67}{space 3} .8455644
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.2469394{col 26}{space 2} .2040492{col 37}{space 1}   -1.21{col 46}{space 3}0.226{col 54}{space 4}-.6471243{col 67}{space 3} .1532454
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0040
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0061
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,850.56
+{txt}{col 49}        avg{col 67}= {res}  1,871.79
+{txt}{col 49}        max{col 67}= {res}  1,891.73
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1876.5{txt}){col 67}= {res}     12.49
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}MARITAL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3586667{col 26}{space 2} .4439627{col 37}{space 1}    0.81{col 46}{space 3}0.419{col 54}{space 4}-.5120501{col 67}{space 3} 1.229384
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} 1.263284{col 26}{space 2} .2321163{col 37}{space 1}    5.44{col 46}{space 3}0.000{col 54}{space 4} .8080467{col 67}{space 3} 1.718521
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .9200589{col 26}{space 2} .2173021{col 37}{space 1}    4.23{col 46}{space 3}0.000{col 54}{space 4} .4938805{col 67}{space 3} 1.346237
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.5328675{col 26}{space 2}  .120088{col 37}{space 1}   -4.44{col 46}{space 3}0.000{col 54}{space 4}-.7683864{col 67}{space 3}-.2973486
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0053
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0066
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,843.87
+{txt}{col 49}        avg{col 67}= {res}  1,870.71
+{txt}{col 49}        max{col 67}= {res}  1,887.63
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1863.4{txt}){col 67}= {res}      7.25
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.5070149{col 26}{space 2} .5475602{col 37}{space 1}   -0.93{col 46}{space 3}0.355{col 54}{space 4}-1.580918{col 67}{space 3} .5668883
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-1.066158{col 26}{space 2} .4967516{col 37}{space 1}   -2.15{col 46}{space 3}0.032{col 54}{space 4}-2.040404{col 67}{space 3}-.0919125
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-2.039944{col 26}{space 2} .5142232{col 37}{space 1}   -3.97{col 46}{space 3}0.000{col 54}{space 4}-3.048449{col 67}{space 3}-1.031438
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .8922621{col 26}{space 2} .4387408{col 37}{space 1}    2.03{col 46}{space 3}0.042{col 54}{space 4} .0317924{col 67}{space 3} 1.752732
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0059
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0124
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,746.12
+{txt}{col 49}        avg{col 67}= {res}  1,818.54
+{txt}{col 49}        max{col 67}= {res}  1,848.45
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1855.2{txt}){col 67}= {res}      0.71
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.5436
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}  .482079{col 26}{space 2} .4381077{col 37}{space 1}    1.10{col 46}{space 3}0.271{col 54}{space 4} -.377192{col 67}{space 3}  1.34135
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .5587609{col 26}{space 2}  .396798{col 37}{space 1}    1.41{col 46}{space 3}0.159{col 54}{space 4}-.2194602{col 67}{space 3} 1.336982
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .5449064{col 26}{space 2} .4111504{col 37}{space 1}    1.33{col 46}{space 3}0.185{col 54}{space 4}-.2614617{col 67}{space 3} 1.351274
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.4346509{col 26}{space 2} .3507594{col 37}{space 1}   -1.24{col 46}{space 3}0.215{col 54}{space 4} -1.12258{col 67}{space 3} .2532781
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0031
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0030
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,880.33
+{txt}{col 49}        avg{col 67}= {res}  1,882.74
+{txt}{col 49}        max{col 67}= {res}  1,886.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1883.4{txt}){col 67}= {res}      4.47
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0039
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.6774632{col 26}{space 2} .5560442{col 37}{space 1}   -1.22{col 46}{space 3}0.223{col 54}{space 4}-1.767991{col 67}{space 3} .4130649
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.9547318{col 26}{space 2} .5050864{col 37}{space 1}   -1.89{col 46}{space 3}0.059{col 54}{space 4}-1.945321{col 67}{space 3}  .035857
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.747137{col 26}{space 2} .5233856{col 37}{space 1}   -3.34{col 46}{space 3}0.001{col 54}{space 4}-2.773613{col 67}{space 3}-.7206599
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .8729666{col 26}{space 2}  .446212{col 37}{space 1}    1.96{col 46}{space 3}0.051{col 54}{space 4}-.0021544{col 67}{space 3} 1.748088
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0043
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0079
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,825.54
+{txt}{col 49}        avg{col 67}= {res}  1,857.31
+{txt}{col 49}        max{col 67}= {res}  1,876.01
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1873.7{txt}){col 67}= {res}      7.10
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}EDUC_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.7166226{col 26}{space 2} .3294758{col 37}{space 1}   -2.18{col 46}{space 3}0.030{col 54}{space 4}-1.362803{col 67}{space 3}-.0704426
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.4283161{col 26}{space 2} .2997317{col 37}{space 1}   -1.43{col 46}{space 3}0.153{col 54}{space 4}-1.016169{col 67}{space 3} .1595371
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.228362{col 26}{space 2} .3099762{col 37}{space 1}   -3.96{col 46}{space 3}0.000{col 54}{space 4}-1.836296{col 67}{space 3}-.6204275
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .6177352{col 26}{space 2} .2645293{col 37}{space 1}    2.34{col 46}{space 3}0.020{col 54}{space 4} .0989301{col 67}{space 3}  1.13654
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0509
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0852
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    442.97
+{txt}{col 49}        avg{col 67}= {res}    969.22
+{txt}{col 49}        max{col 67}= {res}  1,403.30
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}  808.6{txt}){col 67}= {res}      3.92
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0086
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.4868243{col 26}{space 2} .3492879{col 37}{space 1}   -1.39{col 46}{space 3}0.164{col 54}{space 4}-1.172324{col 67}{space 3} .1986752
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-1.274222{col 26}{space 2} .4405649{col 37}{space 1}   -2.89{col 46}{space 3}0.004{col 54}{space 4} -2.13865{col 67}{space 3}-.4097934
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.887947{col 26}{space 2} .7791601{col 37}{space 1}   -2.42{col 46}{space 3}0.016{col 54}{space 4}-3.419257{col 67}{space 3}-.3566379
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .3168871{col 26}{space 2} .2703994{col 37}{space 1}    1.17{col 46}{space 3}0.241{col 54}{space 4}-.2135436{col 67}{space 3} .8473177
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0146
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0204
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,561.96
+{txt}{col 49}        avg{col 67}= {res}  1,702.63
+{txt}{col 49}        max{col 67}= {res}  1,821.43
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1686.4{txt}){col 67}= {res}      0.45
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.7160
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .2871235{col 26}{space 2} .2742774{col 37}{space 1}    1.05{col 46}{space 3}0.295{col 54}{space 4}-.2508672{col 67}{space 3} .8251142
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .2771884{col 26}{space 2} .3455206{col 37}{space 1}    0.80{col 46}{space 3}0.423{col 54}{space 4}-.4004698{col 67}{space 3} .9548465
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.0246642{col 26}{space 2}  .599764{col 37}{space 1}   -0.04{col 46}{space 3}0.967{col 54}{space 4}-1.201065{col 67}{space 3} 1.151737
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.1426772{col 26}{space 2} .2133111{col 37}{space 1}   -0.67{col 46}{space 3}0.504{col 54}{space 4}-.5610379{col 67}{space 3} .2756834
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0447
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0574
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    747.19
+{txt}{col 49}        avg{col 67}= {res}    940.54
+{txt}{col 49}        max{col 67}= {res}  1,236.14
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res}  921.3{txt}){col 67}= {res}      2.91
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0337
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.8114321{col 26}{space 2} .3566473{col 37}{space 1}   -2.28{col 46}{space 3}0.023{col 54}{space 4}-1.511582{col 67}{space 3}-.1112822
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-1.119942{col 26}{space 2} .4503747{col 37}{space 1}   -2.49{col 46}{space 3}0.013{col 54}{space 4}-2.003894{col 67}{space 3}-.2359905
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.390284{col 26}{space 2} .7768268{col 37}{space 1}   -1.79{col 46}{space 3}0.074{col 54}{space 4}-2.914861{col 67}{space 3} .1342922
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .4968561{col 26}{space 2} .2756415{col 37}{space 1}    1.80{col 46}{space 3}0.072{col 54}{space 4}-.0439208{col 67}{space 3} 1.037633
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0236
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0458
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    947.91
+{txt}{col 49}        avg{col 67}= {res}  1,247.97
+{txt}{col 49}        max{col 67}= {res}  1,481.33
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1441.9{txt}){col 67}= {res}      5.43
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0010
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}INCOME_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.5075998{col 26}{space 2}  .207592{col 37}{space 1}   -2.45{col 46}{space 3}0.015{col 54}{space 4}-.9148053{col 67}{space 3}-.1003942
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.8380735{col 26}{space 2} .2660672{col 37}{space 1}   -3.15{col 46}{space 3}0.002{col 54}{space 4}-1.360222{col 67}{space 3}-.3159247
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-1.401293{col 26}{space 2} .4574381{col 37}{space 1}   -3.06{col 46}{space 3}0.002{col 54}{space 4}-2.298808{col 67}{space 3}-.5037782
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .3991333{col 26}{space 2} .1625988{col 37}{space 1}    2.45{col 46}{space 3}0.014{col 54}{space 4}  .080174{col 67}{space 3} .7180925
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0068
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0132
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,730.87
+{txt}{col 49}        avg{col 67}= {res}  1,804.50
+{txt}{col 49}        max{col 67}= {res}  1,862.97
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1745.9{txt}){col 67}= {res}      1.44
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.2362
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.5360816{col 26}{space 2} .3151928{col 37}{space 1}   -1.70{col 46}{space 3}0.089{col 54}{space 4}-1.154259{col 67}{space 3} .0820961
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.2304336{col 26}{space 2} .5076743{col 37}{space 1}   -0.45{col 46}{space 3}0.650{col 54}{space 4}-1.226153{col 67}{space 3} .7652861
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.0110766{col 26}{space 2} .2009841{col 37}{space 1}   -0.06{col 46}{space 3}0.956{col 54}{space 4}-.4052544{col 67}{space 3} .3831011
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0038
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0089
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,812.36
+{txt}{col 49}        avg{col 67}= {res}  1,861.07
+{txt}{col 49}        max{col 67}= {res}  1,888.93
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1844.3{txt}){col 67}= {res}      0.30
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.7396
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.1718123{col 26}{space 2} .2503704{col 37}{space 1}   -0.69{col 46}{space 3}0.493{col 54}{space 4}-.6628571{col 67}{space 3} .3192326
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0704651{col 26}{space 2} .4008713{col 37}{space 1}    0.18{col 46}{space 3}0.860{col 54}{space 4} -.715732{col 67}{space 3} .8566622
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2} .0989357{col 26}{space 2} .1594415{col 37}{space 1}    0.62{col 46}{space 3}0.535{col 54}{space 4}-.2137651{col 67}{space 3} .4116365
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0045
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0073
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,835.93
+{txt}{col 49}        avg{col 67}= {res}  1,868.90
+{txt}{col 49}        max{col 67}= {res}  1,893.53
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1826.6{txt}){col 67}= {res}      4.90
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0076
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .2366977{col 26}{space 2} .3186224{col 37}{space 1}    0.74{col 46}{space 3}0.458{col 54}{space 4}-.3881937{col 67}{space 3}  .861589
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} 1.604603{col 26}{space 2} .5129177{col 37}{space 1}    3.13{col 46}{space 3}0.002{col 54}{space 4} .5986392{col 67}{space 3} 2.610566
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.4015434{col 26}{space 2}  .203209{col 37}{space 1}   -1.98{col 46}{space 3}0.048{col 54}{space 4}-.8000805{col 67}{space 3}-.0030063
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0206
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0384
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,107.30
+{txt}{col 49}        avg{col 67}= {res}  1,410.35
+{txt}{col 49}        max{col 67}= {res}  1,680.21
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1201.2{txt}){col 67}= {res}    365.61
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}SMOKING_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}    2.144{col 26}{space 2} .1632087{col 37}{space 1}   13.14{col 46}{space 3}0.000{col 54}{space 4} 1.823767{col 67}{space 3} 2.464233
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} 6.824172{col 26}{space 2} .2592589{col 37}{space 1}   26.32{col 46}{space 3}0.000{col 54}{space 4} 6.315667{col 67}{space 3} 7.332676
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-1.526337{col 26}{space 2} .1035441{col 37}{space 1}  -14.74{col 46}{space 3}0.000{col 54}{space 4} -1.72945{col 67}{space 3}-1.323224
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0097
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0245
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,455.33
+{txt}{col 49}        avg{col 67}= {res}  1,731.14
+{txt}{col 49}        max{col 67}= {res}  1,852.99
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1794.8{txt}){col 67}= {res}      0.81
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.4871
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .5109708{col 26}{space 2} .4817112{col 37}{space 1}    1.06{col 46}{space 3}0.289{col 54}{space 4}-.4337851{col 67}{space 3} 1.455727
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .0352585{col 26}{space 2} .4556394{col 37}{space 1}    0.08{col 46}{space 3}0.938{col 54}{space 4}-.8585216{col 67}{space 3} .9290385
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.0944139{col 26}{space 2} .4680413{col 37}{space 1}   -0.20{col 46}{space 3}0.840{col 54}{space 4}-1.012358{col 67}{space 3} .8235297
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.3370458{col 26}{space 2} .3752751{col 37}{space 1}   -0.90{col 46}{space 3}0.369{col 54}{space 4}-1.073075{col 67}{space 3} .3989832
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0030
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0059
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,853.07
+{txt}{col 49}        avg{col 67}= {res}  1,867.04
+{txt}{col 49}        max{col 67}= {res}  1,887.28
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1883.5{txt}){col 67}= {res}      0.85
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.4652
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}  .496484{col 26}{space 2} .3822068{col 37}{space 1}    1.30{col 46}{space 3}0.194{col 54}{space 4}-.2531172{col 67}{space 3} 1.246085
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .5056755{col 26}{space 2} .3575599{col 37}{space 1}    1.41{col 46}{space 3}0.157{col 54}{space 4}-.1955787{col 67}{space 3}  1.20693
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} .2520689{col 26}{space 2} .3714517{col 37}{space 1}    0.68{col 46}{space 3}0.497{col 54}{space 4}-.4764387{col 67}{space 3} .9805765
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.3135669{col 26}{space 2} .2967385{col 37}{space 1}   -1.06{col 46}{space 3}0.291{col 54}{space 4}-.8955394{col 67}{space 3} .2684057
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0011
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0029
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,881.27
+{txt}{col 49}        avg{col 67}= {res}  1,886.80
+{txt}{col 49}        max{col 67}= {res}  1,892.19
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1892.7{txt}){col 67}= {res}      1.39
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.2455
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .3815039{col 26}{space 2} .4874154{col 37}{space 1}    0.78{col 46}{space 3}0.434{col 54}{space 4}-.5744243{col 67}{space 3} 1.337432
+{txt}{space 10}3  {c |}{col 14}{res}{space 2}-.0321662{col 26}{space 2} .4573862{col 37}{space 1}   -0.07{col 46}{space 3}0.944{col 54}{space 4}-.9292039{col 67}{space 3} .8648715
+{txt}{space 10}4  {c |}{col 14}{res}{space 2}-.4677543{col 26}{space 2} .4740155{col 37}{space 1}   -0.99{col 46}{space 3}0.324{col 54}{space 4}-1.397404{col 67}{space 3} .4618955
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.1051593{col 26}{space 2} .3790417{col 37}{space 1}   -0.28{col 46}{space 3}0.781{col 54}{space 4}-.8485443{col 67}{space 3} .6382257
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0054
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0081
+{txt}{col 49}Complete DF{col 67}= {res}      1896
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,823.81
+{txt}{col 49}        avg{col 67}= {res}  1,864.18
+{txt}{col 49}        max{col 67}= {res}  1,879.21
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   3{txt},{res} 1861.7{txt}){col 67}= {res}     14.11
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}ALCOHOL_BR {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} 1.780678{col 26}{space 2} .2866081{col 37}{space 1}    6.21{col 46}{space 3}0.000{col 54}{space 4} 1.218574{col 67}{space 3} 2.342781
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .6884321{col 26}{space 2} .2687279{col 37}{space 1}    2.56{col 46}{space 3}0.010{col 54}{space 4} .1613949{col 67}{space 3} 1.215469
+{txt}{space 10}4  {c |}{col 14}{res}{space 2} 1.009872{col 26}{space 2} .2792253{col 37}{space 1}    3.62{col 46}{space 3}0.000{col 54}{space 4} .4622372{col 67}{space 3} 1.557507
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.9833308{col 26}{space 2} .2227412{col 37}{space 1}   -4.41{col 46}{space 3}0.000{col 54}{space 4}-1.420177{col 67}{space 3}-.5464847
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0088
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0141
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,710.95
+{txt}{col 49}        avg{col 67}= {res}  1,775.19
+{txt}{col 49}        max{col 67}= {res}  1,811.52
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1659.6{txt}){col 67}= {res}      3.65
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0261
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2588812{col 26}{space 2} .3998456{col 37}{space 1}   -0.65{col 46}{space 3}0.517{col 54}{space 4}-1.043091{col 67}{space 3} .5253282
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .6235441{col 26}{space 2} .3810493{col 37}{space 1}    1.64{col 46}{space 3}0.102{col 54}{space 4}-.1238274{col 67}{space 3} 1.370916
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.4183182{col 26}{space 2} .3088357{col 37}{space 1}   -1.35{col 46}{space 3}0.176{col 54}{space 4} -1.02403{col 67}{space 3} .1873933
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0067
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0154
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,684.06
+{txt}{col 49}        avg{col 67}= {res}  1,790.10
+{txt}{col 49}        max{col 67}= {res}  1,864.41
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1751.0{txt}){col 67}= {res}      4.12
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0165
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.2192641{col 26}{space 2}  .316562{col 37}{space 1}   -0.69{col 46}{space 3}0.489{col 54}{space 4}-.8401172{col 67}{space 3}  .401589
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .5231346{col 26}{space 2} .3025386{col 37}{space 1}    1.73{col 46}{space 3}0.084{col 54}{space 4}-.0702568{col 67}{space 3} 1.116526
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.1135625{col 26}{space 2} .2449757{col 37}{space 1}   -0.46{col 46}{space 3}0.643{col 54}{space 4}-.5940253{col 67}{space 3} .3669003
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0009
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0013
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,890.84
+{txt}{col 49}        avg{col 67}= {res}  1,891.63
+{txt}{col 49}        max{col 67}= {res}  1,892.81
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1892.2{txt}){col 67}= {res}      8.45
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0002
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2} .1206602{col 26}{space 2} .4032768{col 37}{space 1}    0.30{col 46}{space 3}0.765{col 54}{space 4}-.6702542{col 67}{space 3} .9115745
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} 1.295728{col 26}{space 2} .3833936{col 37}{space 1}    3.38{col 46}{space 3}0.001{col 54}{space 4} .5438088{col 67}{space 3} 2.047647
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.7638439{col 26}{space 2} .3114853{col 37}{space 1}   -2.45{col 46}{space 3}0.014{col 54}{space 4}-1.374735{col 67}{space 3}-.1529533
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0037
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0067
+{txt}{col 49}Complete DF{col 67}= {res}      1897
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,843.69
+{txt}{col 49}        avg{col 67}= {res}  1,854.81
+{txt}{col 49}        max{col 67}= {res}  1,861.64
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   2{txt},{res} 1847.7{txt}){col 67}= {res}      4.93
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0073
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}BMIC_BR2 {c |}
+{space 10}2  {c |}{col 14}{res}{space 2}-.0238475{col 26}{space 2}  .240305{col 37}{space 1}   -0.10{col 46}{space 3}0.921{col 54}{space 4}-.4951461{col 67}{space 3} .4474511
+{txt}{space 10}3  {c |}{col 14}{res}{space 2} .5435107{col 26}{space 2} .2283226{col 37}{space 1}    2.38{col 46}{space 3}0.017{col 54}{space 4} .0957152{col 67}{space 3} .9913062
+{txt}{space 12} {c |}
+{space 7}_cons {c |}{col 14}{res}{space 2}-.2875506{col 26}{space 2} .1855165{col 37}{space 1}   -1.55{col 46}{space 3}0.121{col 54}{space 4}-.6513928{col 67}{space 3} .0762916
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      0.35
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.5543
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2} .2290806{col 26}{space 2} .3873736{col 37}{space 1}    0.59{col 46}{space 3}0.554{col 54}{space 4}-.5306426{col 67}{space 3} .9888038
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2704999{col 26}{space 2} .1609497{col 37}{space 1}   -1.68{col 46}{space 3}0.093{col 54}{space 4}-.5861569{col 67}{space 3} .0451572
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      2.79
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0951
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2} .5130864{col 26}{space 2} .3072504{col 37}{space 1}    1.67{col 46}{space 3}0.095{col 54}{space 4} -.089498{col 67}{space 3} 1.115671
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0456821{col 26}{space 2} .1276593{col 37}{space 1}   -0.36{col 46}{space 3}0.721{col 54}{space 4}-.2960496{col 67}{space 3} .2046854
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      4.28
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0386
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2} .8131941{col 26}{space 2} .3928465{col 37}{space 1}    2.07{col 46}{space 3}0.039{col 54}{space 4} .0427373{col 67}{space 3} 1.583651
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2945508{col 26}{space 2} .1632236{col 37}{space 1}   -1.80{col 46}{space 3}0.071{col 54}{space 4}-.6146676{col 67}{space 3} .0255659
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      2.07
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.1508
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 2}1.CVD_BR12 {c |}{col 14}{res}{space 2} .3351275{col 26}{space 2} .2331725{col 37}{space 1}    1.44{col 46}{space 3}0.151{col 54}{space 4} -.122174{col 67}{space 3} .7924291
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.1145735{col 26}{space 2} .0968807{col 37}{space 1}   -1.18{col 46}{space 3}0.237{col 54}{space 4}-.3045776{col 67}{space 3} .0754305
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      3.91
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0482
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} .5794373{col 26}{space 2}   .29315{col 37}{space 1}    1.98{col 46}{space 3}0.048{col 54}{space 4} .0045068{col 67}{space 3} 1.154368
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.5395799{col 26}{space 2} .2139456{col 37}{space 1}   -2.52{col 46}{space 3}0.012{col 54}{space 4}-.9591735{col 67}{space 3}-.1199864
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      6.00
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0144
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} .5696796{col 26}{space 2}  .232537{col 37}{space 1}    2.45{col 46}{space 3}0.014{col 54}{space 4} .1136242{col 67}{space 3} 1.025735
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2605365{col 26}{space 2} .1697093{col 37}{space 1}   -1.54{col 46}{space 3}0.125{col 54}{space 4} -.593373{col 67}{space 3}    .0723
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}     27.83
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} 1.560155{col 26}{space 2} .2957455{col 37}{space 1}    5.28{col 46}{space 3}0.000{col 54}{space 4} .9801344{col 67}{space 3} 2.140176
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.9851558{col 26}{space 2} .2158399{col 37}{space 1}   -4.56{col 46}{space 3}0.000{col 54}{space 4}-1.408464{col 67}{space 3}-.5618472
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}     18.21
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 3}1.HT_BR12 {c |}{col 14}{res}{space 2} .7504712{col 26}{space 2} .1758761{col 37}{space 1}    4.27{col 46}{space 3}0.000{col 54}{space 4} .4055403{col 67}{space 3} 1.095402
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.4564446{col 26}{space 2} .1283572{col 37}{space 1}   -3.56{col 46}{space 3}0.000{col 54}{space 4}-.7081808{col 67}{space 3}-.2047084
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      1.39
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.2391
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} .4063527{col 26}{space 2} .3450547{col 37}{space 1}    1.18{col 46}{space 3}0.239{col 54}{space 4}-.2703741{col 67}{space 3}  1.08308
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.3265532{col 26}{space 2} .1673651{col 37}{space 1}   -1.95{col 46}{space 3}0.051{col 54}{space 4}-.6547923{col 67}{space 3}  .001686
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      5.51
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0190
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} .6422249{col 26}{space 2} .2735635{col 37}{space 1}    2.35{col 46}{space 3}0.019{col 54}{space 4} .1057077{col 67}{space 3} 1.178742
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -.108199{col 26}{space 2} .1326891{col 37}{space 1}   -0.82{col 46}{space 3}0.415{col 54}{space 4} -.368431{col 67}{space 3} .1520329
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}     14.44
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} 1.326593{col 26}{space 2} .3490947{col 37}{space 1}    3.80{col 46}{space 3}0.000{col 54}{space 4} .6419432{col 67}{space 3} 2.011243
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.4662664{col 26}{space 2} .1693247{col 37}{space 1}   -2.75{col 46}{space 3}0.006{col 54}{space 4}-.7983486{col 67}{space 3}-.1341842
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}     14.45
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0001
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}1.DIAB_BR12 {c |}{col 14}{res}{space 2} .7872856{col 26}{space 2} .2070822{col 37}{space 1}    3.80{col 46}{space 3}0.000{col 54}{space 4} .3811527{col 67}{space 3} 1.193419
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2419392{col 26}{space 2}  .100443{col 37}{space 1}   -2.41{col 46}{space 3}0.016{col 54}{space 4}-.4389297{col 67}{space 3}-.0449488
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0068
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0135
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,726.77
+{txt}{col 49}        avg{col 67}= {res}  1,806.92
+{txt}{col 49}        max{col 67}= {res}  1,887.06
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1726.8{txt}){col 67}= {res}      0.29
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.5901
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}               EEAA{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2} .2151158{col 33}{space 2} .3992027{col 44}{space 1}    0.54{col 53}{space 3}0.590{col 61}{space 4} -.567856{col 74}{space 3} .9980875
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} -.265997{col 33}{space 2} .1601906{col 44}{space 1}   -1.66{col 53}{space 3}0.097{col 61}{space 4}-.5801662{col 74}{space 3} .0481722
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0371
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0714
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    567.86
+{txt}{col 49}        avg{col 67}= {res}  1,160.99
+{txt}{col 49}        max{col 67}= {res}  1,754.11
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}  567.9{txt}){col 67}= {res}      0.34
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.5608
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}               IEAA{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2} .1898571{col 33}{space 2} .3261798{col 44}{space 1}    0.58{col 53}{space 3}0.561{col 61}{space 4} -.450809{col 74}{space 3} .8305232
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2} .0119749{col 33}{space 2} .1277617{col 44}{space 1}    0.09{col 53}{space 3}0.925{col 61}{space 4}-.2386064{col 74}{space 3} .2625561
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0114
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0226
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,505.46
+{txt}{col 49}        avg{col 67}= {res}  1,691.21
+{txt}{col 49}        max{col 67}= {res}  1,876.97
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1505.5{txt}){col 67}= {res}      0.01
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.9047
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      AgeAccelPheno{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2}-.0487757{col 33}{space 2} .4071505{col 44}{space 1}   -0.12{col 53}{space 3}0.905{col 61}{space 4}-.8474182{col 74}{space 3} .7498667
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-.1462055{col 33}{space 2} .1627488{col 44}{space 1}   -0.90{col 53}{space 3}0.369{col 61}{space 4}-.4653931{col 74}{space 3}  .172982
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0560
+{txt}{col 49}Largest FMI{col 67}= {res}    0.1053
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    320.25
+{txt}{col 49}        avg{col 67}= {res}    971.42
+{txt}{col 49}        max{col 67}= {res}  1,622.59
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}  320.2{txt}){col 67}= {res}      0.13
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.7226
+
+{txt}{hline 20}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}    AgeAccelGrimAge{col 21}{c |} Coefficient{col 33}  Std. err.{col 45}      t{col 53}   P>|t|{col 61}     [95% con{col 74}f. interval]
+{hline 20}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.HYPERLIPIDEMIA_BR {c |}{col 21}{res}{space 2}-.0894834{col 33}{space 2} .2518146{col 44}{space 1}   -0.36{col 53}{space 3}0.723{col 61}{space 4}-.5849033{col 74}{space 3} .4059365
+{txt}{space 14}_cons {c |}{col 21}{res}{space 2}-.0421933{col 33}{space 2} .0972295{col 44}{space 1}   -0.43{col 53}{space 3}0.664{col 61}{space 4} -.232902{col 74}{space 3} .1485153
+{txt}{hline 20}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0005
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0010
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,893.11
+{txt}{col 49}        avg{col 67}= {res}  1,894.46
+{txt}{col 49}        max{col 67}= {res}  1,895.81
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1893.1{txt}){col 67}= {res}      4.10
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0430
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} .8965826{col 26}{space 2} .4427007{col 37}{space 1}    2.03{col 46}{space 3}0.043{col 54}{space 4} .0283501{col 67}{space 3} 1.764815
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.3428821{col 26}{space 2} .1563465{col 37}{space 1}   -2.19{col 46}{space 3}0.028{col 54}{space 4}-.6495115{col 67}{space 3}-.0362528
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0014
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0027
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,884.13
+{txt}{col 49}        avg{col 67}= {res}  1,889.73
+{txt}{col 49}        max{col 67}= {res}  1,895.33
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1884.1{txt}){col 67}= {res}      1.67
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.1966
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} .4545056{col 26}{space 2} .3518857{col 37}{space 1}    1.29{col 46}{space 3}0.197{col 54}{space 4} -.235621{col 67}{space 3} 1.144632
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0138455{col 26}{space 2} .1241805{col 37}{space 1}   -0.11{col 46}{space 3}0.911{col 54}{space 4}-.2573904{col 67}{space 3} .2296994
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0001
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0003
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.39
+{txt}{col 49}        avg{col 67}= {res}  1,895.68
+{txt}{col 49}        max{col 67}= {res}  1,895.96
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1895.4{txt}){col 67}= {res}      3.49
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0620
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} .8389838{col 26}{space 2} .4493262{col 37}{space 1}    1.87{col 46}{space 3}0.062{col 54}{space 4}-.0422421{col 67}{space 3}  1.72021
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.2589071{col 26}{space 2} .1587395{col 37}{space 1}   -1.63{col 46}{space 3}0.103{col 54}{space 4}-.5702294{col 67}{space 3} .0524153
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0001
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0002
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.60
+{txt}{col 49}        avg{col 67}= {res}  1,895.79
+{txt}{col 49}        max{col 67}= {res}  1,895.99
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1895.6{txt}){col 67}= {res}     10.51
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0012
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}2.SRH_BR {c |}{col 14}{res}{space 2} .8623689{col 26}{space 2} .2660378{col 37}{space 1}    3.24{col 46}{space 3}0.001{col 54}{space 4} .3406112{col 67}{space 3} 1.384127
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.1643792{col 26}{space 2} .0939901{col 37}{space 1}   -1.75{col 46}{space 3}0.080{col 54}{space 4}-.3487142{col 67}{space 3} .0199557
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      2.90
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0889
+
+{txt}{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                    EEAA{col 26}{c |} Coefficient{col 38}  Std. err.{col 50}      t{col 58}   P>|t|{col 66}     [95% con{col 79}f. interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.DEPRESSION_BASELINE_BR {c |}{col 26}{res}{space 2} .7992359{col 38}{space 2}  .469557{col 49}{space 1}    1.70{col 58}{space 3}0.089{col 66}{space 4}-.1216667{col 79}{space 3} 1.720139
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} -.318028{col 38}{space 2} .1549875{col 49}{space 1}   -2.05{col 58}{space 3}0.040{col 66}{space 4}-.6219919{col 79}{space 3} -.014064
+{txt}{hline 25}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      1.03
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.3091
+
+{txt}{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                    IEAA{col 26}{c |} Coefficient{col 38}  Std. err.{col 50}      t{col 58}   P>|t|{col 66}     [95% con{col 79}f. interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.DEPRESSION_BASELINE_BR {c |}{col 26}{res}{space 2}-.3793204{col 38}{space 2} .3728571{col 49}{space 1}   -1.02{col 58}{space 3}0.309{col 66}{space 4}-1.110574{col 79}{space 3} .3519329
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2} .0842188{col 38}{space 2} .1230696{col 49}{space 1}    0.68{col 58}{space 3}0.494{col 66}{space 4}-.1571473{col 79}{space 3} .3255848
+{txt}{hline 25}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      0.50
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.4794
+
+{txt}{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}           AgeAccelPheno{col 26}{c |} Coefficient{col 38}  Std. err.{col 50}      t{col 58}   P>|t|{col 66}     [95% con{col 79}f. interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.DEPRESSION_BASELINE_BR {c |}{col 26}{res}{space 2} .3374567{col 38}{space 2} .4769851{col 49}{space 1}    0.71{col 58}{space 3}0.479{col 66}{space 4}-.5980141{col 79}{space 3} 1.272927
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2}-.1909329{col 38}{space 2} .1574393{col 49}{space 1}   -1.21{col 58}{space 3}0.225{col 66}{space 4}-.4997054{col 79}{space 3} .1178396
+{txt}{hline 25}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      7.60
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0059
+
+{txt}{hline 25}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}         AgeAccelGrimAge{col 26}{c |} Coefficient{col 38}  Std. err.{col 50}      t{col 58}   P>|t|{col 66}     [95% con{col 79}f. interval]
+{hline 25}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+1.DEPRESSION_BASELINE_BR {c |}{col 26}{res}{space 2} .7786992{col 38}{space 2} .2824197{col 49}{space 1}    2.76{col 58}{space 3}0.006{col 66}{space 4} .2248132{col 79}{space 3} 1.332585
+{txt}{space 19}_cons {c |}{col 26}{res}{space 2}-.1415572{col 38}{space 2} .0932188{col 49}{space 1}   -1.52{col 58}{space 3}0.129{col 66}{space 4}-.3243793{col 79}{space 3}  .041265
+{txt}{hline 25}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. foreach x of varlist AGE BMI  PHYSICAL_ACTIVITY_MET {c -(}
+{txt}  2{com}.         foreach y of varlist EEAA IEAA AgeAccelPheno AgeAccelGrimAge {c -(}
+{txt}  3{com}.         mi estimate: reg  `y' `x' if sample_final==1
+{txt}  4{com}. {c )-}
+{txt}  5{com}. {c )-}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      0.32
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.5720
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}AGE {c |}{col 14}{res}{space 2} .0116448{col 26}{space 2} .0206003{col 37}{space 1}    0.57{col 46}{space 3}0.572{col 54}{space 4}-.0287569{col 67}{space 3} .0520466
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.9834302{col 26}{space 2} 1.339199{col 37}{space 1}   -0.73{col 46}{space 3}0.463{col 54}{space 4}-3.609888{col 67}{space 3} 1.643028
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      0.02
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.9009
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}AGE {c |}{col 14}{res}{space 2}-.0020372{col 26}{space 2} .0163512{col 37}{space 1}   -0.12{col 46}{space 3}0.901{col 54}{space 4}-.0341054{col 67}{space 3} .0300311
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .1745313{col 26}{space 2}  1.06297{col 37}{space 1}    0.16{col 46}{space 3}0.870{col 54}{space 4}-1.910183{col 67}{space 3} 2.259245
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      0.09
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.7651
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}AGE {c |}{col 14}{res}{space 2} .0062503{col 26}{space 2} .0209143{col 37}{space 1}    0.30{col 46}{space 3}0.765{col 54}{space 4}-.0347672{col 67}{space 3} .0472677
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.5580529{col 26}{space 2} 1.359609{col 37}{space 1}   -0.41{col 46}{space 3}0.682{col 54}{space 4}-3.224539{col 67}{space 3} 2.108433
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0000
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0000
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,896.00
+{txt}{col 49}        avg{col 67}= {res}  1,896.00
+{txt}{col 49}        max{col 67}= {res}  1,896.00
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1896.0{txt}){col 67}= {res}      0.07
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.7868
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}AGE {c |}{col 14}{res}{space 2}-.0033557{col 26}{space 2} .0124064{col 37}{space 1}   -0.27{col 46}{space 3}0.787{col 54}{space 4}-.0276873{col 67}{space 3}  .020976
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .1601191{col 26}{space 2} .8065229{col 37}{space 1}    0.20{col 46}{space 3}0.843{col 54}{space 4}-1.421647{col 67}{space 3} 1.741885
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0116
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0230
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,495.65
+{txt}{col 49}        avg{col 67}= {res}  1,503.26
+{txt}{col 49}        max{col 67}= {res}  1,510.87
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1495.7{txt}){col 67}= {res}      6.76
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0094
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        EEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}BMI {c |}{col 14}{res}{space 2}  .062432{col 26}{space 2} .0240074{col 37}{space 1}    2.60{col 46}{space 3}0.009{col 54}{space 4} .0153403{col 67}{space 3} .1095237
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-2.093564{col 26}{space 2} .7311132{col 37}{space 1}   -2.86{col 46}{space 3}0.004{col 54}{space 4}-3.527669{col 67}{space 3}  -.65946
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0097
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0192
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,592.46
+{txt}{col 49}        avg{col 67}= {res}  1,606.25
+{txt}{col 49}        max{col 67}= {res}  1,620.05
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1592.5{txt}){col 67}= {res}      6.73
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0096
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        IEAA{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}BMI {c |}{col 14}{res}{space 2} .0493309{col 26}{space 2} .0190183{col 37}{space 1}    2.59{col 46}{space 3}0.010{col 54}{space 4} .0120273{col 67}{space 3} .0866345
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.428806{col 26}{space 2} .5790252{col 37}{space 1}   -2.47{col 46}{space 3}0.014{col 54}{space 4}-2.564523{col 67}{space 3}-.2930886
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0003
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0003
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,895.26
+{txt}{col 49}        avg{col 67}= {res}  1,895.35
+{txt}{col 49}        max{col 67}= {res}  1,895.43
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1895.3{txt}){col 67}= {res}     24.79
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelPh~o{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}BMI {c |}{col 14}{res}{space 2} .1194198{col 26}{space 2} .0239854{col 37}{space 1}    4.98{col 46}{space 3}0.000{col 54}{space 4} .0723793{col 67}{space 3} .1664603
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}  -3.7169{col 26}{space 2} .7306306{col 37}{space 1}   -5.09{col 46}{space 3}0.000{col 54}{space 4}-5.149825{col 67}{space 3}-2.283975
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0032
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0063
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,849.86
+{txt}{col 49}        avg{col 67}= {res}  1,850.00
+{txt}{col 49}        max{col 67}= {res}  1,850.14
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1850.1{txt}){col 67}= {res}     12.58
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0004
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}AgeAccelGr~e{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}BMI {c |}{col 14}{res}{space 2} .0507834{col 26}{space 2} .0143156{col 37}{space 1}    3.55{col 46}{space 3}0.000{col 54}{space 4}  .022707{col 67}{space 3} .0788597
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.571787{col 26}{space 2} .4360947{col 37}{space 1}   -3.60{col 46}{space 3}0.000{col 54}{space 4}-2.427077{col 67}{space 3} -.716498
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0057
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0113
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,769.98
+{txt}{col 49}        avg{col 67}= {res}  1,819.01
+{txt}{col 49}        max{col 67}= {res}  1,868.05
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1770.0{txt}){col 67}= {res}      4.06
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0441
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                 EEAA{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0234429{col 35}{space 2} .0116349{col 46}{space 1}   -2.01{col 55}{space 3}0.044{col 63}{space 4}-.0462624{col 76}{space 3}-.0006234
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2} .0055137{col 35}{space 2}  .187542{col 46}{space 1}    0.03{col 55}{space 3}0.977{col 63}{space 4}-.3623003{col 76}{space 3} .3733277
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0315
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0609
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}    696.29
+{txt}{col 49}        avg{col 67}= {res}  1,084.22
+{txt}{col 49}        max{col 67}= {res}  1,472.15
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res}  696.3{txt}){col 67}= {res}      0.73
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.3917
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                 IEAA{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0081198{col 35}{space 2} .0094748{col 46}{space 1}   -0.86{col 55}{space 3}0.392{col 63}{space 4}-.0267225{col 76}{space 3} .0104829
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2} .1247661{col 35}{space 2} .1504131{col 46}{space 1}    0.83{col 55}{space 3}0.407{col 63}{space 4}-.1702807{col 76}{space 3} .4198129
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0136
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0269
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,394.49
+{txt}{col 49}        avg{col 67}= {res}  1,592.15
+{txt}{col 49}        max{col 67}= {res}  1,789.80
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1394.5{txt}){col 67}= {res}      2.85
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0914
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        AgeAccelPheno{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0201129{col 35}{space 2} .0119073{col 46}{space 1}   -1.69{col 55}{space 3}0.091{col 63}{space 4}-.0434709{col 76}{space 3} .0032452
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2} .0486835{col 35}{space 2} .1909768{col 46}{space 1}    0.25{col 55}{space 3}0.799{col 63}{space 4}-.3258774{col 76}{space 3} .4232445
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{txt}Multiple-imputation estimates{col 49}Imputations{col 67}= {res}         5
+{txt}Linear regression{col 49}Number of obs{col 67}= {res}     1,900
+{txt}{col 49}Average RVI{col 67}= {res}    0.0100
+{txt}{col 49}Largest FMI{col 67}= {res}    0.0197
+{txt}{col 49}Complete DF{col 67}= {res}      1898
+{txt}DF adjustment:{ralign 15: {res:Small sample}}{col 49}DF:     min{col 67}= {res}  1,579.66
+{txt}{col 49}        avg{col 67}= {res}  1,705.32
+{txt}{col 49}        max{col 67}= {res}  1,830.98
+{txt}Model F test:{ralign 16: {res:Equal FMI}}{col 49}F({res}   1{txt},{res} 1579.7{txt}){col 67}= {res}     10.64
+{txt}Within VCE type: {ralign 12:{res:OLS}}{col 49}Prob > F{col 67}= {res}    0.0011
+
+{txt}{hline 22}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      AgeAccelGrimAge{col 23}{c |} Coefficient{col 35}  Std. err.{col 47}      t{col 55}   P>|t|{col 63}     [95% con{col 76}f. interval]
+{hline 22}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+PHYSICAL_ACTIVITY_MET {c |}{col 23}{res}{space 2}-.0229085{col 35}{space 2} .0070236{col 46}{space 1}   -3.26{col 55}{space 3}0.001{col 63}{space 4}-.0366851{col 76}{space 3}-.0091319
+{txt}{space 16}_cons {c |}{col 23}{res}{space 2} .1743451{col 35}{space 2} .1129089{col 46}{space 1}    1.54{col 55}{space 3}0.123{col 63}{space 4}-.0470987{col 76}{space 3} .3957888
+{txt}{hline 22}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. save, replace
+{txt}{p 0 4 2}
+file {bf}
+finaldata_imputedFINAL.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. capture log close
+{smcl}
+{com}{sf}{ul off}

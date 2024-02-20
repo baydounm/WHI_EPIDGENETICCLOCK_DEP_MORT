@@ -1,0 +1,181 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. 
+. //////////////////////////////////STDESCRIBE and STSUM//////////////////////////////////////////////////////////////////////////////
+> 
+. use finaldata_imputedFINAL,clear
+{txt}
+{com}. 
+. mi extract 0
+{txt}
+{com}. 
+. save finaldata_unimputed_extract0, replace
+{txt}{p 0 4 2}
+file {bf}
+finaldata_unimputed_extract0.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. stdescribe if sample_final==1
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+
+{txt}{col 36}{c LT}{hline 14} Per subject {hline 14}{c RT}
+Category{col 28}Total{col 41}Mean{col 54}Min{col 62}Median{col 76}Max
+{hline 78}
+Number of subjects    {res}      1900   
+{txt}Number of records     {res}      1900           1           1          1          1
+
+{txt}Entry time (first)                 {res}        0           0          0          0
+{txt}Exit time (final)                  {res} 18.81476    .0958252   20.43668   28.82136
+
+{txt}Subjects with gap     {res}         0   
+{txt}Time on gap           {res}         0           .           .          .          .
+{txt}Time at risk          {res} 35748.047    18.81476    .0958252   20.43668   28.82136
+
+{txt}Failures              {res}      1161    .6110526           0          1          1
+{txt}{hline 78}
+
+{com}. stsum if sample_final==1
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+
+{txt}{col 10}{c |}{col 26}Incidence{col 40}Number of{col 52}{c LT}{hline 6} Survival time {hline 5}{c RT}
+        {col 10}{c |} Time at risk{col 31}rate{col 41}subjects{col 57}25%{col 67}50%{col 77}75%
+{hline 9}{c +}{hline 69}
+   Total {c |} {res} 35,748.0465   .0324773{col 40}     1900   15.74538  21.91376  27.48802
+{txt}
+{com}. 
+. 
+. foreach x of varlist DEPRESSION_BASELINE_BR ANTIDEPRESSANT_BR DEP_ANTIDEP_DICH {c -(}
+{txt}  2{com}. sts test `x' if sample_final==1 
+{txt}  3{com}. {c )-}
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+
+{txt}Equality of survivor functions
+Log-rank test
+
+{col 13} {c |}  Observed       Expected
+DEPRESSION~R {c |}    events         events
+{hline 13}{c +}{hline 25}
+           0 {c |}{res}      1038        1038.00
+           {txt}1 {c |}{res}       123         123.00
+{txt}{hline 13}{c +}{hline 25}
+       Total {c |}{res}      1161        1161.00
+
+                       {txt}chi2(1) =   {res}0.00
+                       {txt}Pr>chi2 = {res}0.9998
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+
+{txt}Equality of survivor functions
+Log-rank test
+
+{col 13} {c |}  Observed       Expected
+ANTIDEPRES~R {c |}    events         events
+{hline 13}{c +}{hline 25}
+           0 {c |}{res}      1063        1091.58
+           {txt}1 {c |}{res}        98          69.42
+{txt}{hline 13}{c +}{hline 25}
+       Total {c |}{res}      1161        1161.00
+
+                       {txt}chi2(1) =  {res}12.54
+                       {txt}Pr>chi2 = {res}0.0004
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+
+{txt}Equality of survivor functions
+Log-rank test
+
+{col 13} {c |}  Observed       Expected
+DEP_ANTIDE~H {c |}    events         events
+{hline 13}{c +}{hline 25}
+           0 {c |}{res}       954         984.80
+           {txt}1 {c |}{res}       207         176.20
+{txt}{hline 13}{c +}{hline 25}
+       Total {c |}{res}      1161        1161.00
+
+                       {txt}chi2(1) =   {res}6.36
+                       {txt}Pr>chi2 = {res}0.0117
+{txt}
+{com}. 
+. 
+. 
+. sts graph if sample_final==1, by(DEPRESSION_BASELINE_BR) risktable
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+{txt}
+{com}. graph save "E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1A.gph",replace
+{res}{txt}file {bf:E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1A.gph} saved
+
+{com}. 
+. sts graph  if sample_final==1, by(ANTIDEPRESSANT_BR) risktable
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+{txt}
+{com}. graph save "E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1B.gph",replace
+{res}{txt}file {bf:E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1B.gph} saved
+
+{com}. 
+. 
+. sts graph  if sample_final==1, by(DEP_ANTIDEP_DICH) risktable
+
+{col 10}{txt}Failure {bf:_d}: {res}DEATH_EVENT==1
+{col 4}{txt}Analysis time {bf:_t}: {res}(AGE_EVENT-origin)
+{col 14}{txt}Origin: {res}time AGE
+{col 3}{txt}Enter on or after: {res}time AGE
+{col 9}{txt}ID variable: {res}ID
+{txt}
+{com}. graph save "E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1C.gph",replace
+{res}{txt}file {bf:E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1C.gph} saved
+
+{com}.         
+. 
+. graph bar (mean) DEPRESSION_BASELINE_BR (mean) ANTIDEPRESSANT_BR (mean) DEP_ANTIDEP_DICH if sample_final==1
+{res}{txt}
+{com}. graph save "E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1D.gph",replace
+{res}{txt}file {bf:E:\16GBBACKUPUSB\BACKUP_USB_SEPTEMBER2014\May Baydoun_folder\WHI_EPIGENETICCLOCK_DEP\OUTPUT\FIGURE1D.gph} saved
+
+{com}.         
+. save, replace 
+{txt}{p 0 4 2}
+file {bf}
+finaldata_unimputed_extract0.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. capture log close
+{smcl}
+{com}{sf}{ul off}
